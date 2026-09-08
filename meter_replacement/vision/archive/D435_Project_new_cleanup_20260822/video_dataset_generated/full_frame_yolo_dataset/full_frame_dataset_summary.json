@@ -1,0 +1,40 @@
+{
+  "source_video": "D:\\D435_Project\\data\\raw\\dianbiao_video.mp4",
+  "output_dataset": "D:\\D435_Project\\video_dataset\\full_frame_yolo_dataset",
+  "source_curated_roi_dataset": "D:\\D435_Project\\video_dataset",
+  "method": "Extracted full frames for every current valid roi_01 frame and generated meter/display labels from roi_config pixel boxes.",
+  "classes": {
+    "0": "meter",
+    "1": "display"
+  },
+  "frame_size": {
+    "width": 1920,
+    "height": 1080
+  },
+  "box_pixels": {
+    "meter": {
+      "name": "roi_01",
+      "x": 817,
+      "y": 296,
+      "width": 120,
+      "height": 181
+    },
+    "display": {
+      "name": "roi_02",
+      "x": 835,
+      "y": 302,
+      "width": 82,
+      "height": 57
+    }
+  },
+  "total_images": 129,
+  "split_counts": {
+    "train": 90,
+    "val": 26,
+    "test": 13
+  },
+  "notes": [
+    "This is a full-frame dataset, but labels are generated for the target meter/display at the known ROI position.",
+    "If future training must detect every visible meter in the cabinet, manually add labels for all visible instances."
+  ]
+}

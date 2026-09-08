@@ -1,0 +1,60 @@
+<mujoco model="cr5_robot">
+  <compiler angle="radian"/>
+
+  <option gravity="0 0 0"/>
+
+  <asset>
+    <mesh name="base_link" content_type="model/stl" file="meshes/base_link.STL"/>
+    <mesh name="J1" content_type="model/stl" file="meshes/J1.STL"/>
+    <mesh name="J2" content_type="model/stl" file="meshes/J2.STL"/>
+    <mesh name="J3" content_type="model/stl" file="meshes/J3.STL"/>
+    <mesh name="J4" content_type="model/stl" file="meshes/J4.STL"/>
+    <mesh name="J5" content_type="model/stl" file="meshes/J5.STL"/>
+    <mesh name="J6" content_type="model/stl" file="meshes/J6.STL"/>
+  </asset>
+
+  <worldbody>
+    <!-- Match the measured right-CR5 installation yaw in config/scene.json. -->
+    <body name="right_cr5_mount" quat="0.92387953 0 0 0.38268343">
+    <geom name="base_link_geom" type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="base_link"/>
+    <body name="Link1" pos="0 0 0.147">
+      <inertial pos="1.73246e-07 -0.00325457 -0.00763347" quat="0.999649 -0.0264852 1.82614e-05 1.24178e-05" mass="1.61309" diaginertia="0.00546784 0.00525554 0.00340438"/>
+      <joint name="joint1" pos="0 0 0" axis="0 0 1" range="-6.28 6.28"/>
+      <geom type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="J1"/>
+      <body name="Link2" quat="0.499998 0.5 0.5 -0.500002">
+        <inertial pos="-0.213515 -0.000174146 0.142532" quat="0.499802 0.499787 0.500216 0.500194" mass="5.52503" diaginertia="0.175351 0.171156 0.0135389"/>
+        <joint name="joint2" pos="0 0 0" axis="0 0 1" range="-6.28 6.28"/>
+        <geom type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="J2"/>
+        <body name="Link3" pos="-0.427 -0.00034866 0">
+          <inertial pos="-0.152342 0.000149359 0.0226831" quat="0.494156 0.506262 0.505744 0.493692" mass="2.85389" diaginertia="0.0651296 0.0644216 0.00422715"/>
+          <joint name="joint3" pos="0 0 0" axis="0 0 1" range="-2.792 2.792"/>
+          <geom type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="J3"/>
+          <body name="Link4" pos="-0.357 0.00034866 0.141" quat="0.707105 0 0 -0.707108">
+            <inertial pos="5.59497e-08 -0.00203371 -0.00155328" quat="0.692083 0.721818 2.68109e-05 -2.57065e-05" mass="0.670968" diaginertia="0.00165215 0.00161373 0.000677363"/>
+            <joint name="joint4" pos="0 0 0" axis="0 0 1" range="-6.28 6.28"/>
+            <geom type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="J4"/>
+            <body name="Link5" pos="0 -0.116 0" quat="0.707105 0.707108 0 0">
+              <inertial pos="1.66839e-08 -0.00612503 -0.00127182" quat="0.721052 0.692881 -0.000164005 0.000154478" mass="0.741137" diaginertia="0.00212858 0.0020903 0.000737368"/>
+              <joint name="joint5" pos="0 0 0" axis="0 0 1" range="-6.28 6.28"/>
+              <geom type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="J5"/>
+              <body name="Link6" pos="0 0.105 0" quat="0.707105 -0.707108 0 0">
+                <inertial pos="4.94397e-11 9.37632e-05 -0.0192854" quat="0.499535 0.500465 -0.500465 0.499535" mass="0.157885" diaginertia="0.00013086 7.94007e-05 7.9169e-05"/>
+                <joint name="joint6" pos="0 0 0" axis="0 0 1" range="-6.28 6.28"/>
+                <geom type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="J6"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    </body>
+  </worldbody>
+  <actuator>
+    <position name="joint1_motor" joint="joint1" kp="100"/>
+    <position name="joint2_motor" joint="joint2" kp="100"/>
+    <position name="joint3_motor" joint="joint3" kp="100"/>
+    <position name="joint4_motor" joint="joint4" kp="50"/>
+    <position name="joint5_motor" joint="joint5" kp="50"/>
+    <position name="joint6_motor" joint="joint6" kp="30"/>
+  </actuator>
+</mujoco>

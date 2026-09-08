@@ -1,0 +1,13 @@
+{
+  "source": "/home/haoran/Arm/meter_replacement/vision/D435_Project_new/calibration/result/camera_to_cr5_transform.json",
+  "method": "single_point_operator_translation_correction_2026-09-07",
+  "note": "Legacy red-cube correction retained for traceability; no longer used.",
+  "rotation_camera_to_robot": [
+    [-0.6914092070502285, -0.02275222054262531, -0.7221050095841701],
+    [0.7224401945380009, -0.029777798648771805, -0.6907918992167822],
+    [-0.005785647938627544, -0.9992975628750492, 0.03702576278643428]
+  ],
+  "original_translation_mm": [383.76673223209957, -258.6653411217287, 522.3783067925754],
+  "operator_correction_mm": [-50.5473506708919, -48.35543294517475, -17.4081966049496],
+  "translation_mm": [333.2193815612077, -307.02077406690345, 504.9701101876258]
+}

@@ -1,0 +1,10 @@
+# FakeSystem start used only for continuous real-workflow trajectory generation.
+# Values match config/poses.yaml -> real_commissioning_cabinet_return.
+initial_positions:
+  gripper_finger_joint: 0.0200
+  joint1: 1.5728481210232472
+  joint2: -0.05531028298621602
+  joint3: 1.850199512630683
+  joint4: -1.6433511974857677
+  joint5: -2.371947457191206
+  joint6: -1.5707963267948966

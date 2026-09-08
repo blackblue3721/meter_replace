@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="cr5_with_gripper">
+    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+
+    <!-- Import cr5_with_gripper urdf file -->
+    <xacro:include filename="$(find cr5_description)/urdf/cr5_with_gripper.urdf.xacro" />
+
+    <!-- Import control_xacro -->
+    <xacro:include filename="cr5_with_gripper.ros2_control.xacro" />
+
+
+    <xacro:cr5_with_gripper_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
+
+</robot>

@@ -1,0 +1,36 @@
+[30.034s] Invoking command in '/home/haoran/Arm/meter_replacement/robot/build/cr5_description': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/haoran/Arm/meter_replacement/robot/src/cr5_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/haoran/Arm/meter_replacement/robot/install/cr5_description
+[30.241s] -- The C compiler identification is GNU 11.4.0
+[30.384s] -- The CXX compiler identification is GNU 11.4.0
+[30.398s] -- Detecting C compiler ABI info
+[30.486s] -- Detecting C compiler ABI info - done
+[30.494s] -- Check for working C compiler: /usr/bin/cc - skipped
+[30.495s] -- Detecting C compile features
+[30.496s] -- Detecting C compile features - done
+[30.500s] -- Detecting CXX compiler ABI info
+[30.598s] -- Detecting CXX compiler ABI info - done
+[30.605s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[30.605s] -- Detecting CXX compile features
+[30.606s] -- Detecting CXX compile features - done
+[30.624s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[31.201s] -- Found Python3: /home/haoran/miniconda3/bin/python3 (found version "3.14.6") found components: Interpreter 
+[31.304s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[31.352s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[31.403s] Traceback (most recent call last):
+[31.403s]   File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 22, in <module>
+[31.404s]     from catkin_pkg.package import parse_package_string
+[31.404s] ModuleNotFoundError: No module named 'catkin_pkg'
+[31.411s] CMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):
+[31.412s]   execute_process(/home/haoran/miniconda3/bin/python3
+[31.412s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+[31.412s]   /home/haoran/Arm/meter_replacement/robot/src/cr5_description/package.xml
+[31.412s]   /home/haoran/Arm/meter_replacement/robot/build/cr5_description/ament_cmake_core/package.cmake)
+[31.413s]   returned error code 1
+[31.413s] Call Stack (most recent call first):
+[31.413s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[31.414s]   /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)
+[31.414s]   CMakeLists.txt:24 (ament_lint_auto_find_test_dependencies)
+[31.414s] 
+[31.414s] 
+[31.414s] -- Configuring incomplete, errors occurred!
+[31.414s] See also "/home/haoran/Arm/meter_replacement/robot/build/cr5_description/CMakeFiles/CMakeOutput.log".
+[60.064s] Invoked command in '/home/haoran/Arm/meter_replacement/robot/build/cr5_description' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/haoran/Arm/meter_replacement/robot/src/cr5_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/haoran/Arm/meter_replacement/robot/install/cr5_description

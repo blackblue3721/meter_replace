@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: cr5_description
+    relative_path: urdf/cr5_with_gripper.urdf.xacro
+  srdf:
+    relative_path: config/cr5_with_gripper.srdf
+  package_settings:
+    author_name: Haoran
+    author_email: 2274899897@qq.com
+    generated_timestamp: 1784614213
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity

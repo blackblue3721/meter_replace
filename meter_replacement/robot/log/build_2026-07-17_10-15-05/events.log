@@ -1,0 +1,349 @@
+[0.000000] (-) TimerEvent: {}
+[0.000372] (cr5_description) JobQueued: {'identifier': 'cr5_description', 'dependencies': OrderedDict()}
+[0.000546] (cr5_description) JobStarted: {'identifier': 'cr5_description'}
+[0.013070] (cr5_description) JobProgress: {'identifier': 'cr5_description', 'progress': 'cmake'}
+[0.014787] (cr5_description) JobProgress: {'identifier': 'cr5_description', 'progress': 'build'}
+[0.015503] (cr5_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/haoran/Arm/meter_replacement/robot/build/cr5_description', '--', '-j4', '-l4'], 'cwd': '/home/haoran/Arm/meter_replacement/robot/build/cr5_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/home/haoran/Arm'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('CONDA_PROMPT_MODIFIER', '(base)'), ('HTTPS_PROXY', 'http://192.168.12.1:7897'), ('CODEX_CI', '1'), ('no_proxy', 'localhost,127.0.0.0/8,::1'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'haoran'), ('LC_TIME', 'zh_CN.UTF-8'), ('CODEX_INTERNAL_ORIGINATOR_OVERRIDE', 'codex_vscode'), ('VSCODE_NLS_CONFIG', '{"userLocale":"zh-cn","osLocale":"zh-cn","resolvedLanguage":"zh-cn","defaultMessagesFile":"/usr/share/code/resources/app/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/haoran/.config/Code/clp/a17c70f498447142e2d0b40a2c8593b2.zh-cn/tcf.json","messagesFile":"/home/haoran/.config/Code/clp/a17c70f498447142e2d0b40a2c8593b2.zh-cn/5264f2156cbcd7aea5fd004d29eaa10209155d66/nls.messages.json","corruptMarkerFile":"/home/haoran/.config/Code/clp/a17c70f498447142e2d0b40a2c8593b2.zh-cn/corrupted.info"},"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"a17c70f498447142e2d0b40a2c8593b2.zh-cn","_languagePackSupport":true,"_translationsConfigFile":"/home/haoran/.config/Code/clp/a17c70f498447142e2d0b40a2c8593b2.zh-cn/tcf.json","_cacheRoot":"/home/haoran/.config/Code/clp/a17c70f498447142e2d0b40a2c8593b2.zh-cn","_resolvedLanguagePackCoreLocation":"/home/haoran/.config/Code/clp/a17c70f498447142e2d0b40a2c8593b2.zh-cn/5264f2156cbcd7aea5fd004d29eaa10209155d66","_corruptedFile":"/home/haoran/.config/Code/clp/a17c70f498447142e2d0b40a2c8593b2.zh-cn/corrupted.info"}'), ('all_proxy', 'http://192.168.12.1:7897'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('XDG_SESSION_TYPE', 'wayland'), ('DEBUG', 'release'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/haoran'), ('CHROME_DESKTOP', 'code.desktop'), ('CONDA_SHLVL', '1'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.0/8,::1'), ('VSCODE_IPC_HOOK', '/run/user/1000/vscode-4862dcd6-1.12-main.sock'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('LC_CTYPE', 'C.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '6659'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=73c992805ebdb862723e80d46a585411'), ('COLORTERM', ''), ('_CONDA_ROOT', '/home/haoran/miniconda3'), ('VSCODE_CRASH_REPORTER_PROCESS_TYPE', 'extensionHost'), ('WAYLAND_DISPLAY', 'wayland-0'), ('https_proxy', 'http://192.168.12.1:7897'), ('CODEX_PERMISSION_PROFILE', ':workspace'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'haoran'), ('ALL_PROXY', 'http://192.168.12.1:7897'), ('http_proxy', 'http://192.168.12.1:7897'), ('_', '/usr/bin/env'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('RUST_LOG', 'warn'), ('USERNAME', 'haoran'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('SESSION_MANAGER', 'local/haoran-pc:@/tmp/.ICE-unix/6659,unix/haoran-pc:/tmp/.ICE-unix/6659'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/cf7d0d7b_357d_41ac_959a_941037c203b3'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'wayland'), ('DISPLAY', ':0'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'C.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.BA4FS3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.339'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/haoran/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('ELECTRON_RUN_AS_NODE', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '019f68f2-4776-7992-9230-58afb4dff846'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('_CONDA_EXE', '/home/haoran/miniconda3/bin/conda'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/haoran/Arm/meter_replacement/robot/build/cr5_description'), ('VSCODE_CLI', '1'), ('LC_ALL', 'C.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/haoran/miniconda3/bin/conda'), ('VSCODE_CODE_CACHE_PATH', '/home/haoran/.config/Code/CachedData/5264f2156cbcd7aea5fd004d29eaa10209155d66'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=73c992805ebdb862723e80d46a585411'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://192.168.12.1:7897'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('ELECTRON_NO_ATTACH_CONSOLE', '1'), ('VSCODE_PID', '52428'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.099594] (-) TimerEvent: {}
+[0.164222] (cr5_description) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.200888] (-) TimerEvent: {}
+[0.301371] (-) TimerEvent: {}
+[0.315403] (cr5_description) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.343282] (cr5_description) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[0.401801] (-) TimerEvent: {}
+[0.425132] (cr5_description) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[0.425828] (cr5_description) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[0.426898] (cr5_description) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[0.429701] (cr5_description) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[0.432272] (cr5_description) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.443093] (cr5_description) StdoutLine: {'line': b'-- Generating done\n'}
+[0.445691] (cr5_description) StdoutLine: {'line': b'-- Build files have been written to: /home/haoran/Arm/meter_replacement/robot/build/cr5_description\n'}
+[0.476418] (cr5_description) CommandEnded: {'returncode': 0}
+[0.479023] (cr5_description) JobProgress: {'identifier': 'cr5_description', 'progress': 'install'}
+[0.490176] (cr5_description) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/haoran/Arm/meter_replacement/robot/build/cr5_description'], 'cwd': '/home/haoran/Arm/meter_replacement/robot/build/cr5_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/home/haoran/Arm'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('CONDA_PROMPT_MODIFIER', '(base)'), ('HTTPS_PROXY', 'http://192.168.12.1:7897'), ('CODEX_CI', '1'), ('no_proxy', 'localhost,127.0.0.0/8,::1'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'haoran'), ('LC_TIME', 'zh_CN.UTF-8'), ('CODEX_INTERNAL_ORIGINATOR_OVERRIDE', 'codex_vscode'), ('VSCODE_NLS_CONFIG', '{"userLocale":"zh-cn","osLocale":"zh-cn","resolvedLanguage":"zh-cn","defaultMessagesFile":"/usr/share/code/resources/app/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/haoran/.config/Code/clp/a17c70f498447142e2d0b40a2c8593b2.zh-cn/tcf.json","messagesFile":"/home/haoran/.config/Code/clp/a17c70f498447142e2d0b40a2c8593b2.zh-cn/5264f2156cbcd7aea5fd004d29eaa10209155d66/nls.messages.json","corruptMarkerFile":"/home/haoran/.config/Code/clp/a17c70f498447142e2d0b40a2c8593b2.zh-cn/corrupted.info"},"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"a17c70f498447142e2d0b40a2c8593b2.zh-cn","_languagePackSupport":true,"_translationsConfigFile":"/home/haoran/.config/Code/clp/a17c70f498447142e2d0b40a2c8593b2.zh-cn/tcf.json","_cacheRoot":"/home/haoran/.config/Code/clp/a17c70f498447142e2d0b40a2c8593b2.zh-cn","_resolvedLanguagePackCoreLocation":"/home/haoran/.config/Code/clp/a17c70f498447142e2d0b40a2c8593b2.zh-cn/5264f2156cbcd7aea5fd004d29eaa10209155d66","_corruptedFile":"/home/haoran/.config/Code/clp/a17c70f498447142e2d0b40a2c8593b2.zh-cn/corrupted.info"}'), ('all_proxy', 'http://192.168.12.1:7897'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('XDG_SESSION_TYPE', 'wayland'), ('DEBUG', 'release'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/haoran'), ('CHROME_DESKTOP', 'code.desktop'), ('CONDA_SHLVL', '1'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.0/8,::1'), ('VSCODE_IPC_HOOK', '/run/user/1000/vscode-4862dcd6-1.12-main.sock'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('LC_CTYPE', 'C.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '6659'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=73c992805ebdb862723e80d46a585411'), ('COLORTERM', ''), ('_CONDA_ROOT', '/home/haoran/miniconda3'), ('VSCODE_CRASH_REPORTER_PROCESS_TYPE', 'extensionHost'), ('WAYLAND_DISPLAY', 'wayland-0'), ('https_proxy', 'http://192.168.12.1:7897'), ('CODEX_PERMISSION_PROFILE', ':workspace'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'haoran'), ('ALL_PROXY', 'http://192.168.12.1:7897'), ('http_proxy', 'http://192.168.12.1:7897'), ('_', '/usr/bin/env'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('RUST_LOG', 'warn'), ('USERNAME', 'haoran'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('SESSION_MANAGER', 'local/haoran-pc:@/tmp/.ICE-unix/6659,unix/haoran-pc:/tmp/.ICE-unix/6659'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/cf7d0d7b_357d_41ac_959a_941037c203b3'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'wayland'), ('DISPLAY', ':0'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'C.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.BA4FS3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.339'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/haoran/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('ELECTRON_RUN_AS_NODE', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '019f68f2-4776-7992-9230-58afb4dff846'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('_CONDA_EXE', '/home/haoran/miniconda3/bin/conda'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/haoran/Arm/meter_replacement/robot/build/cr5_description'), ('VSCODE_CLI', '1'), ('LC_ALL', 'C.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/haoran/miniconda3/bin/conda'), ('VSCODE_CODE_CACHE_PATH', '/home/haoran/.config/Code/CachedData/5264f2156cbcd7aea5fd004d29eaa10209155d66'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=73c992805ebdb862723e80d46a585411'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://192.168.12.1:7897'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('ELECTRON_NO_ATTACH_CONSOLE', '1'), ('VSCODE_PID', '52428'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.498778] (cr5_description) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.500620] (cr5_description) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[0.501706] (cr5_description) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/launch/display.launch.py\n'}
+[0.501804] (-) TimerEvent: {}
+[0.501821] (cr5_description) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/meshes/J1.STL\n'}
+[0.501906] (cr5_description) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/meshes/J2.STL\n'}
+[0.501954] (cr5_description) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/meshes/J3.STL\n'}
+[0.501998] (cr5_description) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/meshes/J4.STL\n'}
+[0.502091] (cr5_description) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/meshes/J5.STL\n'}
+[0.502236] (cr5_description) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/meshes/J6.STL\n'}
+[0.502472] (cr5_description) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/meshes/base_link.STL\n'}
+[0.503357] (cr5_description) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/rviz/cr5.rviz\n'}
+[0.503624] (cr5_description) StdoutLine: {'line': b'-- Symlinking: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/urdf/ag_style_gripper.xacro\n'}
+[0.514997] (cr5_description) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/urdf/cr5_robot.urdf\n'}
+[0.515172] (cr5_description) StdoutLine: {'line': b'-- Symlinking: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/urdf/cr5_with_gripper.urdf.xacro\n'}
+[0.526391] (cr5_description) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/ament_index/resource_index/package_run_dependencies/cr5_description\n'}
+[0.526767] (cr5_description) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/ament_index/resource_index/parent_prefix_path/cr5_description\n'}
+[0.527113] (cr5_description) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/environment/ament_prefix_path.sh\n'}
+[0.527234] (cr5_description) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/environment/ament_prefix_path.dsv\n'}
+[0.527506] (cr5_description) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/environment/path.sh\n'}
+[0.527699] (cr5_description) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/environment/path.dsv\n'}
+[0.527910] (cr5_description) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/local_setup.bash\n'}
+[0.528713] (cr5_description) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/local_setup.sh\n'}
+[0.528819] (cr5_description) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/local_setup.zsh\n'}
+[0.528897] (cr5_description) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/local_setup.dsv\n'}
+[0.528960] (cr5_description) StdoutLine: {'line': b'-- Symlinking: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/package.dsv\n'}
+[0.541699] (cr5_description) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/ament_index/resource_index/packages/cr5_description\n'}
+[0.543544] (cr5_description) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/cmake/cr5_descriptionConfig.cmake\n'}
+[0.543646] (cr5_description) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/cmake/cr5_descriptionConfig-version.cmake\n'}
+[0.543730] (cr5_description) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/package.xml\n'}
+[0.602161] (-) TimerEvent: {}
+[0.702757] (-) TimerEvent: {}
+[0.804656] (-) TimerEvent: {}
+[0.905368] (-) TimerEvent: {}
+[1.005744] (-) TimerEvent: {}
+[1.107990] (-) TimerEvent: {}
+[1.208518] (-) TimerEvent: {}
+[1.309151] (-) TimerEvent: {}
+[1.410051] (-) TimerEvent: {}
+[1.510459] (-) TimerEvent: {}
+[1.610725] (-) TimerEvent: {}
+[1.711484] (-) TimerEvent: {}
+[1.812759] (-) TimerEvent: {}
+[1.913429] (-) TimerEvent: {}
+[2.013718] (-) TimerEvent: {}
+[2.114179] (-) TimerEvent: {}
+[2.215502] (-) TimerEvent: {}
+[2.316220] (-) TimerEvent: {}
+[2.416708] (-) TimerEvent: {}
+[2.516958] (-) TimerEvent: {}
+[2.617493] (-) TimerEvent: {}
+[2.717789] (-) TimerEvent: {}
+[2.818492] (-) TimerEvent: {}
+[2.918871] (-) TimerEvent: {}
+[3.019445] (-) TimerEvent: {}
+[3.121163] (-) TimerEvent: {}
+[3.221659] (-) TimerEvent: {}
+[3.322132] (-) TimerEvent: {}
+[3.422636] (-) TimerEvent: {}
+[3.523304] (-) TimerEvent: {}
+[3.623940] (-) TimerEvent: {}
+[3.724666] (-) TimerEvent: {}
+[3.825384] (-) TimerEvent: {}
+[3.925732] (-) TimerEvent: {}
+[4.026275] (-) TimerEvent: {}
+[4.126541] (-) TimerEvent: {}
+[4.227146] (-) TimerEvent: {}
+[4.327708] (-) TimerEvent: {}
+[4.428315] (-) TimerEvent: {}
+[4.528608] (-) TimerEvent: {}
+[4.629191] (-) TimerEvent: {}
+[4.729648] (-) TimerEvent: {}
+[4.830121] (-) TimerEvent: {}
+[4.932329] (-) TimerEvent: {}
+[5.034086] (-) TimerEvent: {}
+[5.134403] (-) TimerEvent: {}
+[5.234820] (-) TimerEvent: {}
+[5.335478] (-) TimerEvent: {}
+[5.437322] (-) TimerEvent: {}
+[5.537923] (-) TimerEvent: {}
+[5.638607] (-) TimerEvent: {}
+[5.739451] (-) TimerEvent: {}
+[5.839983] (-) TimerEvent: {}
+[5.940340] (-) TimerEvent: {}
+[6.040658] (-) TimerEvent: {}
+[6.141121] (-) TimerEvent: {}
+[6.244128] (-) TimerEvent: {}
+[6.344487] (-) TimerEvent: {}
+[6.445076] (-) TimerEvent: {}
+[6.546223] (-) TimerEvent: {}
+[6.647542] (-) TimerEvent: {}
+[6.747885] (-) TimerEvent: {}
+[6.849129] (-) TimerEvent: {}
+[6.949467] (-) TimerEvent: {}
+[7.049747] (-) TimerEvent: {}
+[7.150245] (-) TimerEvent: {}
+[7.250584] (-) TimerEvent: {}
+[7.351245] (-) TimerEvent: {}
+[7.451866] (-) TimerEvent: {}
+[7.552471] (-) TimerEvent: {}
+[7.656405] (-) TimerEvent: {}
+[7.756880] (-) TimerEvent: {}
+[7.857153] (-) TimerEvent: {}
+[7.958110] (-) TimerEvent: {}
+[8.058957] (-) TimerEvent: {}
+[8.159383] (-) TimerEvent: {}
+[8.259666] (-) TimerEvent: {}
+[8.360315] (-) TimerEvent: {}
+[8.460996] (-) TimerEvent: {}
+[8.563647] (-) TimerEvent: {}
+[8.665561] (-) TimerEvent: {}
+[8.766005] (-) TimerEvent: {}
+[8.868588] (-) TimerEvent: {}
+[8.969205] (-) TimerEvent: {}
+[9.071067] (-) TimerEvent: {}
+[9.171336] (-) TimerEvent: {}
+[9.271623] (-) TimerEvent: {}
+[9.373990] (-) TimerEvent: {}
+[9.474238] (-) TimerEvent: {}
+[9.574591] (-) TimerEvent: {}
+[9.675520] (-) TimerEvent: {}
+[9.776099] (-) TimerEvent: {}
+[9.876350] (-) TimerEvent: {}
+[9.977708] (-) TimerEvent: {}
+[10.078768] (-) TimerEvent: {}
+[10.179489] (-) TimerEvent: {}
+[10.279974] (-) TimerEvent: {}
+[10.383297] (-) TimerEvent: {}
+[10.483592] (-) TimerEvent: {}
+[10.584328] (-) TimerEvent: {}
+[10.684821] (-) TimerEvent: {}
+[10.785454] (-) TimerEvent: {}
+[10.885673] (-) TimerEvent: {}
+[10.985992] (-) TimerEvent: {}
+[11.086222] (-) TimerEvent: {}
+[11.187564] (-) TimerEvent: {}
+[11.288085] (-) TimerEvent: {}
+[11.388798] (-) TimerEvent: {}
+[11.489364] (-) TimerEvent: {}
+[11.590033] (-) TimerEvent: {}
+[11.690659] (-) TimerEvent: {}
+[11.791098] (-) TimerEvent: {}
+[11.891417] (-) TimerEvent: {}
+[11.992192] (-) TimerEvent: {}
+[12.092797] (-) TimerEvent: {}
+[12.193202] (-) TimerEvent: {}
+[12.293424] (-) TimerEvent: {}
+[12.394648] (-) TimerEvent: {}
+[12.495037] (-) TimerEvent: {}
+[12.595462] (-) TimerEvent: {}
+[12.699045] (-) TimerEvent: {}
+[12.799637] (-) TimerEvent: {}
+[12.900195] (-) TimerEvent: {}
+[13.001107] (-) TimerEvent: {}
+[13.102794] (-) TimerEvent: {}
+[13.203132] (-) TimerEvent: {}
+[13.303363] (-) TimerEvent: {}
+[13.403634] (-) TimerEvent: {}
+[13.504377] (-) TimerEvent: {}
+[13.604985] (-) TimerEvent: {}
+[13.705247] (-) TimerEvent: {}
+[13.805953] (-) TimerEvent: {}
+[13.906306] (-) TimerEvent: {}
+[14.006996] (-) TimerEvent: {}
+[14.109570] (-) TimerEvent: {}
+[14.210193] (-) TimerEvent: {}
+[14.310380] (-) TimerEvent: {}
+[14.411484] (-) TimerEvent: {}
+[14.511812] (-) TimerEvent: {}
+[14.612474] (-) TimerEvent: {}
+[14.712972] (-) TimerEvent: {}
+[14.813440] (-) TimerEvent: {}
+[14.914129] (-) TimerEvent: {}
+[15.016180] (-) TimerEvent: {}
+[15.116463] (-) TimerEvent: {}
+[15.216996] (-) TimerEvent: {}
+[15.317464] (-) TimerEvent: {}
+[15.417749] (-) TimerEvent: {}
+[15.518242] (-) TimerEvent: {}
+[15.618608] (-) TimerEvent: {}
+[15.719165] (-) TimerEvent: {}
+[15.819531] (-) TimerEvent: {}
+[15.919779] (-) TimerEvent: {}
+[16.020968] (-) TimerEvent: {}
+[16.121650] (-) TimerEvent: {}
+[16.222221] (-) TimerEvent: {}
+[16.322890] (-) TimerEvent: {}
+[16.423706] (-) TimerEvent: {}
+[16.524243] (-) TimerEvent: {}
+[16.624763] (-) TimerEvent: {}
+[16.725248] (-) TimerEvent: {}
+[16.825630] (-) TimerEvent: {}
+[16.925941] (-) TimerEvent: {}
+[17.026117] (-) TimerEvent: {}
+[17.126455] (-) TimerEvent: {}
+[17.227293] (-) TimerEvent: {}
+[17.327539] (-) TimerEvent: {}
+[17.428156] (-) TimerEvent: {}
+[17.528505] (-) TimerEvent: {}
+[17.628888] (-) TimerEvent: {}
+[17.729348] (-) TimerEvent: {}
+[17.829920] (-) TimerEvent: {}
+[17.930290] (-) TimerEvent: {}
+[18.030757] (-) TimerEvent: {}
+[18.131170] (-) TimerEvent: {}
+[18.232850] (-) TimerEvent: {}
+[18.333074] (-) TimerEvent: {}
+[18.434127] (-) TimerEvent: {}
+[18.534376] (-) TimerEvent: {}
+[18.635016] (-) TimerEvent: {}
+[18.735303] (-) TimerEvent: {}
+[18.835686] (-) TimerEvent: {}
+[18.936065] (-) TimerEvent: {}
+[19.036730] (-) TimerEvent: {}
+[19.137178] (-) TimerEvent: {}
+[19.237434] (-) TimerEvent: {}
+[19.337741] (-) TimerEvent: {}
+[19.439479] (-) TimerEvent: {}
+[19.539936] (-) TimerEvent: {}
+[19.640374] (-) TimerEvent: {}
+[19.741359] (-) TimerEvent: {}
+[19.841655] (-) TimerEvent: {}
+[19.941987] (-) TimerEvent: {}
+[20.042521] (-) TimerEvent: {}
+[20.142884] (-) TimerEvent: {}
+[20.244580] (-) TimerEvent: {}
+[20.345466] (-) TimerEvent: {}
+[20.445788] (-) TimerEvent: {}
+[20.546290] (-) TimerEvent: {}
+[20.647177] (-) TimerEvent: {}
+[20.747463] (-) TimerEvent: {}
+[20.848082] (-) TimerEvent: {}
+[20.948613] (-) TimerEvent: {}
+[21.048884] (-) TimerEvent: {}
+[21.149263] (-) TimerEvent: {}
+[21.249906] (-) TimerEvent: {}
+[21.350632] (-) TimerEvent: {}
+[21.450995] (-) TimerEvent: {}
+[21.552650] (-) TimerEvent: {}
+[21.653030] (-) TimerEvent: {}
+[21.753309] (-) TimerEvent: {}
+[21.853583] (-) TimerEvent: {}
+[21.954181] (-) TimerEvent: {}
+[22.054394] (-) TimerEvent: {}
+[22.155052] (-) TimerEvent: {}
+[22.255443] (-) TimerEvent: {}
+[22.355856] (-) TimerEvent: {}
+[22.456239] (-) TimerEvent: {}
+[22.556529] (-) TimerEvent: {}
+[22.657233] (-) TimerEvent: {}
+[22.757593] (-) TimerEvent: {}
+[22.857979] (-) TimerEvent: {}
+[22.960424] (-) TimerEvent: {}
+[23.060716] (-) TimerEvent: {}
+[23.161121] (-) TimerEvent: {}
+[23.261474] (-) TimerEvent: {}
+[23.363977] (-) TimerEvent: {}
+[23.464238] (-) TimerEvent: {}
+[23.564732] (-) TimerEvent: {}
+[23.664931] (-) TimerEvent: {}
+[23.765425] (-) TimerEvent: {}
+[23.865936] (-) TimerEvent: {}
+[23.966688] (-) TimerEvent: {}
+[24.068116] (-) TimerEvent: {}
+[24.168578] (-) TimerEvent: {}
+[24.269131] (-) TimerEvent: {}
+[24.369510] (-) TimerEvent: {}
+[24.470126] (-) TimerEvent: {}
+[24.570482] (-) TimerEvent: {}
+[24.671560] (-) TimerEvent: {}
+[24.771877] (-) TimerEvent: {}
+[24.872532] (-) TimerEvent: {}
+[24.973007] (-) TimerEvent: {}
+[25.073492] (-) TimerEvent: {}
+[25.173937] (-) TimerEvent: {}
+[25.274409] (-) TimerEvent: {}
+[25.375211] (-) TimerEvent: {}
+[25.475671] (-) TimerEvent: {}
+[25.575992] (-) TimerEvent: {}
+[25.676288] (-) TimerEvent: {}
+[25.777502] (-) TimerEvent: {}
+[25.878661] (-) TimerEvent: {}
+[25.979149] (-) TimerEvent: {}
+[26.079583] (-) TimerEvent: {}
+[26.179961] (-) TimerEvent: {}
+[26.280504] (-) TimerEvent: {}
+[26.380740] (-) TimerEvent: {}
+[26.482030] (-) TimerEvent: {}
+[26.584317] (-) TimerEvent: {}
+[26.684722] (-) TimerEvent: {}
+[26.785154] (-) TimerEvent: {}
+[26.885384] (-) TimerEvent: {}
+[26.985613] (-) TimerEvent: {}
+[27.086240] (-) TimerEvent: {}
+[27.186808] (-) TimerEvent: {}
+[27.288715] (-) TimerEvent: {}
+[27.388944] (-) TimerEvent: {}
+[27.489302] (-) TimerEvent: {}
+[27.589931] (-) TimerEvent: {}
+[27.690623] (-) TimerEvent: {}
+[27.791226] (-) TimerEvent: {}
+[27.891586] (-) TimerEvent: {}
+[27.991896] (-) TimerEvent: {}
+[28.092282] (-) TimerEvent: {}
+[28.194152] (-) TimerEvent: {}
+[28.294773] (-) TimerEvent: {}
+[28.395111] (-) TimerEvent: {}
+[28.495341] (-) TimerEvent: {}
+[28.595965] (-) TimerEvent: {}
+[28.696337] (-) TimerEvent: {}
+[28.797099] (-) TimerEvent: {}
+[28.897693] (-) TimerEvent: {}
+[28.997887] (-) TimerEvent: {}
+[29.099031] (-) TimerEvent: {}
+[29.200885] (-) TimerEvent: {}
+[29.301474] (-) TimerEvent: {}
+[29.402680] (-) TimerEvent: {}
+[29.502949] (-) TimerEvent: {}
+[29.603348] (-) TimerEvent: {}
+[29.703967] (-) TimerEvent: {}
+[29.804496] (-) TimerEvent: {}
+[29.905351] (-) TimerEvent: {}
+[30.005602] (cr5_description) CommandEnded: {'returncode': 0}
+[30.006362] (-) TimerEvent: {}
+[30.029794] (cr5_description) JobEnded: {'identifier': 'cr5_description', 'rc': 0}
+[30.030874] (-) EventReactorShutdown: {}

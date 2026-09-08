@@ -1,0 +1,26 @@
+{
+  "video_path": "D:\\D435_Project\\data\\raw\\dianbiao_video.mp4",
+  "fps": 30.010875459510633,
+  "total_frames": 6678,
+  "start_frame": 0,
+  "end_frame": 6677,
+  "frame_interval": 15,
+  "roi_count": 2,
+  "saved_roi_images": 892,
+  "rois": [
+    {
+      "name": "roi_01",
+      "x": 817,
+      "y": 296,
+      "width": 120,
+      "height": 181
+    },
+    {
+      "name": "roi_02",
+      "x": 835,
+      "y": 302,
+      "width": 82,
+      "height": 57
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "root": "D:\\D435_Project\\video_dataset",
+  "source_video": "D:\\D435_Project\\data\\raw\\dianbiao_video.mp4",
+  "operation": "appended extra high-quality non-duplicate ROI crops from confirmed valid frame ranges, then regenerated YOLO dataset",
+  "added": {
+    "total": 116,
+    "by_roi": {
+      "roi_01": 82,
+      "roi_02": 34
+    },
+    "skipped_total": 2
+  },
+  "current_dataset": {
+    "total": 196,
+    "by_roi": {
+      "roi_01": 129,
+      "roi_02": 67
+    }
+  },
+  "yolo_dataset": {
+    "path": "D:\\D435_Project\\video_dataset\\yolo_dataset",
+    "classes": {
+      "0": "meter",
+      "1": "display"
+    },
+    "split_counts": {
+      "train": 137,
+      "val": 39,
+      "test": 20
+    },
+    "split_counts_by_class": {
+      "train": {
+        "meter": 90,
+        "display": 47
+      },
+      "val": {
+        "meter": 26,
+        "display": 13
+      },
+      "test": {
+        "meter": 13,
+        "display": 7
+      }
+    },
+    "label_format": "YOLO detect: class_id x_center y_center width height, normalized; full-image boxes for ROI crops"
+  }
+}

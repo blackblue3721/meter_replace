@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="cr5_with_gripper">
+  <xacro:include filename="$(find cr5_description)/urdf/cr5_robot.urdf"/>
+  <xacro:include filename="$(find cr5_description)/urdf/epg40_100_gripper.xacro"/>
+
+  <xacro:epg40_100_gripper
+    parent="Link6"
+    prefix="gripper_"
+    mount_xyz="0 0 0"
+    mount_rpy="0 0 0"
+    stroke="0.040"
+    process_tcp_z="0.240"/>
+</robot>

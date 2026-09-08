@@ -1,0 +1,2 @@
+﻿timestamp,frame_index,target_id,target_source,depth_m,pixel_x,pixel_y,camera_x_m,camera_y_m,camera_z_m,smooth_x_m,smooth_y_m,smooth_z_m,meter_conf,display_conf,stable_frames,status
+1788755726.0556884,10,1,display,0.872000,748,216,0.095500,-0.150382,0.872000,0.095500,-0.150382,0.872000,0.899192,0.919813,10,ready

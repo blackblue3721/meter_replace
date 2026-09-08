@@ -1,0 +1,11 @@
+{
+  "name": "visual_pregrasp_safe",
+  "recorded_at": "2026-09-08T13:36:34+08:00",
+  "source_receipt": "/home/haoran/Arm/openclaw_ball/logs/safety/default_safe_pose_20260908_133634.json",
+  "validation_status": "operator_approved_live_cr5_safe_pose",
+  "description": "Default safe retreat pose captured from live CR5 feedback",
+  "gripper_state": "open",
+  "joint_names": ["joint1", "joint2", "joint3", "joint4", "joint5", "joint6"],
+  "joint_positions_deg": [-96.875137, 22.205687, -128.438690, 78.441536, 58.476986, 194.894730],
+  "joint_positions_rad": [-1.690790103970582, 0.3875623508173021, -2.241678027448316, 1.3690630735216627, 1.0206159423426286, 3.4015547332853684]
+}

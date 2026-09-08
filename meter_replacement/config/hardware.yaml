@@ -1,0 +1,95 @@
+version: 1
+
+# 当前默认仍是仿真。只有专门的真机诊断/执行入口才读取 real_cr5。
+active_backend: mock_moveit
+
+real_cr5:
+  ip: 192.168.5.1
+  dashboard_port: 29999
+  motion_port: 30003
+  feedback_port: 30004
+  connection_timeout_s: 2.0
+  feedback_timeout_s: 2.0
+
+  # 已通过只读反馈、DobotStudio 对照、RViz 姿态对照和现场人工确认。
+  # J6 +2°及J1往返调试已通过。当前授权仅扩展到人工审查过的
+  # MoveIt预抓取轨迹首段已通过。当前授权仅扩展到同一份人工审查轨迹的
+  # 预抓取终点已通过。当前授权仅扩展到同一场景中已审核的ServoJ竖直
+  # 下降和竖直抬升轨迹已通过。当前授权仅扩展到操作员确认方向正确的
+  # J5语义翻转和箱前转移已通过。当前授权仅扩展到先规划、后人工审核的
+  # 直线插入阶段已通过。当前授权仅扩展到虚拟释放后的直线撤离；
+  # 直线撤离已通过。当前授权仅扩展到重新规划并人工审核的最近腕部分支
+  # Home返回；完整工艺仍未授权。
+  access_mode: commissioning
+  commissioning_authorization:
+    date: 2026-08-20
+    # Two reviewed vision stages: live posture -> safe transition -> approach.
+    # No descent, gripper command, or contact operation is authorized.
+    scope: moveit_servoj_vision_two_stage_approach_only
+    operator_safety_check_confirmed: true
+    full_workflow_authorized: false
+    authorized_run_id: ""
+
+  # CR5 ROS 参考驱动采用 q_actual(deg) -> joint position(rad) 的直接转换。
+  # 当前先据此显示真实姿态；必须由实物照片与 RViz 外观对照后才能批准运动。
+  joint_mapping:
+    status: visual_validation_passed
+    validation_date: 2026-08-07
+    validation_method: real_cr5_feedback_compared_with_rviz_visual_pose
+    vendor_joint_names: [J1, J2, J3, J4, J5, J6]
+    ros_joint_names: [joint1, joint2, joint3, joint4, joint5, joint6]
+    sign: [1, 1, 1, 1, 1, 1]
+    offset_deg: [0, 0, 0, 0, 0, 0]
+
+  # EPG40-100 已采购并完成 CAD 建模，但实体安装、I/O 和 TCP 标定尚未验收。
+  # 当前真机工艺状态机中的开合动作仍只产生软件握手，不发送实体 I/O。
+  end_effector:
+    mode: virtual_handshake
+    physical_tool_installed: false
+    preserve_moveit_tool_envelope: true
+    model: CHA_EPG40-100-C7
+    visual_open_position_m: 0.020
+    custom_fingers_installed: false
+
+  # 这些值仅登记后续低速试运行的上限；只读程序不会使用或发送它们。
+  commissioning_limits:
+    speed_factor_percent: 10
+    maximum_first_test_joint_delta_deg: 3.0
+    j1_roundtrip_delta_deg: 15.0
+    moveit_first_segment_waypoint_index: 3
+    moveit_first_segment_max_joint_delta_deg: 2.10
+    # 2026-08-07 operator-approved speed for the guarded first MoveIt segment.
+    moveit_first_segment_speed_percent: 40
+    moveit_trajectory_start_tolerance_deg: 0.15
+    # 完整任务起点的最终微小归一化保护值；较大范围回原点必须先经MoveIt审核。
+    real_install_start_alignment_max_delta_deg: 0.50
+    moveit_waypoint_target_tolerance_deg: 0.10
+    moveit_pregrasp_full_max_joint_delta_deg: 104.0
+    moveit_joint_line_deviation_tolerance_deg: 0.001
+    moveit_servoj_time_scale: 2.0
+    # Dobot recommends a 30 ms (about 33 Hz) ServoJ secondary-development cycle.
+    moveit_servoj_cycle_s: 0.03
+    moveit_servoj_speed_percent: 10
+    moveit_servoj_max_step_deg: 1.60
+    moveit_servoj_target_tolerance_deg: 0.20
+    moveit_lift_max_joint_delta_deg: 24.0
+    moveit_semantic_flip_max_joint_delta_deg: 90.20
+    # Commissioning guard, deliberately inside the controller-side J5 boundary.
+    # PositiveSolution accepts boundary values but JointMovJ rejected -179.993 deg.
+    # Include MoveIt's configured joint-goal tolerance (~0.06 deg).
+    moveit_semantic_flip_j5_guard_deg: [-175.1, 175.1]
+    moveit_slot_pick_approach_max_joint_delta_deg: 135.0
+    moveit_vision_safe_transition_max_joint_delta_deg: 206.5
+    moveit_vision_approach_max_joint_delta_deg: 195.0
+    moveit_slot_transfer_max_joint_delta_deg: 102.0
+    moveit_slot_transfer_servoj_max_step_deg: 2.30
+    moveit_slot_insert_max_joint_delta_deg: 30.0
+    moveit_slot_retreat_max_joint_delta_deg: 30.0
+    moveit_return_home_max_joint_delta_deg: 60.0
+    # One-time MoveIt-reviewed transition from an operator-adjusted pose to
+    # the fixed start of the validated eight-stage installation bundle.
+    moveit_install_start_transition_max_joint_delta_deg: 225.0
+    # 当前人工审核的自定义目标轨迹端点最大变化约71.07°。
+    moveit_custom_pose_max_joint_delta_deg: 75.0
+    require_operator_confirmation: true
+    require_emergency_stop_ready: true

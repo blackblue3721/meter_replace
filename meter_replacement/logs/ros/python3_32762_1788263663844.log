@@ -1,0 +1,13 @@
+[INFO] [1788263664.370289223] [single_arm_pick_sequence]: Selected home profile: vision_safe_transition
+[INFO] [1788263664.427666727] [single_arm_pick_sequence]: Loaded motion configuration: /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/share/meter_grasp/config/poses.yaml
+[INFO] [1788263664.428135251] [single_arm_pick_sequence]: Execution is DISABLED (plan only)
+[INFO] [1788263664.428494840] [single_arm_pick_sequence]: Requested motion stage: return_home
+[INFO] [1788263664.428818881] [single_arm_pick_sequence]: Selected meter slot: slot_r1_c2
+[INFO] [1788263664.429265834] [single_arm_pick_sequence]: Waiting for MoveIt planning scene...
+[INFO] [1788263665.199436793] [single_arm_pick_sequence]: Verified collision objects: world=['cabinet_left_breaker', 'cabinet_right_breaker_bank', 'd435_camera_collision', 'd435_support_horizontal', 'd435_support_vertical', 'electric_meter', 'meter_cabinet_back', 'meter_cabinet_bottom', 'meter_cabinet_divider', 'meter_cabinet_left_door_open', 'meter_cabinet_left_side', 'meter_cabinet_right_door_open', 'meter_cabinet_right_side', 'meter_cabinet_top', 'workcell_tabletop'], attached=[]
+[INFO] [1788263665.201408452] [single_arm_pick_sequence]: Planning 'return_home' with pipeline='ompl', planner=''
+[INFO] [1788263665.325004369] [single_arm_pick_sequence]: 'return_home' succeeded
+[INFO] [1788263665.325492250] [single_arm_pick_sequence]: Planned cumulative joint travel: joint1=0.002, joint2=0.005, joint3=0.000, joint4=0.002, joint5=0.001, joint6=0.001
+[INFO] [1788263665.328811396] [single_arm_pick_sequence]: Exported validated plan-only trajectory: /home/haoran/Arm/meter_replacement/logs/vision/first_meter_safe_transition_candidate.json
+[INFO] [1788263665.329456342] [single_arm_pick_sequence]: Trajectory SHA256: ca9fbfdefa245c373cf472b2a081e88d225833ff91978afc5a9d6bd6295e2c71
+[INFO] [1788263665.330151764] [single_arm_pick_sequence]: Plan-only safety check complete: 'return_home'

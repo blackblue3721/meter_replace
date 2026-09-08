@@ -1,0 +1,25 @@
+[60.738s] Invoking command in '/home/haoran/Arm/meter_replacement/robot/build/meter_grasp': AMENT_PREFIX_PATH=/home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config:/home/haoran/Arm/meter_replacement/robot/install/cr5_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config:/home/haoran/Arm/meter_replacement/robot/install/cr5_description CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/haoran/Arm/meter_replacement/robot/build/meter_grasp/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/haoran/Arm/meter_replacement/robot/build/meter_grasp/build --no-deps symlink_data
+[60.963s] running develop
+[61.101s] running egg_info
+[61.102s] writing meter_grasp.egg-info/PKG-INFO
+[61.102s] writing dependency_links to meter_grasp.egg-info/dependency_links.txt
+[61.103s] writing entry points to meter_grasp.egg-info/entry_points.txt
+[61.103s] writing requirements to meter_grasp.egg-info/requires.txt
+[61.103s] writing top-level names to meter_grasp.egg-info/top_level.txt
+[61.104s] reading manifest file 'meter_grasp.egg-info/SOURCES.txt'
+[61.106s] writing manifest file 'meter_grasp.egg-info/SOURCES.txt'
+[61.107s] running build_ext
+[61.107s] Creating /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/python3.10/site-packages/meter-grasp.egg-link (link to .)
+[61.108s] Installing add_meter_collision script to /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/meter_grasp
+[61.108s] Installing attach_meter script to /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/meter_grasp
+[61.109s] Installing detach_meter script to /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/meter_grasp
+[61.109s] Installing run_meter_grasp script to /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/meter_grasp
+[61.109s] Installing run_meter_remove script to /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/meter_grasp
+[61.109s] Installing run_pick_sequence script to /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/meter_grasp
+[61.110s] Installing show_meter_cad script to /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/meter_grasp
+[61.110s] Installing show_meter_slots script to /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/meter_grasp
+[61.110s] Installing show_workcell_camera script to /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/meter_grasp
+[61.110s] 
+[61.110s] Installed /home/haoran/Arm/meter_replacement/robot/build/meter_grasp
+[61.110s] running symlink_data
+[90.046s] Invoked command in '/home/haoran/Arm/meter_replacement/robot/build/meter_grasp' returned '0': AMENT_PREFIX_PATH=/home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config:/home/haoran/Arm/meter_replacement/robot/install/cr5_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config:/home/haoran/Arm/meter_replacement/robot/install/cr5_description CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/haoran/Arm/meter_replacement/robot/build/meter_grasp/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/haoran/Arm/meter_replacement/robot/build/meter_grasp/build --no-deps symlink_data

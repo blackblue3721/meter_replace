@@ -1,0 +1,2 @@
+roi_01.jpg	868	confidence=0.7083	engine=easyocr	mode=digit_whole_roi_en	languages=ch_sim,en
+roi_02.jpg	34324271803010106	confidence=0.9216	engine=easyocr	mode=mixed_detect_en	languages=ch_sim,en

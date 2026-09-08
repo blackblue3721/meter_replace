@@ -1,0 +1,1 @@
+/home/haoran/Arm/meter_replacement/robot/build/cr5_moveit_config/ament_cmake_environment_hooks/local_setup.bash

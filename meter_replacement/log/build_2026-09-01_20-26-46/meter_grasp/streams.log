@@ -1,0 +1,43 @@
+[90.106s] Invoking command in '/home/haoran/Arm/meter_replacement/build/meter_grasp': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/haoran/Arm/meter_replacement/build/meter_grasp/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/haoran/Arm/meter_replacement/install/meter_grasp/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/haoran/Arm/meter_replacement/build/meter_grasp/build --no-deps symlink_data
+[90.617s] running develop
+[90.802s] running egg_info
+[90.802s] creating meter_grasp.egg-info
+[90.802s] writing meter_grasp.egg-info/PKG-INFO
+[90.802s] writing dependency_links to meter_grasp.egg-info/dependency_links.txt
+[90.803s] writing entry points to meter_grasp.egg-info/entry_points.txt
+[90.803s] writing requirements to meter_grasp.egg-info/requires.txt
+[90.803s] writing top-level names to meter_grasp.egg-info/top_level.txt
+[90.803s] writing manifest file 'meter_grasp.egg-info/SOURCES.txt'
+[90.806s] reading manifest file 'meter_grasp.egg-info/SOURCES.txt'
+[90.807s] writing manifest file 'meter_grasp.egg-info/SOURCES.txt'
+[90.809s] running build_ext
+[90.809s] Creating /home/haoran/Arm/meter_replacement/install/meter_grasp/lib/python3.10/site-packages/meter-grasp.egg-link (link to .)
+[90.811s] Installing add_meter_collision script to /home/haoran/Arm/meter_replacement/install/meter_grasp/lib/meter_grasp
+[90.811s] Installing attach_meter script to /home/haoran/Arm/meter_replacement/install/meter_grasp/lib/meter_grasp
+[90.812s] Installing detach_meter script to /home/haoran/Arm/meter_replacement/install/meter_grasp/lib/meter_grasp
+[90.812s] Installing run_meter_grasp script to /home/haoran/Arm/meter_replacement/install/meter_grasp/lib/meter_grasp
+[90.813s] Installing run_meter_remove script to /home/haoran/Arm/meter_replacement/install/meter_grasp/lib/meter_grasp
+[90.813s] Installing run_pick_sequence script to /home/haoran/Arm/meter_replacement/install/meter_grasp/lib/meter_grasp
+[90.813s] Installing show_meter_cad script to /home/haoran/Arm/meter_replacement/install/meter_grasp/lib/meter_grasp
+[90.813s] Installing show_meter_slots script to /home/haoran/Arm/meter_replacement/install/meter_grasp/lib/meter_grasp
+[90.814s] Installing show_workcell_camera script to /home/haoran/Arm/meter_replacement/install/meter_grasp/lib/meter_grasp
+[90.815s] 
+[90.815s] Installed /home/haoran/Arm/meter_replacement/build/meter_grasp
+[90.815s] running symlink_data
+[90.815s] creating /home/haoran/Arm/meter_replacement/install/meter_grasp/share/ament_index
+[90.815s] creating /home/haoran/Arm/meter_replacement/install/meter_grasp/share/ament_index/resource_index
+[90.815s] creating /home/haoran/Arm/meter_replacement/install/meter_grasp/share/ament_index/resource_index/packages
+[90.816s] symbolically linking /home/haoran/Arm/meter_replacement/build/meter_grasp/resource/meter_grasp -> /home/haoran/Arm/meter_replacement/install/meter_grasp/share/ament_index/resource_index/packages
+[90.816s] symbolically linking /home/haoran/Arm/meter_replacement/build/meter_grasp/package.xml -> /home/haoran/Arm/meter_replacement/install/meter_grasp/share/meter_grasp
+[90.816s] creating /home/haoran/Arm/meter_replacement/install/meter_grasp/share/meter_grasp/launch
+[90.816s] symbolically linking /home/haoran/Arm/meter_replacement/build/meter_grasp/launch/single_arm_scene.launch.py -> /home/haoran/Arm/meter_replacement/install/meter_grasp/share/meter_grasp/launch
+[90.816s] symbolically linking /home/haoran/Arm/meter_replacement/build/meter_grasp/launch/real_arm_plan_only_scene.launch.py -> /home/haoran/Arm/meter_replacement/install/meter_grasp/share/meter_grasp/launch
+[90.816s] symbolically linking /home/haoran/Arm/meter_replacement/build/meter_grasp/launch/bundle_generation_scene.launch.py -> /home/haoran/Arm/meter_replacement/install/meter_grasp/share/meter_grasp/launch
+[90.816s] symbolically linking /home/haoran/Arm/meter_replacement/build/meter_grasp/launch/vision_guided_scene.launch.py -> /home/haoran/Arm/meter_replacement/install/meter_grasp/share/meter_grasp/launch
+[90.816s] creating /home/haoran/Arm/meter_replacement/install/meter_grasp/share/meter_grasp/config
+[90.816s] symbolically linking /home/haoran/Arm/config/scene.json -> /home/haoran/Arm/meter_replacement/install/meter_grasp/share/meter_grasp/config
+[90.816s] symbolically linking /home/haoran/Arm/config/poses.yaml -> /home/haoran/Arm/meter_replacement/install/meter_grasp/share/meter_grasp/config
+[90.816s] creating /home/haoran/Arm/meter_replacement/install/meter_grasp/share/meter_grasp/meshes
+[90.816s] symbolically linking /home/haoran/Arm/meter_replacement/build/meter_grasp/meshes/electric_meter_body.stl -> /home/haoran/Arm/meter_replacement/install/meter_grasp/share/meter_grasp/meshes
+[90.816s] symbolically linking /home/haoran/Arm/meter_replacement/build/meter_grasp/meshes/electric_meter_cover.stl -> /home/haoran/Arm/meter_replacement/install/meter_grasp/share/meter_grasp/meshes
+[90.880s] Invoked command in '/home/haoran/Arm/meter_replacement/build/meter_grasp' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/haoran/Arm/meter_replacement/build/meter_grasp/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/haoran/Arm/meter_replacement/install/meter_grasp/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/haoran/Arm/meter_replacement/build/meter_grasp/build --no-deps symlink_data

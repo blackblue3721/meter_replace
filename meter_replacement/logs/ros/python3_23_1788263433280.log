@@ -1,0 +1,7 @@
+[INFO] [1788263433.516116084] [single_arm_pick_sequence]: Selected home profile: vision_safe_transition
+[INFO] [1788263433.671618106] [single_arm_pick_sequence]: Loaded motion configuration: /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/share/meter_grasp/config/poses.yaml
+[INFO] [1788263433.672144240] [single_arm_pick_sequence]: Execution is DISABLED (plan only)
+[INFO] [1788263433.672519579] [single_arm_pick_sequence]: Requested motion stage: return_home
+[INFO] [1788263433.673309973] [single_arm_pick_sequence]: Selected meter slot: slot_r1_c2
+[INFO] [1788263433.674188724] [single_arm_pick_sequence]: Waiting for MoveIt planning scene...
+[ERROR] [1788263463.754158140] [single_arm_pick_sequence]: GetPlanningScene service was not available

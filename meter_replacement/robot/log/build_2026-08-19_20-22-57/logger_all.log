@@ -1,0 +1,141 @@
+[0.110s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--base-paths', 'src', '../simulation/ros2', '--packages-select', 'meter_grasp', '--symlink-install']
+[0.110s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['src', '../simulation/ros2'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['meter_grasp'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7a31df84c6d0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7a31df9c9d50>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7a31df9c9d50>>)
+[0.258s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.259s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.259s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.259s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.259s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.259s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/haoran/Arm/meter_replacement/robot/src', '/home/haoran/Arm/meter_replacement/simulation/ros2'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/cr5_description) by extensions ['ignore', 'ignore_ament_install']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/cr5_description) by extension 'ignore'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/cr5_description) by extension 'ignore_ament_install'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/cr5_description) by extensions ['colcon_pkg']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/cr5_description) by extension 'colcon_pkg'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/cr5_description) by extensions ['colcon_meta']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/cr5_description) by extension 'colcon_meta'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/cr5_description) by extensions ['ros']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/cr5_description) by extension 'ros'
+[0.275s] DEBUG:colcon.colcon_core.package_identification:Package 'src/cr5_description' with type 'ros.ament_cmake' and name 'cr5_description'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/cr5_moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/cr5_moveit_config) by extension 'ignore'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/cr5_moveit_config) by extension 'ignore_ament_install'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/cr5_moveit_config) by extensions ['colcon_pkg']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/cr5_moveit_config) by extension 'colcon_pkg'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/cr5_moveit_config) by extensions ['colcon_meta']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/cr5_moveit_config) by extension 'colcon_meta'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/cr5_moveit_config) by extensions ['ros']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/cr5_moveit_config) by extension 'ros'
+[0.277s] DEBUG:colcon.colcon_core.package_identification:Package 'src/cr5_moveit_config' with type 'ros.ament_cmake' and name 'cr5_moveit_config'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2) by extension 'ignore'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2) by extension 'ignore_ament_install'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2) by extensions ['colcon_pkg']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2) by extension 'colcon_pkg'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2) by extensions ['colcon_meta']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2) by extension 'colcon_meta'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2) by extensions ['ros']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2) by extension 'ros'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2) by extensions ['cmake', 'python']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2) by extension 'cmake'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2) by extension 'python'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2) by extensions ['python_setup_py']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2) by extension 'python_setup_py'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/meter_grasp) by extensions ['ignore', 'ignore_ament_install']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/meter_grasp) by extension 'ignore'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/meter_grasp) by extension 'ignore_ament_install'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/meter_grasp) by extensions ['colcon_pkg']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/meter_grasp) by extension 'colcon_pkg'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/meter_grasp) by extensions ['colcon_meta']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/meter_grasp) by extension 'colcon_meta'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/meter_grasp) by extensions ['ros']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/meter_grasp) by extension 'ros'
+[0.279s] DEBUG:colcon.colcon_core.package_identification:Package '../simulation/ros2/meter_grasp' with type 'ros.ament_python' and name 'meter_grasp'
+[0.279s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.300s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'cr5_description' in 'src/cr5_description'
+[0.300s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'cr5_moveit_config' in 'src/cr5_moveit_config'
+[0.301s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.301s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.303s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 362 installed packages in /opt/ros/humble
+[0.320s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'meter_grasp' build argument 'cmake_args' from command line to 'None'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'meter_grasp' build argument 'cmake_target' from command line to 'None'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'meter_grasp' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'meter_grasp' build argument 'cmake_clean_cache' from command line to 'False'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'meter_grasp' build argument 'cmake_clean_first' from command line to 'False'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'meter_grasp' build argument 'cmake_force_configure' from command line to 'False'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'meter_grasp' build argument 'ament_cmake_args' from command line to 'None'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'meter_grasp' build argument 'catkin_cmake_args' from command line to 'None'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'meter_grasp' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.363s] DEBUG:colcon.colcon_core.verb:Building package 'meter_grasp' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/haoran/Arm/meter_replacement/robot/build/meter_grasp', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/haoran/Arm/meter_replacement/robot/install/meter_grasp', 'merge_install': False, 'path': '/home/haoran/Arm/meter_replacement/simulation/ros2/meter_grasp', 'symlink_install': True, 'test_result_base': None}
+[0.363s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.365s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.365s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/haoran/Arm/meter_replacement/simulation/ros2/meter_grasp' with build type 'ament_python'
+[0.366s] Level 1:colcon.colcon_core.shell:create_environment_hook('meter_grasp', 'ament_prefix_path')
+[0.368s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.368s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/haoran/Arm/meter_replacement/robot/install/meter_grasp/share/meter_grasp/hook/ament_prefix_path.ps1'
+[0.369s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/haoran/Arm/meter_replacement/robot/install/meter_grasp/share/meter_grasp/hook/ament_prefix_path.dsv'
+[0.370s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/haoran/Arm/meter_replacement/robot/install/meter_grasp/share/meter_grasp/hook/ament_prefix_path.sh'
+[0.371s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.371s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.629s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/haoran/Arm/meter_replacement/simulation/ros2/meter_grasp'
+[0.629s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.629s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[30.723s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: check, build, install, compile_catalog, extract_messages, setopt, install_egg_info, upload, build_ext, build_clib, install_scripts, rotate, test, register, init_catalog, install_lib, sdist, saveopts, develop, alias, bdist_egg, symlink_data, easy_install, upload_docs, update_catalog, build_scripts, clean, bdist_dumb, build_py, install_headers, dist_info, bdist, bdist_rpm, egg_info, install_data
+[31.095s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools 'develop' options: --egg-path, --record, --no-find-links, --no-user-cfg, --upgrade, --install-dir, --user, --build-directory, --multi-version, --always-unzip, --exclude-scripts, --find-links, --script-dir, --install-layout, --optimize, --editable, --no-deps, --version, --force-installation-into-system-dir, --dry-run, --local-snapshots-ok, --prefix, --index-url, --always-copy, --allow-hosts, --uninstall, --verbose, --help, --site-dirs, --quiet, --zip-ok
+[31.100s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/haoran/Arm/meter_replacement/robot/build/meter_grasp': AMENT_PREFIX_PATH=/home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config:/home/haoran/Arm/meter_replacement/robot/install/cr5_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config:/home/haoran/Arm/meter_replacement/robot/install/cr5_description CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/haoran/Arm/meter_replacement/robot/build/meter_grasp/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/haoran/Arm/meter_replacement/robot/build/meter_grasp/build --no-deps symlink_data
+[31.606s] Level 1:colcon.colcon_core.shell:create_environment_hook('meter_grasp', 'pythonpath_develop')
+[31.607s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/haoran/Arm/meter_replacement/robot/build/meter_grasp/share/meter_grasp/hook/pythonpath_develop.ps1'
+[31.608s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/haoran/Arm/meter_replacement/robot/build/meter_grasp/share/meter_grasp/hook/pythonpath_develop.dsv'
+[31.608s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/haoran/Arm/meter_replacement/robot/build/meter_grasp/share/meter_grasp/hook/pythonpath_develop.sh'
+[31.609s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/haoran/Arm/meter_replacement/robot/build/meter_grasp' returned '0': AMENT_PREFIX_PATH=/home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config:/home/haoran/Arm/meter_replacement/robot/install/cr5_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config:/home/haoran/Arm/meter_replacement/robot/install/cr5_description CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/haoran/Arm/meter_replacement/robot/build/meter_grasp/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/haoran/Arm/meter_replacement/robot/build/meter_grasp/build --no-deps symlink_data
+[31.611s] Level 1:colcon.colcon_core.environment:checking '/home/haoran/Arm/meter_replacement/robot/install/meter_grasp' for CMake module files
+[31.612s] Level 1:colcon.colcon_core.environment:checking '/home/haoran/Arm/meter_replacement/robot/install/meter_grasp' for CMake config files
+[31.613s] Level 1:colcon.colcon_core.environment:checking '/home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib'
+[31.614s] Level 1:colcon.colcon_core.environment:checking '/home/haoran/Arm/meter_replacement/robot/install/meter_grasp/bin'
+[31.615s] Level 1:colcon.colcon_core.environment:checking '/home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/pkgconfig/meter_grasp.pc'
+[31.615s] Level 1:colcon.colcon_core.environment:checking '/home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/python3.10/site-packages'
+[31.615s] Level 1:colcon.colcon_core.shell:create_environment_hook('meter_grasp', 'pythonpath')
+[31.615s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/haoran/Arm/meter_replacement/robot/install/meter_grasp/share/meter_grasp/hook/pythonpath.ps1'
+[31.616s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/haoran/Arm/meter_replacement/robot/install/meter_grasp/share/meter_grasp/hook/pythonpath.dsv'
+[31.617s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/haoran/Arm/meter_replacement/robot/install/meter_grasp/share/meter_grasp/hook/pythonpath.sh'
+[31.618s] Level 1:colcon.colcon_core.environment:checking '/home/haoran/Arm/meter_replacement/robot/install/meter_grasp/bin'
+[31.618s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(meter_grasp)
+[31.619s] INFO:colcon.colcon_core.shell:Creating package script '/home/haoran/Arm/meter_replacement/robot/install/meter_grasp/share/meter_grasp/package.ps1'
+[31.620s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/haoran/Arm/meter_replacement/robot/install/meter_grasp/share/meter_grasp/package.dsv'
+[31.621s] INFO:colcon.colcon_core.shell:Creating package script '/home/haoran/Arm/meter_replacement/robot/install/meter_grasp/share/meter_grasp/package.sh'
+[31.622s] INFO:colcon.colcon_core.shell:Creating package script '/home/haoran/Arm/meter_replacement/robot/install/meter_grasp/share/meter_grasp/package.bash'
+[31.622s] INFO:colcon.colcon_core.shell:Creating package script '/home/haoran/Arm/meter_replacement/robot/install/meter_grasp/share/meter_grasp/package.zsh'
+[31.623s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/haoran/Arm/meter_replacement/robot/install/meter_grasp/share/colcon-core/packages/meter_grasp)
+[31.624s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[31.624s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[31.624s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[31.625s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[31.630s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[31.630s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[31.630s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[31.630s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.AccessDenied: Failed to connect to socket /run/user/1000/bus: Operation not permitted
+[31.630s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[31.631s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/haoran/Arm/meter_replacement/robot/install/local_setup.ps1'
+[31.632s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/haoran/Arm/meter_replacement/robot/install/_local_setup_util_ps1.py'
+[31.633s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/haoran/Arm/meter_replacement/robot/install/setup.ps1'
+[31.634s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/haoran/Arm/meter_replacement/robot/install/local_setup.sh'
+[31.635s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/haoran/Arm/meter_replacement/robot/install/_local_setup_util_sh.py'
+[31.636s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/haoran/Arm/meter_replacement/robot/install/setup.sh'
+[31.637s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/haoran/Arm/meter_replacement/robot/install/local_setup.bash'
+[31.638s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/haoran/Arm/meter_replacement/robot/install/setup.bash'
+[31.639s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/haoran/Arm/meter_replacement/robot/install/local_setup.zsh'
+[31.640s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/haoran/Arm/meter_replacement/robot/install/setup.zsh'

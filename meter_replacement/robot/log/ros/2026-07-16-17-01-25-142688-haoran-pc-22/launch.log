@@ -1,0 +1,23 @@
+1784192485.1438196 [INFO] [launch]: All log files can be found below /home/haoran/Arm/meter_replacement/robot/log/ros/2026-07-16-17-01-25-142688-haoran-pc-22
+1784192485.1440160 [INFO] [launch]: Default logging verbosity is set to INFO
+1784192485.2952986 [INFO] [robot_state_publisher-1]: process started with pid [24]
+1784192485.2960117 [INFO] [joint_state_publisher-2]: process started with pid [26]
+1784192485.3847935 [robot_state_publisher-1] getifaddrs: Operation not permitted
+1784192485.3850114 [robot_state_publisher-1] getifaddrs: Operation not permitted
+1784192485.3860991 [robot_state_publisher-1] getifaddrs: Operation not permitted
+1784192485.3887062 [robot_state_publisher-1] [37;1m2026-07-16 17:01:25.385 [31;1m[[37;1mTRANSPORT_UDP[31;1m Error] [37mError creating socket: Operation not permitted[34;1m -> Function [36minit[m
+1784192485.3888156 [robot_state_publisher-1] [37;1m2026-07-16 17:01:25.385 [31;1m[[37;1mRTPS_PARTICIPANT[31;1m Error] [37mUser transport failed to register.[34;1m -> Function [36mRTPSParticipantImpl[m
+1784192485.4396498 [robot_state_publisher-1] [INFO] [1784192485.438518144] [robot_state_publisher]: got segment Link1
+1784192485.4401689 [robot_state_publisher-1] [INFO] [1784192485.438677780] [robot_state_publisher]: got segment Link2
+1784192485.4404347 [robot_state_publisher-1] [INFO] [1784192485.438687698] [robot_state_publisher]: got segment Link3
+1784192485.4407332 [robot_state_publisher-1] [INFO] [1784192485.438692267] [robot_state_publisher]: got segment Link4
+1784192485.4407816 [robot_state_publisher-1] [INFO] [1784192485.438696545] [robot_state_publisher]: got segment Link5
+1784192485.4408176 [robot_state_publisher-1] [INFO] [1784192485.438700572] [robot_state_publisher]: got segment Link6
+1784192485.4408510 [robot_state_publisher-1] [INFO] [1784192485.438704510] [robot_state_publisher]: got segment base_link
+1784192485.4408846 [robot_state_publisher-1] [INFO] [1784192485.438708537] [robot_state_publisher]: got segment dummy_link
+1784192485.6389761 [joint_state_publisher-2] getifaddrs: Operation not permitted
+1784192485.6404445 [joint_state_publisher-2] getifaddrs: Operation not permitted
+1784192485.6407182 [joint_state_publisher-2] getifaddrs: Operation not permitted
+1784192485.6424708 [joint_state_publisher-2] [37;1m2026-07-16 17:01:25.640 [31;1m[[37;1mTRANSPORT_UDP[31;1m Error] [37mError creating socket: Operation not permitted[34;1m -> Function [36minit[m
+1784192485.6427474 [joint_state_publisher-2] [37;1m2026-07-16 17:01:25.640 [31;1m[[37;1mRTPS_PARTICIPANT[31;1m Error] [37mUser transport failed to register.[34;1m -> Function [36mRTPSParticipantImpl[m
+1784192485.6945593 [joint_state_publisher-2] [INFO] [1784192485.694334794] [joint_state_publisher]: Waiting for robot_description to be published on the robot_description topic...

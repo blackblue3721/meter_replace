@@ -1,0 +1,317 @@
+# 项目动作复现手册
+
+更新日期：2026-08-14  
+项目目录：`~/Arm/meter_replacement`
+
+本文件只保存已经验证过的启动顺序和命令。当前已完成：
+
+- MoveIt/RViz 仿真安装与拆取闭环；
+- MuJoCo 占位夹爪接触实验；
+- 真实 CR5 关节反馈实时发布到 ROS 2，RViz 与真机同步；
+- 经审核轨迹由 Python/TCP-IP 驱动真实 CR5 完成一次完整空载安装路径；
+- 真机完整运行记录：`install-20260807-01`，状态为 `complete`。
+
+> 当前真实 CR5 没有实体夹爪。真机“抓取/释放”是软件握手，验证的是机械臂、规划、轨迹转换和执行闭环，不代表真实电表已经被夹持。
+
+## 0. 通用规则
+
+每个新终端都必须独立加载环境：
+
+```bash
+cd ~/Arm/meter_replacement
+conda deactivate 2>/dev/null || true
+source /opt/ros/humble/setup.bash
+source robot/install/setup.bash
+```
+
+注意：
+
+1. `source` 只对当前终端生效。
+2. 仿真关节发布器和真实 CR5 关节发布器不能同时运行。
+3. 真机运动前必须保证 DobotStudio Pro 已切换到 `TCP/IP 二次开发`。
+4. 真机异常时优先使用现场急停；禁止使用 `continue()` 恢复未知队列。
+5. 不得重复使用已经完成的运行编号 `install-20260807-01`。
+6. `logs/commissioning/` 和 `logs/real_cr5/` 是审计证据，不要随意删除或覆盖。
+
+## 1. 修改 ROS 2 包后重新构建
+
+只有修改了 `robot/src/` 或 `simulation/ros2/meter_grasp/` 中的代码后才执行。
+
+```bash
+cd ~/Arm/meter_replacement/robot
+conda deactivate 2>/dev/null || true
+source /opt/ros/humble/setup.bash
+colcon build --symlink-install
+```
+
+构建完成后，新终端仍需重新执行：
+
+```bash
+source ~/Arm/meter_replacement/robot/install/setup.bash
+```
+
+## 2. 复现纯仿真电表安装与拆取
+
+### 终端 1：启动 MoveIt、mock 控制器、RViz 和工作场景
+
+```bash
+cd ~/Arm/meter_replacement
+conda deactivate 2>/dev/null || true
+source /opt/ros/humble/setup.bash
+source robot/install/setup.bash
+ros2 launch meter_grasp single_arm_scene.launch.py
+```
+
+保持终端 1 运行。
+
+### 终端 2：先检查，再执行桌面电表安装
+
+```bash
+cd ~/Arm/meter_replacement
+conda deactivate 2>/dev/null || true
+source /opt/ros/humble/setup.bash
+source robot/install/setup.bash
+```
+
+只规划、不执行：
+
+```bash
+ros2 run meter_grasp run_meter_grasp \
+  --ros-args \
+  -p target_slot:=slot_r1_c2 \
+  -p execute:=false
+```
+
+确认检查通过后执行：
+
+```bash
+ros2 run meter_grasp run_meter_grasp \
+  --ros-args \
+  -p target_slot:=slot_r1_c2 \
+  -p execute:=true
+```
+
+成功标志：
+
+```text
+Meter grasp process completed: installed in 'slot_r1_c2'
+```
+
+### 终端 2：从表位拆取并放回桌面
+
+安装状态机成功并回到 Home 后执行：
+
+```bash
+ros2 run meter_grasp run_meter_remove \
+  --ros-args \
+  -p target_slot:=slot_r1_c2 \
+  -p execute:=true
+```
+
+成功标志：
+
+```text
+Meter removal process completed: removed from 'slot_r1_c2' and placed on the desktop
+```
+
+## 3. 复现 MuJoCo 场景与夹持接触实验
+
+### 单独查看 MuJoCo 工作场景
+
+```bash
+cd ~/Arm/meter_replacement
+conda deactivate 2>/dev/null || true
+/usr/bin/python3 simulation/mujoco/view_single_arm_scene.py
+```
+
+### 可视化占位夹爪夹持、抬升和重力实验
+
+```bash
+cd ~/Arm/meter_replacement
+conda deactivate 2>/dev/null || true
+/usr/bin/python3 simulation/mujoco/grasp_contact_test.py
+```
+
+### 无窗口回归检查
+
+```bash
+/usr/bin/python3 simulation/mujoco/grasp_contact_test.py --check
+```
+
+预期结果：
+
+```text
+nominal_hold_check: PASS
+low_friction_drop_check: PASS
+grasp_contact_test: PASS
+```
+
+## 4. 复现真实 CR5 与 RViz 实时同步（只读，不运动）
+
+开始前关闭所有 mock 场景终端。
+
+### 终端 1：发布真实 CR5 关节反馈
+
+```bash
+cd ~/Arm/meter_replacement
+conda deactivate 2>/dev/null || true
+source /opt/ros/humble/setup.bash
+/usr/bin/python3 robot/real/cr5_tcp/publish_cr5_joint_states.py
+```
+
+保持终端 1 运行。该节点只连接 `192.168.5.1:30004`，不会发送控制命令。
+
+### 终端 2：启动真机反馈对应的 MoveIt/RViz 场景
+
+```bash
+cd ~/Arm/meter_replacement
+conda deactivate 2>/dev/null || true
+source /opt/ros/humble/setup.bash
+source robot/install/setup.bash
+ros2 launch meter_grasp real_arm_plan_only_scene.launch.py
+```
+
+保持终端 2 运行。该 launch 不启动 mock `ros2_control`，也不能向真机下发运动。
+
+### 终端 3：执行只读运动前检查
+
+```bash
+cd ~/Arm/meter_replacement
+conda deactivate 2>/dev/null || true
+source /opt/ros/humble/setup.bash
+/usr/bin/python3 robot/real/cr5_tcp/preflight_cr5.py
+```
+
+预期结果：
+
+```text
+PREFLIGHT RESULT: READ-ONLY CHECK PASSED
+```
+
+此时可在 DobotStudio Pro 中低速点动，检查真实 CR5 与 RViz 是否同步。不要在该检查中运行 mock 控制器。
+
+## 5. 查看已经完成的真机完整运行证据
+
+以下命令不会运动机器人：
+
+```bash
+cd ~/Arm/meter_replacement
+python3 -m json.tool \
+  logs/commissioning/runs/install-20260807-01/meter_install.json
+```
+
+应看到：
+
+```text
+"status": "complete"
+```
+
+以及八个已完成阶段：
+
+```text
+pregrasp
+grasp_candidate
+lift
+semantic_flip
+slot_transfer
+slot_insert
+slot_retreat
+return_home
+```
+
+## 6. 新一次真机完整运行的严格顺序
+
+这部分不是日常“一键重复运行”。电表箱、底座、工具、TCP 或障碍物发生变化后，旧轨迹必须作废并重新生成。
+
+### 阶段 A：在专用 mock 场景连续生成八段轨迹
+
+终端 1：
+
+```bash
+cd ~/Arm/meter_replacement
+conda deactivate 2>/dev/null || true
+source /opt/ros/humble/setup.bash
+source robot/install/setup.bash
+ros2 launch meter_grasp bundle_generation_scene.launch.py
+```
+
+终端 2：
+
+```bash
+cd ~/Arm/meter_replacement
+conda deactivate 2>/dev/null || true
+source /opt/ros/humble/setup.bash
+source robot/install/setup.bash
+/usr/bin/python3 tools/generate_real_install_bundle_mock.py
+```
+
+只有 dry-run 通过并确认 RViz 初始姿态正确后，才允许使用生成命令：
+
+```bash
+/usr/bin/python3 tools/generate_real_install_bundle_mock.py \
+  --execute \
+  --confirmation GENERATE_CONTINUOUS_MOCK_INSTALL_BUNDLE
+```
+
+生成器不会覆盖已有 `logs/real_cr5/full_install_bundle/`。历史轨迹必须先归档，不能直接删除后重做。
+
+### 阶段 B：人工审核并建立单次授权
+
+必须完成：
+
+- RViz 逐段观察方向、碰撞、绕圈和腕部分支；
+- 校验轨迹 SHA256 和阶段连续性；
+- 为本次运行分配新的唯一 `run-id`；
+- 在 `config/hardware.yaml` 中只授权该 `run-id`；
+- 确认现场急停、人员、线缆和临时障碍物状态。
+
+这一步由项目维护者修改配置，不使用临时终端命令绕过授权。
+
+### 阶段 C：切换到真实反馈场景
+
+停止两个 mock 终端，然后按本文件第 4 节启动三个真机同步终端。
+
+### 阶段 D：起点检查、必要时精确归位、完整 dry-run
+
+```bash
+/usr/bin/python3 robot/real/cr5_tcp/run_real_meter_install.py
+```
+
+若起点误差超过 `0.15°`，禁止放宽阈值。先使用受保护工具做 dry-run：
+
+```bash
+/usr/bin/python3 robot/real/cr5_tcp/align_real_install_start.py
+```
+
+归位执行必须具有对应的单独授权和确认字符串，不能与完整流程授权同时开启。
+
+完整 dry-run 的成功标志：
+
+```text
+FULL WORKFLOW DRY-RUN PASSED
+```
+
+### 阶段 E：使用新 run-id 执行一次
+
+```bash
+/usr/bin/python3 robot/real/cr5_tcp/run_real_meter_install.py \
+  --run-id <本次唯一运行编号> \
+  --execute \
+  --confirmation RUN_REAL_CR5_FULL_METER_INSTALL
+```
+
+成功标志：
+
+```text
+FULL METER INSTALL PASSED: 真机完整空载安装流程执行成功。
+```
+
+## 7. 停止顺序
+
+1. 确认机器人已静止；
+2. 关闭终端 3 中的一次性检查或任务程序；
+3. 关闭终端 2 的 RViz/MoveIt；
+4. 最后关闭终端 1 的真实关节反馈发布器；
+5. 在 DobotStudio Pro 中按现场规定下使能。
+
+若执行过程中失败：不要重发命令、不要调用 `continue()`、不要删除失败回执；先只读检查状态并保留日志。

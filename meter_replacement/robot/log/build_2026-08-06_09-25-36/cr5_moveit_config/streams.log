@@ -1,0 +1,40 @@
+[30.021s] Invoking command in '/home/haoran/Arm/meter_replacement/robot/build/cr5_moveit_config': AMENT_PREFIX_PATH=/home/haoran/Arm/meter_replacement/robot/install/cr5_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/haoran/Arm/meter_replacement/robot/install/cr5_description:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/haoran/Arm/meter_replacement/robot/build/cr5_moveit_config -- -j4 -l4
+[30.144s] Invoked command in '/home/haoran/Arm/meter_replacement/robot/build/cr5_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/haoran/Arm/meter_replacement/robot/install/cr5_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/haoran/Arm/meter_replacement/robot/install/cr5_description:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/haoran/Arm/meter_replacement/robot/build/cr5_moveit_config -- -j4 -l4
+[30.165s] Invoking command in '/home/haoran/Arm/meter_replacement/robot/build/cr5_moveit_config': AMENT_PREFIX_PATH=/home/haoran/Arm/meter_replacement/robot/install/cr5_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/haoran/Arm/meter_replacement/robot/install/cr5_description:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/haoran/Arm/meter_replacement/robot/build/cr5_moveit_config
+[30.177s] -- Install configuration: ""
+[30.178s] -- Execute custom install script
+[30.180s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/ament_index/resource_index/package_run_dependencies/cr5_moveit_config
+[30.186s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/ament_index/resource_index/parent_prefix_path/cr5_moveit_config
+[30.190s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/environment/ament_prefix_path.sh
+[30.191s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/environment/ament_prefix_path.dsv
+[30.191s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/environment/path.sh
+[30.195s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/environment/path.dsv
+[30.196s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/local_setup.bash
+[30.196s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/local_setup.sh
+[30.202s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/local_setup.zsh
+[30.203s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/local_setup.dsv
+[30.205s] -- Symlinking: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/package.dsv
+[30.229s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/ament_index/resource_index/packages/cr5_moveit_config
+[30.230s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/cmake/cr5_moveit_configConfig.cmake
+[30.230s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/cmake/cr5_moveit_configConfig-version.cmake
+[30.231s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/package.xml
+[30.232s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/launch/demo.launch.py
+[30.232s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/launch/move_group.launch.py
+[30.235s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/launch/moveit_rviz.launch.py
+[30.236s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/launch/rsp.launch.py
+[30.236s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/launch/setup_assistant.launch.py
+[30.236s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/launch/spawn_controllers.launch.py
+[30.238s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/launch/static_virtual_joint_tfs.launch.py
+[30.238s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/launch/warehouse_db.launch.py
+[30.238s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/config/cr5_with_gripper.ros2_control.xacro
+[30.238s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/config/cr5_with_gripper.srdf
+[30.239s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/config/cr5_with_gripper.urdf.xacro
+[30.240s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/config/initial_positions.yaml
+[30.240s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/config/joint_limits.yaml
+[30.241s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/config/kinematics.yaml
+[30.241s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/config/moveit.rviz
+[30.243s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/config/moveit_controllers.yaml
+[30.243s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/config/pilz_cartesian_limits.yaml
+[30.243s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/config/ros2_controllers.yaml
+[30.246s] -- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/.setup_assistant
+[30.247s] Invoked command in '/home/haoran/Arm/meter_replacement/robot/build/cr5_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/haoran/Arm/meter_replacement/robot/install/cr5_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/haoran/Arm/meter_replacement/robot/install/cr5_description:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/haoran/Arm/meter_replacement/robot/build/cr5_moveit_config

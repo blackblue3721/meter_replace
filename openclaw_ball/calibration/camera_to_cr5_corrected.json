@@ -1,0 +1,21 @@
+{
+  "source": "/home/haoran/Arm/meter_replacement/vision/D435_Project_new/calibration/result/camera_to_cr5_transform.json",
+  "method": "single_point_live_tcp_translation_correction_2026-09-08",
+  "note": "Original 44-point hand-eye rotation retained; translation aligned from the frozen green cube center to the operator-confirmed live gripper TCP.",
+  "rotation_camera_to_robot": [
+    [-0.6914092070502285, -0.02275222054262531, -0.7221050095841701],
+    [0.7224401945380009, -0.029777798648771805, -0.6907918992167822],
+    [-0.005785647938627544, -0.9992975628750492, 0.03702576278643428]
+  ],
+  "original_translation_mm": [383.76673223209957, -258.6653411217287, 522.3783067925754],
+  "operator_correction_mm": [-27.58238815977228, -29.895444941590085, -4.124974486703422],
+  "translation_mm": [356.1843440723273, -288.5607860633188, 518.2533323058719],
+  "reference": {
+    "color": "green",
+    "frozen_camera_xyz_m": [0.10821847708731082, 0.05579907562788209, 0.8580000400543213],
+    "cube_depth_mm": 25.0,
+    "original_predicted_cube_center_base_mm": [-320.9185118402277, -783.4799130584099, 498.22324048670345],
+    "operator_confirmed_gripper_tcp_base_mm": [-348.5009, -813.375358, 494.098266],
+    "source_target": "/home/haoran/Arm/openclaw_ball/logs/grasp/20260908_135239_963604/target.json"
+  }
+}

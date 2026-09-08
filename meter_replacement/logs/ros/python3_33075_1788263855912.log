@@ -1,0 +1,19 @@
+[INFO] [1788263856.209229708] [single_arm_pick_sequence]: Selected home profile: vision_safe_transition
+[INFO] [1788263856.263167100] [single_arm_pick_sequence]: Loaded motion configuration: /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/share/meter_grasp/config/poses.yaml
+[INFO] [1788263856.263913036] [single_arm_pick_sequence]: Execution is DISABLED (plan only)
+[INFO] [1788263856.264565616] [single_arm_pick_sequence]: Requested motion stage: vision_meter_approach
+[INFO] [1788263856.265046332] [single_arm_pick_sequence]: Selected meter slot: slot_r1_c1
+[INFO] [1788263856.265586199] [single_arm_pick_sequence]: Waiting for MoveIt planning scene...
+[INFO] [1788263856.872207083] [single_arm_pick_sequence]: State-validity check passed: 'preceding trajectory endpoint'
+[INFO] [1788263856.872737192] [single_arm_pick_sequence]: Planning from validated preceding trajectory endpoint: /home/haoran/Arm/meter_replacement/logs/vision/first_meter_safe_transition_candidate.json (sha256=f2c990ce6c16ed52c86a479fbcfc1f5365d6bdf676a428c41dcbd65fca612c34)
+[INFO] [1788263856.873264666] [single_arm_pick_sequence]: Verified collision objects: world=['cabinet_left_breaker', 'cabinet_right_breaker_bank', 'd435_camera_collision', 'd435_support_horizontal', 'd435_support_vertical', 'electric_meter', 'meter_cabinet_back', 'meter_cabinet_bottom', 'meter_cabinet_divider', 'meter_cabinet_left_door_open', 'meter_cabinet_left_side', 'meter_cabinet_right_door_open', 'meter_cabinet_right_side', 'meter_cabinet_top', 'workcell_tabletop'], attached=[]
+[INFO] [1788263856.990087439] [single_arm_pick_sequence]: D435 target correction in planning frame: dx=+0.0229, dy=+0.0214, dz=-0.0000 m
+[INFO] [1788263856.993813501] [single_arm_pick_sequence]: Searching collision-aware IK branches around the current state
+[INFO] [1788263857.422495665] [single_arm_pick_sequence]: Selected best of 18 unique IK branches: joint1=-1.084, joint2=-0.159, joint3=-1.383, joint4=1.543, joint5=0.325, joint6=-1.571; max_joint_delta=3.312, total_joint_delta=5.995, ergonomic_cost=0.506, ranking=nearest
+[INFO] [1788263857.425401195] [single_arm_pick_sequence]: Planning 'vision_meter_approach_ptp' with pipeline='pilz_industrial_motion_planner', planner='PTP'
+[INFO] [1788263857.480946190] [single_arm_pick_sequence]: 'vision_meter_approach_ptp' succeeded
+[INFO] [1788263857.483059953] [single_arm_pick_sequence]: Planned cumulative joint travel: joint1=0.574, joint2=0.481, joint3=0.733, joint4=0.044, joint5=0.851, joint6=3.312
+[INFO] [1788263857.485661516] [single_arm_pick_sequence]: Planned cumulative joint travel: joint1=0.574, joint2=0.481, joint3=0.733, joint4=0.044, joint5=0.851, joint6=3.312
+[INFO] [1788263857.501310356] [single_arm_pick_sequence]: Exported validated plan-only trajectory: /home/haoran/Arm/meter_replacement/logs/vision/first_meter_dynamic_approach_candidate.json
+[INFO] [1788263857.503084760] [single_arm_pick_sequence]: Trajectory SHA256: f9cbe11ee424ff909f6e9d041a674542df2b3d00cc0ce2d6b8d559d5fd3c1f35
+[INFO] [1788263857.503646914] [single_arm_pick_sequence]: Plan-only safety check complete: 'vision_meter_approach'

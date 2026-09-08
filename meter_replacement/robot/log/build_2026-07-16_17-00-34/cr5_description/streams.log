@@ -1,0 +1,31 @@
+[0.015s] Invoking command in '/home/haoran/Arm/meter_replacement/robot/build/cr5_description': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/haoran/Arm/meter_replacement/robot/build/cr5_description -- -j4 -l4
+[0.071s] Invoked command in '/home/haoran/Arm/meter_replacement/robot/build/cr5_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/haoran/Arm/meter_replacement/robot/build/cr5_description -- -j4 -l4
+[0.085s] Invoking command in '/home/haoran/Arm/meter_replacement/robot/build/cr5_description': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/haoran/Arm/meter_replacement/robot/build/cr5_description
+[0.094s] -- Install configuration: ""
+[0.097s] -- Execute custom install script
+[0.098s] -- Symlinking: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/launch/display.launch.py
+[0.109s] -- Symlinking: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/meshes/J1.STL
+[0.125s] -- Symlinking: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/meshes/J2.STL
+[0.136s] -- Symlinking: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/meshes/J3.STL
+[0.147s] -- Symlinking: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/meshes/J4.STL
+[0.161s] -- Symlinking: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/meshes/J5.STL
+[0.174s] -- Symlinking: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/meshes/J6.STL
+[0.186s] -- Symlinking: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/meshes/base_link.STL
+[0.198s] -- Symlinking: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/rviz/cr5.rviz
+[0.210s] -- Symlinking: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/urdf/cr5_robot.urdf
+[0.222s] -- Symlinking: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/ament_index/resource_index/package_run_dependencies/cr5_description
+[0.234s] -- Symlinking: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/ament_index/resource_index/parent_prefix_path/cr5_description
+[0.245s] -- Symlinking: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/environment/ament_prefix_path.sh
+[0.257s] -- Symlinking: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/environment/ament_prefix_path.dsv
+[0.268s] -- Symlinking: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/environment/path.sh
+[0.283s] -- Symlinking: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/environment/path.dsv
+[0.291s] -- Symlinking: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/local_setup.bash
+[0.304s] -- Symlinking: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/local_setup.sh
+[0.317s] -- Symlinking: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/local_setup.zsh
+[0.331s] -- Symlinking: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/local_setup.dsv
+[0.343s] -- Symlinking: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/package.dsv
+[0.354s] -- Symlinking: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/ament_index/resource_index/packages/cr5_description
+[0.365s] -- Symlinking: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/cmake/cr5_descriptionConfig.cmake
+[0.377s] -- Symlinking: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/cmake/cr5_descriptionConfig-version.cmake
+[0.387s] -- Symlinking: /home/haoran/Arm/meter_replacement/robot/install/cr5_description/share/cr5_description/package.xml
+[30.032s] Invoked command in '/home/haoran/Arm/meter_replacement/robot/build/cr5_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/haoran/Arm/meter_replacement/robot/build/cr5_description

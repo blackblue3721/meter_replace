@@ -1,0 +1,147 @@
+[0.139s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install', '--packages-select', 'meter_replacement_sim', '--base-paths', '../simulation/ros2']
+[0.139s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['../simulation/ros2'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['meter_replacement_sim'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7eab6984c580>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7eab699c9c00>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7eab699c9c00>>)
+[0.370s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.370s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.371s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.371s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.371s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.371s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/haoran/Arm/meter_replacement/simulation/ros2'
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2) by extension 'ignore'
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2) by extension 'ignore_ament_install'
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2) by extensions ['colcon_pkg']
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2) by extension 'colcon_pkg'
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2) by extensions ['colcon_meta']
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2) by extension 'colcon_meta'
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2) by extensions ['ros']
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2) by extension 'ros'
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2) by extensions ['cmake', 'python']
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2) by extension 'cmake'
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2) by extension 'python'
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2) by extensions ['python_setup_py']
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2) by extension 'python_setup_py'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/config) by extensions ['ignore', 'ignore_ament_install']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/config) by extension 'ignore'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/config) by extension 'ignore_ament_install'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/config) by extensions ['colcon_pkg']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/config) by extension 'colcon_pkg'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/config) by extensions ['colcon_meta']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/config) by extension 'colcon_meta'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/config) by extensions ['ros']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/config) by extension 'ros'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/config) by extensions ['cmake', 'python']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/config) by extension 'cmake'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/config) by extension 'python'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/config) by extensions ['python_setup_py']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/config) by extension 'python_setup_py'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/description) by extensions ['ignore', 'ignore_ament_install']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/description) by extension 'ignore'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/description) by extension 'ignore_ament_install'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/description) by extensions ['colcon_pkg']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/description) by extension 'colcon_pkg'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/description) by extensions ['colcon_meta']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/description) by extension 'colcon_meta'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/description) by extensions ['ros']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/description) by extension 'ros'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/description) by extensions ['cmake', 'python']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/description) by extension 'cmake'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/description) by extension 'python'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/description) by extensions ['python_setup_py']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/description) by extension 'python_setup_py'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/launch) by extensions ['ignore', 'ignore_ament_install']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/launch) by extension 'ignore'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/launch) by extension 'ignore_ament_install'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/launch) by extensions ['colcon_pkg']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/launch) by extension 'colcon_pkg'
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/launch) by extensions ['colcon_meta']
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/launch) by extension 'colcon_meta'
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/launch) by extensions ['ros']
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/launch) by extension 'ros'
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/launch) by extensions ['cmake', 'python']
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/launch) by extension 'cmake'
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/launch) by extension 'python'
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/launch) by extensions ['python_setup_py']
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/launch) by extension 'python_setup_py'
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/meter_replacement_sim) by extensions ['ignore', 'ignore_ament_install']
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/meter_replacement_sim) by extension 'ignore'
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/meter_replacement_sim) by extension 'ignore_ament_install'
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/meter_replacement_sim) by extensions ['colcon_pkg']
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/meter_replacement_sim) by extension 'colcon_pkg'
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/meter_replacement_sim) by extensions ['colcon_meta']
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/meter_replacement_sim) by extension 'colcon_meta'
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/meter_replacement_sim) by extensions ['ros']
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(../simulation/ros2/meter_replacement_sim) by extension 'ros'
+[0.392s] DEBUG:colcon.colcon_core.package_identification:Package '../simulation/ros2/meter_replacement_sim' with type 'ros.ament_python' and name 'meter_replacement_sim'
+[0.393s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.416s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.416s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.420s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 357 installed packages in /opt/ros/humble
+[0.438s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.478s] Level 5:colcon.colcon_core.verb:set package 'meter_replacement_sim' build argument 'cmake_args' from command line to 'None'
+[0.479s] Level 5:colcon.colcon_core.verb:set package 'meter_replacement_sim' build argument 'cmake_target' from command line to 'None'
+[0.479s] Level 5:colcon.colcon_core.verb:set package 'meter_replacement_sim' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.479s] Level 5:colcon.colcon_core.verb:set package 'meter_replacement_sim' build argument 'cmake_clean_cache' from command line to 'False'
+[0.479s] Level 5:colcon.colcon_core.verb:set package 'meter_replacement_sim' build argument 'cmake_clean_first' from command line to 'False'
+[0.479s] Level 5:colcon.colcon_core.verb:set package 'meter_replacement_sim' build argument 'cmake_force_configure' from command line to 'False'
+[0.479s] Level 5:colcon.colcon_core.verb:set package 'meter_replacement_sim' build argument 'ament_cmake_args' from command line to 'None'
+[0.479s] Level 5:colcon.colcon_core.verb:set package 'meter_replacement_sim' build argument 'catkin_cmake_args' from command line to 'None'
+[0.479s] Level 5:colcon.colcon_core.verb:set package 'meter_replacement_sim' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.479s] DEBUG:colcon.colcon_core.verb:Building package 'meter_replacement_sim' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/haoran/Arm/meter_replacement/robot/build/meter_replacement_sim', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/haoran/Arm/meter_replacement/robot/install/meter_replacement_sim', 'merge_install': False, 'path': '/home/haoran/Arm/meter_replacement/simulation/ros2/meter_replacement_sim', 'symlink_install': True, 'test_result_base': None}
+[0.479s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.481s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.481s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/haoran/Arm/meter_replacement/simulation/ros2/meter_replacement_sim' with build type 'ament_python'
+[0.481s] Level 1:colcon.colcon_core.shell:create_environment_hook('meter_replacement_sim', 'ament_prefix_path')
+[0.485s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.486s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/haoran/Arm/meter_replacement/robot/install/meter_replacement_sim/share/meter_replacement_sim/hook/ament_prefix_path.ps1'
+[0.486s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/haoran/Arm/meter_replacement/robot/install/meter_replacement_sim/share/meter_replacement_sim/hook/ament_prefix_path.dsv'
+[0.487s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/haoran/Arm/meter_replacement/robot/install/meter_replacement_sim/share/meter_replacement_sim/hook/ament_prefix_path.sh'
+[0.488s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.489s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.727s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/haoran/Arm/meter_replacement/simulation/ros2/meter_replacement_sim'
+[0.727s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.727s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[30.512s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: develop, bdist_rpm, bdist_dumb, easy_install, install, init_catalog, check, build_ext, install_egg_info, extract_messages, install_headers, upload, rotate, bdist, compile_catalog, sdist, install_scripts, symlink_data, upload_docs, build_scripts, setopt, install_lib, alias, install_data, update_catalog, bdist_egg, clean, build, build_py, saveopts, test, register, build_clib, dist_info, egg_info
+[30.746s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools 'develop' options: --install-dir, --build-directory, --force-installation-into-system-dir, --index-url, --always-copy, --verbose, --site-dirs, --no-user-cfg, --egg-path, --multi-version, --editable, --upgrade, --dry-run, --find-links, --always-unzip, --local-snapshots-ok, --no-deps, --prefix, --exclude-scripts, --quiet, --install-layout, --no-find-links, --zip-ok, --allow-hosts, --script-dir, --user, --version, --uninstall, --optimize, --help, --record
+[30.749s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/haoran/Arm/meter_replacement/robot/build/meter_replacement_sim': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/haoran/Arm/meter_replacement/robot/build/meter_replacement_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/haoran/Arm/meter_replacement/robot/install/meter_replacement_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/haoran/Arm/meter_replacement/robot/build/meter_replacement_sim/build --no-deps symlink_data
+[31.131s] Level 1:colcon.colcon_core.shell:create_environment_hook('meter_replacement_sim', 'pythonpath_develop')
+[31.132s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/haoran/Arm/meter_replacement/robot/build/meter_replacement_sim/share/meter_replacement_sim/hook/pythonpath_develop.ps1'
+[31.133s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/haoran/Arm/meter_replacement/robot/build/meter_replacement_sim' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/haoran/Arm/meter_replacement/robot/build/meter_replacement_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/haoran/Arm/meter_replacement/robot/install/meter_replacement_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/haoran/Arm/meter_replacement/robot/build/meter_replacement_sim/build --no-deps symlink_data
+[31.133s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/haoran/Arm/meter_replacement/robot/build/meter_replacement_sim/share/meter_replacement_sim/hook/pythonpath_develop.dsv'
+[31.133s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/haoran/Arm/meter_replacement/robot/build/meter_replacement_sim/share/meter_replacement_sim/hook/pythonpath_develop.sh'
+[31.139s] Level 1:colcon.colcon_core.environment:checking '/home/haoran/Arm/meter_replacement/robot/install/meter_replacement_sim' for CMake module files
+[31.140s] Level 1:colcon.colcon_core.environment:checking '/home/haoran/Arm/meter_replacement/robot/install/meter_replacement_sim' for CMake config files
+[31.141s] Level 1:colcon.colcon_core.environment:checking '/home/haoran/Arm/meter_replacement/robot/install/meter_replacement_sim/lib'
+[31.141s] Level 1:colcon.colcon_core.environment:checking '/home/haoran/Arm/meter_replacement/robot/install/meter_replacement_sim/bin'
+[31.142s] Level 1:colcon.colcon_core.environment:checking '/home/haoran/Arm/meter_replacement/robot/install/meter_replacement_sim/lib/pkgconfig/meter_replacement_sim.pc'
+[31.142s] Level 1:colcon.colcon_core.environment:checking '/home/haoran/Arm/meter_replacement/robot/install/meter_replacement_sim/lib/python3.10/site-packages'
+[31.142s] Level 1:colcon.colcon_core.shell:create_environment_hook('meter_replacement_sim', 'pythonpath')
+[31.142s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/haoran/Arm/meter_replacement/robot/install/meter_replacement_sim/share/meter_replacement_sim/hook/pythonpath.ps1'
+[31.143s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/haoran/Arm/meter_replacement/robot/install/meter_replacement_sim/share/meter_replacement_sim/hook/pythonpath.dsv'
+[31.143s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/haoran/Arm/meter_replacement/robot/install/meter_replacement_sim/share/meter_replacement_sim/hook/pythonpath.sh'
+[31.144s] Level 1:colcon.colcon_core.environment:checking '/home/haoran/Arm/meter_replacement/robot/install/meter_replacement_sim/bin'
+[31.144s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(meter_replacement_sim)
+[31.144s] INFO:colcon.colcon_core.shell:Creating package script '/home/haoran/Arm/meter_replacement/robot/install/meter_replacement_sim/share/meter_replacement_sim/package.ps1'
+[31.146s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/haoran/Arm/meter_replacement/robot/install/meter_replacement_sim/share/meter_replacement_sim/package.dsv'
+[31.147s] INFO:colcon.colcon_core.shell:Creating package script '/home/haoran/Arm/meter_replacement/robot/install/meter_replacement_sim/share/meter_replacement_sim/package.sh'
+[31.148s] INFO:colcon.colcon_core.shell:Creating package script '/home/haoran/Arm/meter_replacement/robot/install/meter_replacement_sim/share/meter_replacement_sim/package.bash'
+[31.149s] INFO:colcon.colcon_core.shell:Creating package script '/home/haoran/Arm/meter_replacement/robot/install/meter_replacement_sim/share/meter_replacement_sim/package.zsh'
+[31.150s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/haoran/Arm/meter_replacement/robot/install/meter_replacement_sim/share/colcon-core/packages/meter_replacement_sim)
+[31.151s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[31.151s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[31.151s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[31.151s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[31.162s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[31.162s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[31.162s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[31.162s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.AccessDenied: Failed to connect to socket /run/user/1000/bus: Operation not permitted
+[31.162s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[31.162s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/haoran/Arm/meter_replacement/robot/install/local_setup.ps1'
+[31.164s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/haoran/Arm/meter_replacement/robot/install/_local_setup_util_ps1.py'
+[31.165s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/haoran/Arm/meter_replacement/robot/install/setup.ps1'
+[31.167s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/haoran/Arm/meter_replacement/robot/install/local_setup.sh'
+[31.167s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/haoran/Arm/meter_replacement/robot/install/_local_setup_util_sh.py'
+[31.168s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/haoran/Arm/meter_replacement/robot/install/setup.sh'
+[31.169s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/haoran/Arm/meter_replacement/robot/install/local_setup.bash'
+[31.170s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/haoran/Arm/meter_replacement/robot/install/setup.bash'
+[31.171s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/haoran/Arm/meter_replacement/robot/install/local_setup.zsh'
+[31.172s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/haoran/Arm/meter_replacement/robot/install/setup.zsh'

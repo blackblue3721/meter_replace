@@ -1,0 +1,37 @@
+{
+  "description": "CR5 robot base point = rotation_camera_to_robot * D435 camera point + translation_mm",
+  "assumption": "CR5 TCP coordinates recorded in calibration_samples.csv correspond to the chessboard center.",
+  "unit": "mm",
+  "pattern_size_inner_corners": [
+    3,
+    3
+  ],
+  "square_size_mm": 25.0,
+  "rotation_camera_to_robot": [
+    [
+      -0.26242620204316625,
+      0.4772442193862995,
+      -0.8386718330452991
+    ],
+    [
+      0.9517245757254305,
+      -0.0154036024966399,
+      -0.3065665686117383
+    ],
+    [
+      -0.15922569026840375,
+      -0.8786356947520902,
+      -0.4501627433118636
+    ]
+  ],
+  "translation_mm": [
+    719.158418343272,
+    180.72004316253026,
+    364.9129202381797
+  ],
+  "valid_sample_count": 20,
+  "mean_error_mm": 7.239646019580036,
+  "max_error_mm": 19.41341754713186,
+  "median_error_mm": 5.072843054433478,
+  "rejected_samples": []
+}

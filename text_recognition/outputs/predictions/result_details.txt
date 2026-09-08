@@ -1,0 +1,12 @@
+roi_01.jpg	mixed_detect_zh_en	858	confidence=0.1161	score=0.1461
+roi_01.jpg	mixed_detect_en	068.	confidence=0.1379	score=0.1379
+roi_01.jpg	general_detect	050	confidence=0.2202	score=0.2202
+roi_01.jpg	general_whole_roi	858	confidence=0.3737	score=0.3737
+roi_01.jpg	digit_detect_en	0682	confidence=0.5181	score=0.5181
+roi_01.jpg	digit_whole_roi_en	868	confidence=0.7083	score=0.7083
+roi_02.jpg	mixed_detect_zh_en	34324271803010106	confidence=0.2200	score=0.2500
+roi_02.jpg	mixed_detect_en	34324271803010106	confidence=0.9216	score=0.9216
+roi_02.jpg	general_detect	34324271803010106	confidence=0.5881	score=0.5881
+roi_02.jpg	general_whole_roi	34324271803010106	confidence=0.4125	score=0.4125
+roi_02.jpg	digit_detect_en	34324271803010100	confidence=0.7185	score=0.7185
+roi_02.jpg	digit_whole_roi_en	34324271803010106	confidence=0.6317	score=0.6317

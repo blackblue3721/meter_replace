@@ -1,0 +1,358 @@
+version: 2
+
+frames:
+  planning_frame: world
+  tool_frame: gripper_tcp
+
+planning:
+  robot_model_name: cr5_with_gripper
+  group_name: cr5_arm_right
+  move_group_action: /move_action
+  execute_trajectory_action: /execute_trajectory
+  compute_ik_service: /compute_ik
+  state_validity_service: /check_state_validity
+  required_collision_objects:
+    - electric_meter
+    - workcell_tabletop
+    - meter_cabinet_back
+    - meter_cabinet_left_side
+    - meter_cabinet_right_side
+    - meter_cabinet_top
+    - meter_cabinet_bottom
+    - meter_cabinet_divider
+    - meter_cabinet_left_door_open
+    - meter_cabinet_right_door_open
+    - d435_support_vertical
+    - d435_support_horizontal
+    - d435_camera_collision
+  pipeline_id: ompl
+  planner_id: ""
+  linear_pipeline_id: pilz_industrial_motion_planner
+  linear_planner_id: LIN
+  allowed_planning_time_s: 5.0
+  planning_attempts: 10
+  velocity_scaling: 0.10
+  acceleration_scaling: 0.10
+  joint_tolerance_rad: 0.005
+  position_tolerance_m: 0.001
+  orientation_tolerance_rad: 0.01
+  max_joint_travel_rad: 3.20
+  # First real-arm motion from the measured commissioning home.  Pregrasp IK
+  # searches multiple branches around the live joint state and rejects any
+  # candidate requiring more than this on a single joint.
+  pregrasp_max_joint_travel_rad: 2.50
+  # Generic Tool0 commissioning target. This remains plan-only and rejects
+  # IK branches that would move any single joint more than this value.
+  custom_pose_max_joint_travel_rad: 2.50
+  slot_transfer_max_joint_travel_rad: 2.50
+  # The measured vision-safe posture has J6 near +100 deg, while the
+  # front-facing meter approach is near -90 deg.  Permit that single
+  # shortest-path wrist reorientation without allowing a full revolution.
+  vision_approach_max_joint_travel_rad: 3.50
+  semantic_flip_max_joint_travel_rad: 1.80
+  return_home_max_joint_travel_rad: 3.60
+  max_extra_joint_travel_rad: 0.20
+  # Keep every planned arm waypoint away from the configured hard limits.
+  # Equivalent revolute-joint angles are normalized inside this soft range.
+  joint_limit_margin_rad: 0.174533
+  display_trajectory_in_execute_mode: false
+  ik_timeout_s: 1.0
+  server_timeout_s: 30.0
+  # The legacy trajectories were validated with a table-aligned 0 deg base.
+  # The physical right CR5 is mounted at +45 deg about the same Z axis as J1.
+  # Rz(+45) * Rz(J1_new) = Rz(J1_old), therefore J1_new = J1_old - 45 deg
+  # preserves the old world-space robot posture while J2..J6 remain unchanged.
+  mount_yaw_compensation:
+    enabled: true
+    joint_name: joint1
+    reference_mount_yaw_rad: 0.0
+    actual_mount_yaw_rad: 0.7853981633974483
+  # Search nearby elbow/wrist seeds, then select the collision-free IK branch
+  # with the smallest maximum single-joint displacement. This avoids accepting
+  # whichever branch a single IK request happens to return.
+  slot_transfer_ik_seed_offsets_rad:
+    joint1: [0.0, 1.0, -1.0]
+    joint3: [-1.0, 0.0, 1.0]
+    joint4: [-1.0, 0.0, 1.0]
+  # Soft ergonomic reference for cabinet work. The slot TF still determines
+  # the TCP target; this reference only ranks valid IK branches so the base
+  # faces the cabinet and the elbow stays outside the robot body.
+  slot_transfer_preferred_joint_positions_rad:
+    # Recorded from RViz nullspace exploration on 2026-07-29. The displayed
+    # degree values were [-30, 8, -110, 98, 25, -79]; these are a branch seed,
+    # not a commanded installation pose.
+    joint1: -0.523599
+    joint2: 0.139626
+    joint3: -1.919862
+    joint4: 1.710423
+    joint5: 0.436332
+    joint6: -1.378810
+  execute: false
+  target_stage: pregrasp
+  joint_position_limits_rad:
+    joint1: [-6.28, 6.28]
+    joint2: [-6.28, 6.28]
+    joint3: [-2.792, 2.792]
+    joint4: [-6.28, 6.28]
+    # CR5 controller rejects joint commands beyond about +/-175.1 deg.
+    # Include the common 10 deg planning margin so the effective soft range
+    # remains +/-175.1 deg instead of treating J5 as a +/-360 deg joint.
+    joint5: [-3.228859, 3.228859]
+    joint6: [-6.28, 6.28]
+
+home_joint_positions_rad:
+  joint1: 0.0
+  joint2: 0.4337
+  joint3: -1.4695
+  joint4: -0.2602
+  joint5: 1.7175
+  joint6: 0.0
+
+# Named home profiles keep the legacy simulation start separate from the
+# physically observed real-arm commissioning start.  The legacy profile needs
+# the configured J1 mount-yaw compensation; the real profile is already
+# expressed in the actual CR5 joint coordinates and must not be shifted again.
+home_profiles:
+  simulation:
+    source: legacy_mock_home
+    apply_mount_yaw_compensation: true
+    joint_positions_rad:
+      joint1: 0.0
+      joint2: 0.4337
+      joint3: -1.4695
+      joint4: -0.2602
+      joint5: 1.7175
+      joint6: 0.0
+  real_commissioning:
+    source: real_cr5_joint_states_observed_2026_08_07
+    validation_status: physically_observed_safe_start_without_real_gripper
+    apply_mount_yaw_compensation: false
+    joint_positions_rad:
+      joint1: 1.5728481210232472
+      joint2: -0.05531028298621602
+      joint3: 1.850199512630683
+      joint4: -1.6433511974857677
+      joint5: -2.371947457191206
+      joint6: 1.594565791009904
+  real_commissioning_cabinet_return:
+    source: real_commissioning_home_with_nearest_post_install_wrist_branch
+    validation_status: pending_real_execution_after_moveit_review
+    apply_mount_yaw_compensation: false
+    description: >-
+      Safe return target after cabinet installation. J1..J5 retain the
+      physically observed commissioning home while J6 remains on the nearest
+      -90 degree wrist branch, avoiding an unnecessary 181 degree rotation
+      from the slot-retreat state.
+    joint_positions_rad:
+      joint1: 1.5728481210232472
+      joint2: -0.05531028298621602
+      joint3: 1.850199512630683
+      joint4: -1.6433511974857677
+      joint5: -2.371947457191206
+      joint6: -1.5707963267948966
+  vision_safe_transition:
+    source: real_cr5_feedback_observed_2026_09_01
+    validation_status: physically_observed_and_moveit_collision_checked
+    apply_mount_yaw_compensation: false
+    description: >-
+      Dedicated transition pose for the D435-guided two-stage approach.
+      Captured from the stationary real CR5 and validated against the current
+      workcell, including the D435 post, rail, and camera collision objects.
+    joint_positions_rad:
+      joint1: -1.658635833347920
+      joint2: 0.322039252398809
+      joint3: -2.119355230558892
+      joint4: 1.496029598138698
+      joint5: 1.176119141281840
+      joint6: 1.744114799540915
+
+state_machine:
+  joint_state_topic: /joint_states
+  slot_manager_node: /meter_slot_manager
+  home_tolerance_rad: 0.02
+  execution_joint_tolerance_rad: 0.02
+  gripper_position_tolerance_m: 0.001
+  pickup_position_tolerance_m: 0.005
+  # Maximum position error between the world collision object and the selected
+  # slot TCP pose before an automatic removal sequence may start.
+  installed_position_tolerance_m: 0.010
+  slot_transform_timeout_s: 5.0
+
+gripper:
+  # CHA EPG40-100-C7 actuator limits. The supplier CAD does not include the
+  # custom meter-contact fingers, so the grasp position remains provisional
+  # until those fingers are installed and the tool TCP/contact force is tested.
+  model: CHA_EPG40-100-C7
+  custom_fingers_status: pending_design_and_tcp_calibration
+  action_name: /gripper_controller/gripper_cmd
+  open_position_m: 0.0200
+  meter_grasp_position_m: 0.0100
+  fully_closed_position_m: 0.0
+  simulation_max_effort: 0.0
+
+attachment:
+  object_id: electric_meter
+  link_name: gripper_base_link
+  touch_links:
+    - gripper_base_link
+    - gripper_left_finger_link
+    - gripper_right_finger_link
+  service_timeout_s: 30.0
+
+# Candidate poses were recorded in the earlier mock scene. The configured
+# mount-yaw compensation preserves their legacy world-space posture by
+# subtracting 45 degrees from J1 seeds/references. MoveIt must still regenerate
+# and collision-check each trajectory. None are approved for hardware yet.
+single_arm:
+  meter_top_grasp_candidate:
+    source: mirrored_provisional_pose_for_measured_workcell_revalidation
+    validation:
+      candidate_pose: pending_measured_scene_revalidation
+      approach_motion: rviz_plan_validated_from_real_commissioning_home_2026_08_07
+      approach_validation_record:
+        ik_solutions_found: 25
+        selected_goal_rad:
+          joint1: 2.119
+          joint2: 0.281
+          joint3: 1.509
+          joint4: -0.219
+          joint5: -1.571
+          joint6: -0.237
+        maximum_ik_joint_delta_rad: 1.832
+        planned_cumulative_joint_travel_rad:
+          joint1: 0.548
+          joint2: 0.340
+          joint3: 0.344
+          joint4: 1.428
+          joint5: 0.797
+          joint6: 1.828
+        note: >-
+          Operator visually approved the RViz plan. Values copied from logs
+          are audit records, not hard-coded command targets; runtime still
+          resolves collision-aware IK from the live robot state.
+      lift_motion: pending_measured_scene_revalidation
+      real_hardware: pending
+    description: >-
+      Placeholder top-grasp pose with the tool Z axis pointing down. The TCP
+      is at the current model's fingertip ends and is aligned with the
+      electric-meter mid-height for 35 mm of finger overlap. Update this
+      height after the real gripper and finger geometry are measured.
+    pose:
+      position_m:
+        x: 0.600
+        y: 0.000
+        z: 0.035
+      quaternion_xyzw:
+        x: -0.70710678
+        y: 0.70710678
+        z: 0.0
+        w: 0.0
+    planning_seed_joint_positions_rad:
+      joint1: 0.198785199323942
+      joint2: -0.2735583689780673
+      joint3: -1.5973210623805871
+      joint4: 0.327894140169642
+      joint5: 1.618645485583754
+      joint6: 0.182240150733691
+    approach:
+      frame: world
+      offset_m:
+        x: 0.0
+        y: 0.0
+        z: 0.10
+    lift:
+      frame: world
+      offset_m:
+        x: 0.0
+        y: 0.0
+        z: 0.15
+
+  meter_place_candidate:
+    source: provisional_measured_workcell_candidate
+    validation:
+      transfer_motion: pending_measured_scene_revalidation
+      descend_motion: pending_measured_scene_revalidation
+      release_motion: pending_measured_scene_revalidation
+      retreat_motion: pending_measured_scene_revalidation
+      return_home_motion: pending_measured_scene_revalidation
+      real_hardware: pending
+    description: >-
+      Configurable placeholder placement pose on the workcell surface. The TCP
+      and electric-meter centre coincide in the current placeholder grasp
+      model. Replace this pose with a taught or vision-derived pose before
+      real-hardware use.
+    pose:
+      position_m:
+        x: 0.30
+        y: 0.00
+        z: 0.035
+      quaternion_xyzw:
+        x: -0.70710678
+        y: 0.70710678
+        z: 0.0
+        w: 0.0
+    approach:
+      frame: world
+      offset_m:
+        x: 0.0
+        y: 0.0
+        z: 0.15
+
+  meter_slot_install_candidate:
+    source: measured_workcell_slot_frame
+    target_slot_id: slot_r1_c2
+    validation:
+      transfer_motion: pending_simulation_validation
+      insertion_motion: pending_simulation_validation
+      release_motion: pending_simulation_validation
+      retreat_motion: pending_simulation_validation
+      return_home_motion: pending_simulation_validation
+      real_hardware: pending
+    description: >-
+      Tool pose relative to the selected meter-slot TF frame. The current
+      placeholder grasp model places the TCP at the meter centre. The approach
+      stays 0.15 m in front of the cabinet. This distance keeps the selected
+      ergonomic wrist branch on one side of its singular region; insertion
+      and retreat use Pilz LIN along the slot-frame Y axis. Recalibrate this
+      transform after the real gripper and meter support geometry are installed.
+    pose:
+      position_m:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+      quaternion_xyzw:
+        x: 0.5
+        y: -0.5
+        z: 0.5
+        w: 0.5
+    approach:
+      frame: selected_meter_slot
+      offset_m:
+        x: 0.0
+        y: 0.15
+        z: 0.0
+
+  meter_semantic_flip:
+    source: cr5_fk_validated_semantic_waypoint
+    description: >-
+      Rotate only joint5 from the lifted pickup state to stand the meter
+      upright. With the configured desktop grasp relationship, joint5=0 makes
+      the meter top point approximately +Z and its display face approximately
+      +Y. MoveIt still plans and collision-checks the complete joint-space
+      trajectory; all other arm joints are constrained to their current values.
+    joint_name: joint5
+    target_position_rad: 0.0
+    # The legacy simulation and the real +45 deg-mounted workcell require
+    # opposite wrist-side choices for the meter face to point at the cabinet.
+    # Keep the old simulation behavior while recording the operator-validated
+    # real-arm direction independently.
+    target_position_rad_by_home_profile:
+      simulation: 0.0
+      # Keep 5 deg away from the controller's negative J5 motion boundary.
+      # The exact cabinet-normal pose is recovered by slot_transfer/slot_insert.
+      real_commissioning: -3.0543261909900767
+      # This Home differs only in the final J6 branch.  Meter semantics and
+      # cabinet-facing J5 direction must remain identical to real_commissioning.
+      real_commissioning_cabinet_return: -3.0543261909900767
+    expected_meter_top_direction_world: [0.0, 0.0, 1.0]
+    expected_meter_front_direction_world: [0.0, 1.0, 0.0]

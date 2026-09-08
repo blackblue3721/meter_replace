@@ -1,0 +1,24 @@
+[30.032s] Invoking command in '/home/haoran/Arm/meter_replacement/robot/build/meter_grasp': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/haoran/Arm/meter_replacement/robot/build/meter_grasp/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/haoran/Arm/meter_replacement/robot/build/meter_grasp/build --no-deps symlink_data
+[30.260s] running develop
+[30.391s] running egg_info
+[30.391s] writing meter_grasp.egg-info/PKG-INFO
+[30.392s] writing dependency_links to meter_grasp.egg-info/dependency_links.txt
+[30.392s] writing entry points to meter_grasp.egg-info/entry_points.txt
+[30.392s] writing requirements to meter_grasp.egg-info/requires.txt
+[30.392s] writing top-level names to meter_grasp.egg-info/top_level.txt
+[30.395s] reading manifest file 'meter_grasp.egg-info/SOURCES.txt'
+[30.395s] writing manifest file 'meter_grasp.egg-info/SOURCES.txt'
+[30.396s] running build_ext
+[30.396s] Creating /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/python3.10/site-packages/meter-grasp.egg-link (link to .)
+[30.397s] Installing add_meter_collision script to /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/meter_grasp
+[30.398s] Installing attach_meter script to /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/meter_grasp
+[30.398s] Installing detach_meter script to /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/meter_grasp
+[30.398s] Installing run_meter_grasp script to /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/meter_grasp
+[30.398s] Installing run_meter_remove script to /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/meter_grasp
+[30.398s] Installing run_pick_sequence script to /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/meter_grasp
+[30.399s] Installing show_meter_cad script to /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/meter_grasp
+[30.399s] Installing show_meter_slots script to /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/meter_grasp
+[30.399s] 
+[30.399s] Installed /home/haoran/Arm/meter_replacement/robot/build/meter_grasp
+[30.399s] running symlink_data
+[60.061s] Invoked command in '/home/haoran/Arm/meter_replacement/robot/build/meter_grasp' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/haoran/Arm/meter_replacement/robot/build/meter_grasp/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/haoran/Arm/meter_replacement/robot/build/meter_grasp/build --no-deps symlink_data

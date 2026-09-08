@@ -1,0 +1,6 @@
+easyocr
+opencv-python
+numpy
+matplotlib
+pyzbar
+zxing-cpp

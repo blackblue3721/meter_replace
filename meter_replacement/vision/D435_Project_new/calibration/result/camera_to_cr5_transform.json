@@ -1,0 +1,46 @@
+{
+  "description": "CR5 robot base point = rotation_camera_to_robot * D435 camera point + translation_mm",
+  "assumption": "Robot XYZ values are recorded in DobotStudio User 0 with Tool 2 needle TCP, and each point_id was touched exactly as labeled in the collector debug image.",
+  "unit": "mm",
+  "method": "manual needle touch on 3x3 inner chessboard corners over multiple board positions",
+  "pattern_size_inner_corners": [
+    3,
+    3
+  ],
+  "square_size_mm": 25.0,
+  "rotation_camera_to_robot": [
+    [
+      -0.6914092070502285,
+      -0.02275222054262531,
+      -0.7221050095841701
+    ],
+    [
+      0.7224401945380009,
+      -0.029777798648771805,
+      -0.6907918992167822
+    ],
+    [
+      -0.005785647938627544,
+      -0.9992975628750492,
+      0.03702576278643428
+    ]
+  ],
+  "translation_mm": [
+    383.76673223209957,
+    -258.6653411217287,
+    522.3783067925754
+  ],
+  "valid_point_count": 44,
+  "mean_error_mm": 2.7049610191024622,
+  "median_error_mm": 2.474820003671364,
+  "max_error_mm": 6.03792587784345,
+  "geometry_warning": null,
+  "rejected_points": [
+    {
+      "pair_id": "16",
+      "board_id": "002",
+      "point_id": "P7",
+      "reason": "excluded by user"
+    }
+  ]
+}

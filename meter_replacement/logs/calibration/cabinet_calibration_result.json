@@ -1,0 +1,34 @@
+{
+  "format": "d435_rviz_cabinet_calibration_v1",
+  "date": "2026-08-23",
+  "source_clicks": "logs/calibration/cabinet_rviz_clicks.json",
+  "frame_id": "world",
+  "cabinet": {
+    "position_m": [0.43773545, -0.73728224, -0.00990855],
+    "yaw_deg": 1.524930533,
+    "quaternion_wxyz": [0.999911456, 0.0, 0.0, 0.013307137],
+    "width_m": 0.7,
+    "height_m": 0.8,
+    "depth_m": 0.2,
+    "dimension_source": "retained physical tape measurements: 0.70 x 0.80 x 0.20 m",
+    "clicked_top_edge_span_m": 0.771279174,
+    "clicked_span_policy": "used for centre and yaw only; not used as cabinet scale"
+  },
+  "slot_grid_local_m": {
+    "slot_r1_c1": [-0.08448856, -0.02815478, 0.69061004],
+    "slot_r1_c2": [-0.23476301, -0.02815478, 0.69061004],
+    "slot_r2_c1": [-0.08448856, -0.02815478, 0.42846357],
+    "slot_r2_c2": [-0.23476301, -0.02815478, 0.42846357]
+  },
+  "slot_occupancy": {
+    "slot_r1_c1": "OCCUPIED",
+    "slot_r1_c2": "EMPTY",
+    "slot_r2_c1": "OCCUPIED",
+    "slot_r2_c2": "OCCUPIED"
+  },
+  "inference": {
+    "slot_r1_c2": "inferred as the missing fourth corner of the three occupied-meter centre grid",
+    "common_slot_depth": "mean local centre depth of the three occupied meters",
+    "meter_centre_offset": "35 mm behind the clicked front face along cabinet outward normal"
+  }
+}

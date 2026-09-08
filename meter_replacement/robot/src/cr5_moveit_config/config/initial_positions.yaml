@@ -1,0 +1,10 @@
+# Default initial positions for cr5_with_gripper's ros2_control fake system
+
+initial_positions:
+  gripper_finger_joint: 0
+  joint1: 0
+  joint2: 0.4337
+  joint3: -1.4695
+  joint4: -0.2602
+  joint5: 1.7175
+  joint6: 0

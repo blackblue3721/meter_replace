@@ -1,0 +1,17 @@
+{
+  "name": "ball_sorting_tool",
+  "description": "Detect or pinch-and-release one red, yellow, green, or blue cube with the D435 and CR5.",
+  "method": "POST",
+  "url": "http://127.0.0.1:8765/v1/tasks",
+  "body_schema": {
+    "type": "object",
+    "required": ["color"],
+    "properties": {
+      "color": {"type": "string", "enum": ["red", "yellow", "green", "blue"]},
+      "source": {"type": "string", "enum": ["camera", "image"], "default": "camera"},
+      "image_path": {"type": "string"},
+      "mode": {"type": "string", "enum": ["detect", "execute"], "default": "detect"},
+      "destination": {"type": "string", "enum": ["box"], "default": "box"}
+    }
+  }
+}

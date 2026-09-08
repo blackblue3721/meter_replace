@@ -1,0 +1,1 @@
+/home/haoran/Arm/meter_replacement/robot/src/cr5_moveit_config/launch/demo_real_commissioning_home.launch.py

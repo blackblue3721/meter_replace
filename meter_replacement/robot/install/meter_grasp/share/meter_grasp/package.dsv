@@ -1,0 +1,9 @@
+source;share/meter_grasp/hook/pythonpath.ps1
+source;share/meter_grasp/hook/pythonpath.dsv
+source;share/meter_grasp/hook/pythonpath.sh
+source;share/meter_grasp/hook/ament_prefix_path.ps1
+source;share/meter_grasp/hook/ament_prefix_path.dsv
+source;share/meter_grasp/hook/ament_prefix_path.sh
+source;../../build/meter_grasp/share/meter_grasp/hook/pythonpath_develop.ps1
+source;../../build/meter_grasp/share/meter_grasp/hook/pythonpath_develop.dsv
+source;../../build/meter_grasp/share/meter_grasp/hook/pythonpath_develop.sh

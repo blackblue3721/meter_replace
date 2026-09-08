@@ -1,0 +1,683 @@
+[0.000000] (-) TimerEvent: {}
+[0.000571] (-) JobUnselected: {'identifier': 'cr5_description'}
+[0.000628] (cr5_moveit_config) JobQueued: {'identifier': 'cr5_moveit_config', 'dependencies': OrderedDict([('cr5_description', '/home/haoran/Arm/meter_replacement/robot/install/cr5_description')])}
+[0.000682] (meter_grasp) JobQueued: {'identifier': 'meter_grasp', 'dependencies': OrderedDict([('cr5_description', '/home/haoran/Arm/meter_replacement/robot/install/cr5_description'), ('cr5_moveit_config', '/home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config')])}
+[0.000765] (cr5_moveit_config) JobStarted: {'identifier': 'cr5_moveit_config'}
+[0.011336] (cr5_moveit_config) JobProgress: {'identifier': 'cr5_moveit_config', 'progress': 'cmake'}
+[0.013596] (cr5_moveit_config) JobProgress: {'identifier': 'cr5_moveit_config', 'progress': 'build'}
+[0.015470] (cr5_moveit_config) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/haoran/Arm/meter_replacement/robot/build/cr5_moveit_config', '--', '-j4', '-l4'], 'cwd': '/home/haoran/Arm/meter_replacement/robot/build/cr5_moveit_config', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/home/haoran/Arm'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('CONDA_PROMPT_MODIFIER', '(base)'), ('HTTPS_PROXY', 'http://192.168.12.1:7897'), ('CODEX_CI', '1'), ('no_proxy', 'localhost,127.0.0.0/8,::1'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'haoran'), ('LC_TIME', 'zh_CN.UTF-8'), ('CODEX_INTERNAL_ORIGINATOR_OVERRIDE', 'codex_vscode'), ('VSCODE_NLS_CONFIG', '{"userLocale":"zh-cn","osLocale":"zh-cn","resolvedLanguage":"zh-cn","defaultMessagesFile":"/usr/share/code/resources/app/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/haoran/.config/Code/clp/08e3eb26a94cfe99087efc53c5a0cebc.zh-cn/tcf.json","messagesFile":"/home/haoran/.config/Code/clp/08e3eb26a94cfe99087efc53c5a0cebc.zh-cn/5264f2156cbcd7aea5fd004d29eaa10209155d66/nls.messages.json","corruptMarkerFile":"/home/haoran/.config/Code/clp/08e3eb26a94cfe99087efc53c5a0cebc.zh-cn/corrupted.info"},"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"08e3eb26a94cfe99087efc53c5a0cebc.zh-cn","_languagePackSupport":true,"_translationsConfigFile":"/home/haoran/.config/Code/clp/08e3eb26a94cfe99087efc53c5a0cebc.zh-cn/tcf.json","_cacheRoot":"/home/haoran/.config/Code/clp/08e3eb26a94cfe99087efc53c5a0cebc.zh-cn","_resolvedLanguagePackCoreLocation":"/home/haoran/.config/Code/clp/08e3eb26a94cfe99087efc53c5a0cebc.zh-cn/5264f2156cbcd7aea5fd004d29eaa10209155d66","_corruptedFile":"/home/haoran/.config/Code/clp/08e3eb26a94cfe99087efc53c5a0cebc.zh-cn/corrupted.info"}'), ('all_proxy', 'http://192.168.12.1:7897'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('XDG_SESSION_TYPE', 'wayland'), ('DEBUG', 'release'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/haoran'), ('CHROME_DESKTOP', 'code.desktop'), ('CONDA_SHLVL', '1'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.0/8,::1'), ('VSCODE_IPC_HOOK', '/run/user/1000/vscode-4862dcd6-1.12-main.sock'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('LC_CTYPE', 'C.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1728'), ('IM_CONFIG_CHECK_ENV', '1'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=687a5f6ea11d54c4f48ea8186a7544df'), ('COLORTERM', ''), ('_CONDA_ROOT', '/home/haoran/miniconda3'), ('VSCODE_CRASH_REPORTER_PROCESS_TYPE', 'extensionHost'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('https_proxy', 'http://192.168.12.1:7897'), ('CODEX_PERMISSION_PROFILE', ':workspace'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'haoran'), ('ALL_PROXY', 'http://192.168.12.1:7897'), ('http_proxy', 'http://192.168.12.1:7897'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('RUST_LOG', 'warn'), ('USERNAME', 'haoran'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/haoran/.codex/tmp/arg0/codex-arg0iY8NLK:/home/haoran/miniconda3/bin:/home/haoran/miniconda3/condabin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/haoran/.vscode/extensions/openai.chatgpt-26.727.40816-linux-x64/bin/linux-x86_64'), ('SESSION_MANAGER', 'local/haoran-pc:@/tmp/.ICE-unix/1728,unix/haoran-pc:/tmp/.ICE-unix/1728'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/b54d442b_5e3d_49e8_a499_addc48667f78'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'wayland'), ('DISPLAY', ':0'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'C.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.OZUNT3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.106'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/haoran/Arm/meter_replacement/robot/install/cr5_description:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/haoran/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('ELECTRON_RUN_AS_NODE', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'base'), ('CODEX_THREAD_ID', '019f7ebc-36bd-71a3-8ab6-46771edd9418'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('_CONDA_EXE', '/home/haoran/miniconda3/bin/conda'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/haoran/Arm/meter_replacement/robot/build/cr5_moveit_config'), ('VSCODE_CLI', '1'), ('LC_ALL', 'C.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/haoran/miniconda3/bin/conda'), ('VSCODE_CODE_CACHE_PATH', '/home/haoran/.config/Code/CachedData/5264f2156cbcd7aea5fd004d29eaa10209155d66'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=687a5f6ea11d54c4f48ea8186a7544df'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://192.168.12.1:7897'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('CONDA_PREFIX', '/home/haoran/miniconda3'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('ELECTRON_NO_ATTACH_CONSOLE', '1'), ('VSCODE_PID', '3079'), ('CMAKE_PREFIX_PATH', '/home/haoran/Arm/meter_replacement/robot/install/cr5_description:/opt/ros/humble')]), 'shell': False}
+[0.100015] (-) TimerEvent: {}
+[0.202211] (-) TimerEvent: {}
+[0.302487] (-) TimerEvent: {}
+[0.403187] (-) TimerEvent: {}
+[0.503527] (-) TimerEvent: {}
+[0.603885] (-) TimerEvent: {}
+[0.704459] (-) TimerEvent: {}
+[0.804845] (-) TimerEvent: {}
+[0.905148] (-) TimerEvent: {}
+[1.005603] (-) TimerEvent: {}
+[1.106337] (-) TimerEvent: {}
+[1.206737] (-) TimerEvent: {}
+[1.307368] (-) TimerEvent: {}
+[1.407602] (-) TimerEvent: {}
+[1.507898] (-) TimerEvent: {}
+[1.608169] (-) TimerEvent: {}
+[1.708730] (-) TimerEvent: {}
+[1.809410] (-) TimerEvent: {}
+[1.909796] (-) TimerEvent: {}
+[2.010277] (-) TimerEvent: {}
+[2.110885] (-) TimerEvent: {}
+[2.211526] (-) TimerEvent: {}
+[2.312163] (-) TimerEvent: {}
+[2.412717] (-) TimerEvent: {}
+[2.513093] (-) TimerEvent: {}
+[2.613914] (-) TimerEvent: {}
+[2.714552] (-) TimerEvent: {}
+[2.815225] (-) TimerEvent: {}
+[2.915713] (-) TimerEvent: {}
+[3.016387] (-) TimerEvent: {}
+[3.116953] (-) TimerEvent: {}
+[3.217388] (-) TimerEvent: {}
+[3.318004] (-) TimerEvent: {}
+[3.418211] (-) TimerEvent: {}
+[3.518714] (-) TimerEvent: {}
+[3.619305] (-) TimerEvent: {}
+[3.719710] (-) TimerEvent: {}
+[3.820093] (-) TimerEvent: {}
+[3.920320] (-) TimerEvent: {}
+[4.020610] (-) TimerEvent: {}
+[4.121289] (-) TimerEvent: {}
+[4.221610] (-) TimerEvent: {}
+[4.322363] (-) TimerEvent: {}
+[4.423107] (-) TimerEvent: {}
+[4.523601] (-) TimerEvent: {}
+[4.623822] (-) TimerEvent: {}
+[4.724351] (-) TimerEvent: {}
+[4.824586] (-) TimerEvent: {}
+[4.924978] (-) TimerEvent: {}
+[5.025671] (-) TimerEvent: {}
+[5.126360] (-) TimerEvent: {}
+[5.227078] (-) TimerEvent: {}
+[5.327650] (-) TimerEvent: {}
+[5.428429] (-) TimerEvent: {}
+[5.529060] (-) TimerEvent: {}
+[5.629593] (-) TimerEvent: {}
+[5.730300] (-) TimerEvent: {}
+[5.830538] (-) TimerEvent: {}
+[5.931173] (-) TimerEvent: {}
+[6.031523] (-) TimerEvent: {}
+[6.132073] (-) TimerEvent: {}
+[6.232816] (-) TimerEvent: {}
+[6.333450] (-) TimerEvent: {}
+[6.433917] (-) TimerEvent: {}
+[6.534564] (-) TimerEvent: {}
+[6.634835] (-) TimerEvent: {}
+[6.735375] (-) TimerEvent: {}
+[6.836005] (-) TimerEvent: {}
+[6.936527] (-) TimerEvent: {}
+[7.036941] (-) TimerEvent: {}
+[7.137673] (-) TimerEvent: {}
+[7.238078] (-) TimerEvent: {}
+[7.338826] (-) TimerEvent: {}
+[7.439347] (-) TimerEvent: {}
+[7.539629] (-) TimerEvent: {}
+[7.640205] (-) TimerEvent: {}
+[7.740495] (-) TimerEvent: {}
+[7.841143] (-) TimerEvent: {}
+[7.942310] (-) TimerEvent: {}
+[8.042643] (-) TimerEvent: {}
+[8.143568] (-) TimerEvent: {}
+[8.244142] (-) TimerEvent: {}
+[8.344526] (-) TimerEvent: {}
+[8.445432] (-) TimerEvent: {}
+[8.545842] (-) TimerEvent: {}
+[8.646239] (-) TimerEvent: {}
+[8.746557] (-) TimerEvent: {}
+[8.847251] (-) TimerEvent: {}
+[8.947813] (-) TimerEvent: {}
+[9.048194] (-) TimerEvent: {}
+[9.148612] (-) TimerEvent: {}
+[9.249213] (-) TimerEvent: {}
+[9.350198] (-) TimerEvent: {}
+[9.450481] (-) TimerEvent: {}
+[9.551059] (-) TimerEvent: {}
+[9.651444] (-) TimerEvent: {}
+[9.751967] (-) TimerEvent: {}
+[9.852594] (-) TimerEvent: {}
+[9.953048] (-) TimerEvent: {}
+[10.053614] (-) TimerEvent: {}
+[10.155406] (-) TimerEvent: {}
+[10.256074] (-) TimerEvent: {}
+[10.356460] (-) TimerEvent: {}
+[10.457116] (-) TimerEvent: {}
+[10.557653] (-) TimerEvent: {}
+[10.658306] (-) TimerEvent: {}
+[10.758732] (-) TimerEvent: {}
+[10.859081] (-) TimerEvent: {}
+[10.959672] (-) TimerEvent: {}
+[11.062272] (-) TimerEvent: {}
+[11.162980] (-) TimerEvent: {}
+[11.264374] (-) TimerEvent: {}
+[11.364718] (-) TimerEvent: {}
+[11.465155] (-) TimerEvent: {}
+[11.566348] (-) TimerEvent: {}
+[11.669044] (-) TimerEvent: {}
+[11.769348] (-) TimerEvent: {}
+[11.870816] (-) TimerEvent: {}
+[11.971174] (-) TimerEvent: {}
+[12.071609] (-) TimerEvent: {}
+[12.172272] (-) TimerEvent: {}
+[12.272639] (-) TimerEvent: {}
+[12.372856] (-) TimerEvent: {}
+[12.473580] (-) TimerEvent: {}
+[12.573827] (-) TimerEvent: {}
+[12.674547] (-) TimerEvent: {}
+[12.775183] (-) TimerEvent: {}
+[12.875989] (-) TimerEvent: {}
+[12.976226] (-) TimerEvent: {}
+[13.076515] (-) TimerEvent: {}
+[13.176901] (-) TimerEvent: {}
+[13.277593] (-) TimerEvent: {}
+[13.377873] (-) TimerEvent: {}
+[13.478488] (-) TimerEvent: {}
+[13.578841] (-) TimerEvent: {}
+[13.679469] (-) TimerEvent: {}
+[13.779811] (-) TimerEvent: {}
+[13.880281] (-) TimerEvent: {}
+[13.980855] (-) TimerEvent: {}
+[14.081275] (-) TimerEvent: {}
+[14.181565] (-) TimerEvent: {}
+[14.281820] (-) TimerEvent: {}
+[14.382473] (-) TimerEvent: {}
+[14.483259] (-) TimerEvent: {}
+[14.583617] (-) TimerEvent: {}
+[14.685375] (-) TimerEvent: {}
+[14.785892] (-) TimerEvent: {}
+[14.886162] (-) TimerEvent: {}
+[14.986932] (-) TimerEvent: {}
+[15.087536] (-) TimerEvent: {}
+[15.188131] (-) TimerEvent: {}
+[15.288736] (-) TimerEvent: {}
+[15.389291] (-) TimerEvent: {}
+[15.489736] (-) TimerEvent: {}
+[15.590346] (-) TimerEvent: {}
+[15.691083] (-) TimerEvent: {}
+[15.791739] (-) TimerEvent: {}
+[15.894733] (-) TimerEvent: {}
+[15.995231] (-) TimerEvent: {}
+[16.095766] (-) TimerEvent: {}
+[16.196193] (-) TimerEvent: {}
+[16.296487] (-) TimerEvent: {}
+[16.397933] (-) TimerEvent: {}
+[16.498272] (-) TimerEvent: {}
+[16.598988] (-) TimerEvent: {}
+[16.699606] (-) TimerEvent: {}
+[16.800011] (-) TimerEvent: {}
+[16.900453] (-) TimerEvent: {}
+[17.001035] (-) TimerEvent: {}
+[17.101638] (-) TimerEvent: {}
+[17.202380] (-) TimerEvent: {}
+[17.302851] (-) TimerEvent: {}
+[17.405454] (-) TimerEvent: {}
+[17.505890] (-) TimerEvent: {}
+[17.606666] (-) TimerEvent: {}
+[17.707491] (-) TimerEvent: {}
+[17.807973] (-) TimerEvent: {}
+[17.908223] (-) TimerEvent: {}
+[18.008842] (-) TimerEvent: {}
+[18.109595] (-) TimerEvent: {}
+[18.210299] (-) TimerEvent: {}
+[18.310505] (-) TimerEvent: {}
+[18.411158] (-) TimerEvent: {}
+[18.512194] (-) TimerEvent: {}
+[18.612635] (-) TimerEvent: {}
+[18.713048] (-) TimerEvent: {}
+[18.813599] (-) TimerEvent: {}
+[18.914164] (-) TimerEvent: {}
+[19.014535] (-) TimerEvent: {}
+[19.114920] (-) TimerEvent: {}
+[19.215479] (-) TimerEvent: {}
+[19.316166] (-) TimerEvent: {}
+[19.416599] (-) TimerEvent: {}
+[19.517129] (-) TimerEvent: {}
+[19.617773] (-) TimerEvent: {}
+[19.718294] (-) TimerEvent: {}
+[19.819071] (-) TimerEvent: {}
+[19.919805] (-) TimerEvent: {}
+[20.020354] (-) TimerEvent: {}
+[20.120776] (-) TimerEvent: {}
+[20.221341] (-) TimerEvent: {}
+[20.321926] (-) TimerEvent: {}
+[20.422177] (-) TimerEvent: {}
+[20.522716] (-) TimerEvent: {}
+[20.623212] (-) TimerEvent: {}
+[20.723571] (-) TimerEvent: {}
+[20.823921] (-) TimerEvent: {}
+[20.924970] (-) TimerEvent: {}
+[21.025544] (-) TimerEvent: {}
+[21.125853] (-) TimerEvent: {}
+[21.226276] (-) TimerEvent: {}
+[21.326828] (-) TimerEvent: {}
+[21.427457] (-) TimerEvent: {}
+[21.528083] (-) TimerEvent: {}
+[21.628503] (-) TimerEvent: {}
+[21.729109] (-) TimerEvent: {}
+[21.829655] (-) TimerEvent: {}
+[21.929887] (-) TimerEvent: {}
+[22.030369] (-) TimerEvent: {}
+[22.131128] (-) TimerEvent: {}
+[22.231603] (-) TimerEvent: {}
+[22.332267] (-) TimerEvent: {}
+[22.432927] (-) TimerEvent: {}
+[22.533285] (-) TimerEvent: {}
+[22.634186] (-) TimerEvent: {}
+[22.734532] (-) TimerEvent: {}
+[22.834906] (-) TimerEvent: {}
+[22.935177] (-) TimerEvent: {}
+[23.035502] (-) TimerEvent: {}
+[23.136252] (-) TimerEvent: {}
+[23.236534] (-) TimerEvent: {}
+[23.336871] (-) TimerEvent: {}
+[23.437166] (-) TimerEvent: {}
+[23.537616] (-) TimerEvent: {}
+[23.638088] (-) TimerEvent: {}
+[23.738416] (-) TimerEvent: {}
+[23.838831] (-) TimerEvent: {}
+[23.939117] (-) TimerEvent: {}
+[24.039641] (-) TimerEvent: {}
+[24.139862] (-) TimerEvent: {}
+[24.240587] (-) TimerEvent: {}
+[24.340807] (-) TimerEvent: {}
+[24.441075] (-) TimerEvent: {}
+[24.541396] (-) TimerEvent: {}
+[24.641968] (-) TimerEvent: {}
+[24.742432] (-) TimerEvent: {}
+[24.842805] (-) TimerEvent: {}
+[24.943032] (-) TimerEvent: {}
+[25.043753] (-) TimerEvent: {}
+[25.144267] (-) TimerEvent: {}
+[25.244801] (-) TimerEvent: {}
+[25.345515] (-) TimerEvent: {}
+[25.445968] (-) TimerEvent: {}
+[25.546515] (-) TimerEvent: {}
+[25.646918] (-) TimerEvent: {}
+[25.747396] (-) TimerEvent: {}
+[25.847797] (-) TimerEvent: {}
+[25.947995] (-) TimerEvent: {}
+[26.048521] (-) TimerEvent: {}
+[26.148755] (-) TimerEvent: {}
+[26.249383] (-) TimerEvent: {}
+[26.349835] (-) TimerEvent: {}
+[26.450407] (-) TimerEvent: {}
+[26.550616] (-) TimerEvent: {}
+[26.651324] (-) TimerEvent: {}
+[26.751555] (-) TimerEvent: {}
+[26.851890] (-) TimerEvent: {}
+[26.952205] (-) TimerEvent: {}
+[27.053473] (-) TimerEvent: {}
+[27.154070] (-) TimerEvent: {}
+[27.254769] (-) TimerEvent: {}
+[27.355041] (-) TimerEvent: {}
+[27.455744] (-) TimerEvent: {}
+[27.555994] (-) TimerEvent: {}
+[27.656648] (-) TimerEvent: {}
+[27.757567] (-) TimerEvent: {}
+[27.858268] (-) TimerEvent: {}
+[27.959070] (-) TimerEvent: {}
+[28.059821] (-) TimerEvent: {}
+[28.160337] (-) TimerEvent: {}
+[28.260970] (-) TimerEvent: {}
+[28.361373] (-) TimerEvent: {}
+[28.461938] (-) TimerEvent: {}
+[28.562424] (-) TimerEvent: {}
+[28.662818] (-) TimerEvent: {}
+[28.763265] (-) TimerEvent: {}
+[28.863998] (-) TimerEvent: {}
+[28.964480] (-) TimerEvent: {}
+[29.064993] (-) TimerEvent: {}
+[29.165301] (-) TimerEvent: {}
+[29.265791] (-) TimerEvent: {}
+[29.366175] (-) TimerEvent: {}
+[29.466672] (-) TimerEvent: {}
+[29.568186] (-) TimerEvent: {}
+[29.668860] (-) TimerEvent: {}
+[29.769074] (-) TimerEvent: {}
+[29.869467] (-) TimerEvent: {}
+[29.969796] (-) TimerEvent: {}
+[30.031424] (cr5_moveit_config) CommandEnded: {'returncode': 0}
+[30.033004] (cr5_moveit_config) JobProgress: {'identifier': 'cr5_moveit_config', 'progress': 'install'}
+[30.045298] (cr5_moveit_config) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/haoran/Arm/meter_replacement/robot/build/cr5_moveit_config'], 'cwd': '/home/haoran/Arm/meter_replacement/robot/build/cr5_moveit_config', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/home/haoran/Arm'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('CONDA_PROMPT_MODIFIER', '(base)'), ('HTTPS_PROXY', 'http://192.168.12.1:7897'), ('CODEX_CI', '1'), ('no_proxy', 'localhost,127.0.0.0/8,::1'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'haoran'), ('LC_TIME', 'zh_CN.UTF-8'), ('CODEX_INTERNAL_ORIGINATOR_OVERRIDE', 'codex_vscode'), ('VSCODE_NLS_CONFIG', '{"userLocale":"zh-cn","osLocale":"zh-cn","resolvedLanguage":"zh-cn","defaultMessagesFile":"/usr/share/code/resources/app/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/haoran/.config/Code/clp/08e3eb26a94cfe99087efc53c5a0cebc.zh-cn/tcf.json","messagesFile":"/home/haoran/.config/Code/clp/08e3eb26a94cfe99087efc53c5a0cebc.zh-cn/5264f2156cbcd7aea5fd004d29eaa10209155d66/nls.messages.json","corruptMarkerFile":"/home/haoran/.config/Code/clp/08e3eb26a94cfe99087efc53c5a0cebc.zh-cn/corrupted.info"},"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"08e3eb26a94cfe99087efc53c5a0cebc.zh-cn","_languagePackSupport":true,"_translationsConfigFile":"/home/haoran/.config/Code/clp/08e3eb26a94cfe99087efc53c5a0cebc.zh-cn/tcf.json","_cacheRoot":"/home/haoran/.config/Code/clp/08e3eb26a94cfe99087efc53c5a0cebc.zh-cn","_resolvedLanguagePackCoreLocation":"/home/haoran/.config/Code/clp/08e3eb26a94cfe99087efc53c5a0cebc.zh-cn/5264f2156cbcd7aea5fd004d29eaa10209155d66","_corruptedFile":"/home/haoran/.config/Code/clp/08e3eb26a94cfe99087efc53c5a0cebc.zh-cn/corrupted.info"}'), ('all_proxy', 'http://192.168.12.1:7897'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('XDG_SESSION_TYPE', 'wayland'), ('DEBUG', 'release'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/haoran'), ('CHROME_DESKTOP', 'code.desktop'), ('CONDA_SHLVL', '1'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.0/8,::1'), ('VSCODE_IPC_HOOK', '/run/user/1000/vscode-4862dcd6-1.12-main.sock'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('LC_CTYPE', 'C.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1728'), ('IM_CONFIG_CHECK_ENV', '1'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=687a5f6ea11d54c4f48ea8186a7544df'), ('COLORTERM', ''), ('_CONDA_ROOT', '/home/haoran/miniconda3'), ('VSCODE_CRASH_REPORTER_PROCESS_TYPE', 'extensionHost'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('https_proxy', 'http://192.168.12.1:7897'), ('CODEX_PERMISSION_PROFILE', ':workspace'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'haoran'), ('ALL_PROXY', 'http://192.168.12.1:7897'), ('http_proxy', 'http://192.168.12.1:7897'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('RUST_LOG', 'warn'), ('USERNAME', 'haoran'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/haoran/.codex/tmp/arg0/codex-arg0iY8NLK:/home/haoran/miniconda3/bin:/home/haoran/miniconda3/condabin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/haoran/.vscode/extensions/openai.chatgpt-26.727.40816-linux-x64/bin/linux-x86_64'), ('SESSION_MANAGER', 'local/haoran-pc:@/tmp/.ICE-unix/1728,unix/haoran-pc:/tmp/.ICE-unix/1728'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/b54d442b_5e3d_49e8_a499_addc48667f78'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'wayland'), ('DISPLAY', ':0'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'C.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.OZUNT3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.106'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/haoran/Arm/meter_replacement/robot/install/cr5_description:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/haoran/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('ELECTRON_RUN_AS_NODE', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'base'), ('CODEX_THREAD_ID', '019f7ebc-36bd-71a3-8ab6-46771edd9418'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('_CONDA_EXE', '/home/haoran/miniconda3/bin/conda'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/haoran/Arm/meter_replacement/robot/build/cr5_moveit_config'), ('VSCODE_CLI', '1'), ('LC_ALL', 'C.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/haoran/miniconda3/bin/conda'), ('VSCODE_CODE_CACHE_PATH', '/home/haoran/.config/Code/CachedData/5264f2156cbcd7aea5fd004d29eaa10209155d66'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=687a5f6ea11d54c4f48ea8186a7544df'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://192.168.12.1:7897'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('CONDA_PREFIX', '/home/haoran/miniconda3'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('ELECTRON_NO_ATTACH_CONSOLE', '1'), ('VSCODE_PID', '3079'), ('CMAKE_PREFIX_PATH', '/home/haoran/Arm/meter_replacement/robot/install/cr5_description:/opt/ros/humble')]), 'shell': False}
+[30.054642] (cr5_moveit_config) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[30.056341] (cr5_moveit_config) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[30.056687] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/ament_index/resource_index/package_run_dependencies/cr5_moveit_config\n'}
+[30.056977] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/ament_index/resource_index/parent_prefix_path/cr5_moveit_config\n'}
+[30.057151] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/environment/ament_prefix_path.sh\n'}
+[30.057526] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/environment/ament_prefix_path.dsv\n'}
+[30.057615] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/environment/path.sh\n'}
+[30.057718] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/environment/path.dsv\n'}
+[30.058285] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/local_setup.bash\n'}
+[30.058656] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/local_setup.sh\n'}
+[30.058889] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/local_setup.zsh\n'}
+[30.059549] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/local_setup.dsv\n'}
+[30.059620] (cr5_moveit_config) StdoutLine: {'line': b'-- Symlinking: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/package.dsv\n'}
+[30.069770] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/ament_index/resource_index/packages/cr5_moveit_config\n'}
+[30.072455] (-) TimerEvent: {}
+[30.072547] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/cmake/cr5_moveit_configConfig.cmake\n'}
+[30.072839] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/cmake/cr5_moveit_configConfig-version.cmake\n'}
+[30.073272] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/package.xml\n'}
+[30.073417] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/launch/demo.launch.py\n'}
+[30.073529] (cr5_moveit_config) StdoutLine: {'line': b'-- Symlinking: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/launch/demo_real_commissioning_home.launch.py\n'}
+[30.084566] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/launch/move_group.launch.py\n'}
+[30.084984] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/launch/moveit_rviz.launch.py\n'}
+[30.085075] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/launch/rsp.launch.py\n'}
+[30.085690] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/launch/setup_assistant.launch.py\n'}
+[30.085965] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/launch/spawn_controllers.launch.py\n'}
+[30.086018] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/launch/static_virtual_joint_tfs.launch.py\n'}
+[30.086064] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/launch/warehouse_db.launch.py\n'}
+[30.086107] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/config/cr5_with_gripper.ros2_control.xacro\n'}
+[30.086150] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/config/cr5_with_gripper.srdf\n'}
+[30.086240] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/config/cr5_with_gripper.urdf.xacro\n'}
+[30.086293] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/config/initial_positions.yaml\n'}
+[30.086337] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/config/joint_limits.yaml\n'}
+[30.086392] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/config/kinematics.yaml\n'}
+[30.086433] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/config/moveit.rviz\n'}
+[30.086472] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/config/moveit_controllers.yaml\n'}
+[30.086511] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/config/pilz_cartesian_limits.yaml\n'}
+[30.086581] (cr5_moveit_config) StdoutLine: {'line': b'-- Symlinking: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/config/real_commissioning_initial_positions.yaml\n'}
+[30.098052] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/config/ros2_controllers.yaml\n'}
+[30.098447] (cr5_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config/share/cr5_moveit_config/.setup_assistant\n'}
+[30.099278] (cr5_moveit_config) CommandEnded: {'returncode': 0}
+[30.124794] (cr5_moveit_config) JobEnded: {'identifier': 'cr5_moveit_config', 'rc': 0}
+[30.126319] (meter_grasp) JobStarted: {'identifier': 'meter_grasp'}
+[30.175112] (-) TimerEvent: {}
+[30.275484] (-) TimerEvent: {}
+[30.375791] (-) TimerEvent: {}
+[30.476832] (-) TimerEvent: {}
+[30.577160] (-) TimerEvent: {}
+[30.677703] (-) TimerEvent: {}
+[30.778055] (-) TimerEvent: {}
+[30.878624] (-) TimerEvent: {}
+[30.980960] (-) TimerEvent: {}
+[31.081502] (-) TimerEvent: {}
+[31.181808] (-) TimerEvent: {}
+[31.283433] (-) TimerEvent: {}
+[31.384161] (-) TimerEvent: {}
+[31.484771] (-) TimerEvent: {}
+[31.585165] (-) TimerEvent: {}
+[31.686083] (-) TimerEvent: {}
+[31.786500] (-) TimerEvent: {}
+[31.886779] (-) TimerEvent: {}
+[31.987053] (-) TimerEvent: {}
+[32.087606] (-) TimerEvent: {}
+[32.188470] (-) TimerEvent: {}
+[32.289092] (-) TimerEvent: {}
+[32.389489] (-) TimerEvent: {}
+[32.489916] (-) TimerEvent: {}
+[32.590390] (-) TimerEvent: {}
+[32.690685] (-) TimerEvent: {}
+[32.791092] (-) TimerEvent: {}
+[32.891746] (-) TimerEvent: {}
+[32.992436] (-) TimerEvent: {}
+[33.092682] (-) TimerEvent: {}
+[33.192890] (-) TimerEvent: {}
+[33.293774] (-) TimerEvent: {}
+[33.395359] (-) TimerEvent: {}
+[33.495739] (-) TimerEvent: {}
+[33.596278] (-) TimerEvent: {}
+[33.696714] (-) TimerEvent: {}
+[33.797208] (-) TimerEvent: {}
+[33.897886] (-) TimerEvent: {}
+[33.998533] (-) TimerEvent: {}
+[34.098763] (-) TimerEvent: {}
+[34.199013] (-) TimerEvent: {}
+[34.299303] (-) TimerEvent: {}
+[34.399696] (-) TimerEvent: {}
+[34.499925] (-) TimerEvent: {}
+[34.600610] (-) TimerEvent: {}
+[34.701177] (-) TimerEvent: {}
+[34.801488] (-) TimerEvent: {}
+[34.901871] (-) TimerEvent: {}
+[35.002238] (-) TimerEvent: {}
+[35.102729] (-) TimerEvent: {}
+[35.203280] (-) TimerEvent: {}
+[35.303994] (-) TimerEvent: {}
+[35.404265] (-) TimerEvent: {}
+[35.504537] (-) TimerEvent: {}
+[35.608248] (-) TimerEvent: {}
+[35.708684] (-) TimerEvent: {}
+[35.809107] (-) TimerEvent: {}
+[35.909773] (-) TimerEvent: {}
+[36.010103] (-) TimerEvent: {}
+[36.110571] (-) TimerEvent: {}
+[36.211107] (-) TimerEvent: {}
+[36.311516] (-) TimerEvent: {}
+[36.412579] (-) TimerEvent: {}
+[36.513289] (-) TimerEvent: {}
+[36.613956] (-) TimerEvent: {}
+[36.714659] (-) TimerEvent: {}
+[36.815141] (-) TimerEvent: {}
+[36.915809] (-) TimerEvent: {}
+[37.016403] (-) TimerEvent: {}
+[37.117035] (-) TimerEvent: {}
+[37.217682] (-) TimerEvent: {}
+[37.318239] (-) TimerEvent: {}
+[37.418956] (-) TimerEvent: {}
+[37.519382] (-) TimerEvent: {}
+[37.619871] (-) TimerEvent: {}
+[37.720203] (-) TimerEvent: {}
+[37.820566] (-) TimerEvent: {}
+[37.920834] (-) TimerEvent: {}
+[38.021237] (-) TimerEvent: {}
+[38.121739] (-) TimerEvent: {}
+[38.222128] (-) TimerEvent: {}
+[38.322835] (-) TimerEvent: {}
+[38.423543] (-) TimerEvent: {}
+[38.524159] (-) TimerEvent: {}
+[38.624720] (-) TimerEvent: {}
+[38.725061] (-) TimerEvent: {}
+[38.825484] (-) TimerEvent: {}
+[38.925807] (-) TimerEvent: {}
+[39.026006] (-) TimerEvent: {}
+[39.126372] (-) TimerEvent: {}
+[39.226927] (-) TimerEvent: {}
+[39.327200] (-) TimerEvent: {}
+[39.427536] (-) TimerEvent: {}
+[39.527912] (-) TimerEvent: {}
+[39.628278] (-) TimerEvent: {}
+[39.728732] (-) TimerEvent: {}
+[39.829446] (-) TimerEvent: {}
+[39.929858] (-) TimerEvent: {}
+[40.030224] (-) TimerEvent: {}
+[40.130999] (-) TimerEvent: {}
+[40.231356] (-) TimerEvent: {}
+[40.331605] (-) TimerEvent: {}
+[40.432421] (-) TimerEvent: {}
+[40.532915] (-) TimerEvent: {}
+[40.633468] (-) TimerEvent: {}
+[40.733908] (-) TimerEvent: {}
+[40.834282] (-) TimerEvent: {}
+[40.935041] (-) TimerEvent: {}
+[41.035557] (-) TimerEvent: {}
+[41.136088] (-) TimerEvent: {}
+[41.236632] (-) TimerEvent: {}
+[41.337209] (-) TimerEvent: {}
+[41.437810] (-) TimerEvent: {}
+[41.538981] (-) TimerEvent: {}
+[41.639468] (-) TimerEvent: {}
+[41.741069] (-) TimerEvent: {}
+[41.841413] (-) TimerEvent: {}
+[41.941726] (-) TimerEvent: {}
+[42.042103] (-) TimerEvent: {}
+[42.142697] (-) TimerEvent: {}
+[42.242934] (-) TimerEvent: {}
+[42.343348] (-) TimerEvent: {}
+[42.443706] (-) TimerEvent: {}
+[42.544042] (-) TimerEvent: {}
+[42.644301] (-) TimerEvent: {}
+[42.744747] (-) TimerEvent: {}
+[42.845764] (-) TimerEvent: {}
+[42.946154] (-) TimerEvent: {}
+[43.046662] (-) TimerEvent: {}
+[43.147151] (-) TimerEvent: {}
+[43.247750] (-) TimerEvent: {}
+[43.348200] (-) TimerEvent: {}
+[43.448730] (-) TimerEvent: {}
+[43.550076] (-) TimerEvent: {}
+[43.650586] (-) TimerEvent: {}
+[43.750794] (-) TimerEvent: {}
+[43.851083] (-) TimerEvent: {}
+[43.951995] (-) TimerEvent: {}
+[44.052578] (-) TimerEvent: {}
+[44.152820] (-) TimerEvent: {}
+[44.253482] (-) TimerEvent: {}
+[44.353704] (-) TimerEvent: {}
+[44.454286] (-) TimerEvent: {}
+[44.554966] (-) TimerEvent: {}
+[44.655311] (-) TimerEvent: {}
+[44.755684] (-) TimerEvent: {}
+[44.856269] (-) TimerEvent: {}
+[44.956779] (-) TimerEvent: {}
+[45.057482] (-) TimerEvent: {}
+[45.158206] (-) TimerEvent: {}
+[45.258573] (-) TimerEvent: {}
+[45.359124] (-) TimerEvent: {}
+[45.459439] (-) TimerEvent: {}
+[45.559885] (-) TimerEvent: {}
+[45.660441] (-) TimerEvent: {}
+[45.760803] (-) TimerEvent: {}
+[45.861087] (-) TimerEvent: {}
+[45.961764] (-) TimerEvent: {}
+[46.062380] (-) TimerEvent: {}
+[46.162775] (-) TimerEvent: {}
+[46.263437] (-) TimerEvent: {}
+[46.363722] (-) TimerEvent: {}
+[46.464074] (-) TimerEvent: {}
+[46.564773] (-) TimerEvent: {}
+[46.665475] (-) TimerEvent: {}
+[46.765827] (-) TimerEvent: {}
+[46.866553] (-) TimerEvent: {}
+[46.966978] (-) TimerEvent: {}
+[47.067379] (-) TimerEvent: {}
+[47.167712] (-) TimerEvent: {}
+[47.268308] (-) TimerEvent: {}
+[47.368869] (-) TimerEvent: {}
+[47.469396] (-) TimerEvent: {}
+[47.569937] (-) TimerEvent: {}
+[47.670254] (-) TimerEvent: {}
+[47.770469] (-) TimerEvent: {}
+[47.871704] (-) TimerEvent: {}
+[47.972443] (-) TimerEvent: {}
+[48.072710] (-) TimerEvent: {}
+[48.173392] (-) TimerEvent: {}
+[48.273687] (-) TimerEvent: {}
+[48.374272] (-) TimerEvent: {}
+[48.475056] (-) TimerEvent: {}
+[48.575610] (-) TimerEvent: {}
+[48.676258] (-) TimerEvent: {}
+[48.776686] (-) TimerEvent: {}
+[48.876973] (-) TimerEvent: {}
+[48.977475] (-) TimerEvent: {}
+[49.078175] (-) TimerEvent: {}
+[49.178710] (-) TimerEvent: {}
+[49.279349] (-) TimerEvent: {}
+[49.379769] (-) TimerEvent: {}
+[49.480635] (-) TimerEvent: {}
+[49.580861] (-) TimerEvent: {}
+[49.681334] (-) TimerEvent: {}
+[49.781617] (-) TimerEvent: {}
+[49.881879] (-) TimerEvent: {}
+[49.982374] (-) TimerEvent: {}
+[50.082881] (-) TimerEvent: {}
+[50.183591] (-) TimerEvent: {}
+[50.283974] (-) TimerEvent: {}
+[50.384559] (-) TimerEvent: {}
+[50.484793] (-) TimerEvent: {}
+[50.585338] (-) TimerEvent: {}
+[50.685780] (-) TimerEvent: {}
+[50.789072] (-) TimerEvent: {}
+[50.889644] (-) TimerEvent: {}
+[50.989870] (-) TimerEvent: {}
+[51.090559] (-) TimerEvent: {}
+[51.191313] (-) TimerEvent: {}
+[51.293283] (-) TimerEvent: {}
+[51.393669] (-) TimerEvent: {}
+[51.494288] (-) TimerEvent: {}
+[51.594994] (-) TimerEvent: {}
+[51.695492] (-) TimerEvent: {}
+[51.795842] (-) TimerEvent: {}
+[51.896526] (-) TimerEvent: {}
+[51.997040] (-) TimerEvent: {}
+[52.097349] (-) TimerEvent: {}
+[52.197756] (-) TimerEvent: {}
+[52.298407] (-) TimerEvent: {}
+[52.398730] (-) TimerEvent: {}
+[52.498975] (-) TimerEvent: {}
+[52.599346] (-) TimerEvent: {}
+[52.700847] (-) TimerEvent: {}
+[52.801312] (-) TimerEvent: {}
+[52.901583] (-) TimerEvent: {}
+[53.002138] (-) TimerEvent: {}
+[53.102444] (-) TimerEvent: {}
+[53.202731] (-) TimerEvent: {}
+[53.303529] (-) TimerEvent: {}
+[53.403995] (-) TimerEvent: {}
+[53.504799] (-) TimerEvent: {}
+[53.605051] (-) TimerEvent: {}
+[53.705519] (-) TimerEvent: {}
+[53.806229] (-) TimerEvent: {}
+[53.906768] (-) TimerEvent: {}
+[54.007109] (-) TimerEvent: {}
+[54.107580] (-) TimerEvent: {}
+[54.207909] (-) TimerEvent: {}
+[54.308179] (-) TimerEvent: {}
+[54.408718] (-) TimerEvent: {}
+[54.509184] (-) TimerEvent: {}
+[54.609632] (-) TimerEvent: {}
+[54.710069] (-) TimerEvent: {}
+[54.810803] (-) TimerEvent: {}
+[54.911456] (-) TimerEvent: {}
+[55.011829] (-) TimerEvent: {}
+[55.112158] (-) TimerEvent: {}
+[55.212989] (-) TimerEvent: {}
+[55.313694] (-) TimerEvent: {}
+[55.414399] (-) TimerEvent: {}
+[55.515223] (-) TimerEvent: {}
+[55.615859] (-) TimerEvent: {}
+[55.716343] (-) TimerEvent: {}
+[55.816612] (-) TimerEvent: {}
+[55.917325] (-) TimerEvent: {}
+[56.018233] (-) TimerEvent: {}
+[56.118592] (-) TimerEvent: {}
+[56.219100] (-) TimerEvent: {}
+[56.319523] (-) TimerEvent: {}
+[56.419835] (-) TimerEvent: {}
+[56.520099] (-) TimerEvent: {}
+[56.620648] (-) TimerEvent: {}
+[56.721307] (-) TimerEvent: {}
+[56.821793] (-) TimerEvent: {}
+[56.922481] (-) TimerEvent: {}
+[57.024276] (-) TimerEvent: {}
+[57.124654] (-) TimerEvent: {}
+[57.224823] (-) TimerEvent: {}
+[57.325481] (-) TimerEvent: {}
+[57.425693] (-) TimerEvent: {}
+[57.525920] (-) TimerEvent: {}
+[57.626624] (-) TimerEvent: {}
+[57.727097] (-) TimerEvent: {}
+[57.827855] (-) TimerEvent: {}
+[57.928349] (-) TimerEvent: {}
+[58.028860] (-) TimerEvent: {}
+[58.131395] (-) TimerEvent: {}
+[58.231632] (-) TimerEvent: {}
+[58.332303] (-) TimerEvent: {}
+[58.432574] (-) TimerEvent: {}
+[58.533017] (-) TimerEvent: {}
+[58.633507] (-) TimerEvent: {}
+[58.734072] (-) TimerEvent: {}
+[58.834632] (-) TimerEvent: {}
+[58.935176] (-) TimerEvent: {}
+[59.035693] (-) TimerEvent: {}
+[59.136259] (-) TimerEvent: {}
+[59.236567] (-) TimerEvent: {}
+[59.337282] (-) TimerEvent: {}
+[59.437997] (-) TimerEvent: {}
+[59.538973] (-) TimerEvent: {}
+[59.639343] (-) TimerEvent: {}
+[59.739789] (-) TimerEvent: {}
+[59.840042] (-) TimerEvent: {}
+[59.940532] (-) TimerEvent: {}
+[60.041126] (-) TimerEvent: {}
+[60.141759] (-) TimerEvent: {}
+[60.242103] (-) TimerEvent: {}
+[60.345716] (-) TimerEvent: {}
+[60.399996] (meter_grasp) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/haoran/Arm/meter_replacement/robot/build/meter_grasp/build', '--no-deps', 'symlink_data'], 'cwd': '/home/haoran/Arm/meter_replacement/robot/build/meter_grasp', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'VSCODE_CWD': '/home/haoran/Arm', 'VSCODE_ESM_ENTRYPOINT': 'vs/workbench/api/node/extensionHostProcess', 'CONDA_PROMPT_MODIFIER': '(base)', 'HTTPS_PROXY': 'http://192.168.12.1:7897', 'CODEX_CI': '1', 'no_proxy': 'localhost,127.0.0.0/8,::1', 'LANGUAGE': 'zh_CN:en', 'USER': 'haoran', 'LC_TIME': 'zh_CN.UTF-8', 'CODEX_INTERNAL_ORIGINATOR_OVERRIDE': 'codex_vscode', 'VSCODE_NLS_CONFIG': '{"userLocale":"zh-cn","osLocale":"zh-cn","resolvedLanguage":"zh-cn","defaultMessagesFile":"/usr/share/code/resources/app/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/haoran/.config/Code/clp/08e3eb26a94cfe99087efc53c5a0cebc.zh-cn/tcf.json","messagesFile":"/home/haoran/.config/Code/clp/08e3eb26a94cfe99087efc53c5a0cebc.zh-cn/5264f2156cbcd7aea5fd004d29eaa10209155d66/nls.messages.json","corruptMarkerFile":"/home/haoran/.config/Code/clp/08e3eb26a94cfe99087efc53c5a0cebc.zh-cn/corrupted.info"},"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"08e3eb26a94cfe99087efc53c5a0cebc.zh-cn","_languagePackSupport":true,"_translationsConfigFile":"/home/haoran/.config/Code/clp/08e3eb26a94cfe99087efc53c5a0cebc.zh-cn/tcf.json","_cacheRoot":"/home/haoran/.config/Code/clp/08e3eb26a94cfe99087efc53c5a0cebc.zh-cn","_resolvedLanguagePackCoreLocation":"/home/haoran/.config/Code/clp/08e3eb26a94cfe99087efc53c5a0cebc.zh-cn/5264f2156cbcd7aea5fd004d29eaa10209155d66","_corruptedFile":"/home/haoran/.config/Code/clp/08e3eb26a94cfe99087efc53c5a0cebc.zh-cn/corrupted.info"}', 'all_proxy': 'http://192.168.12.1:7897', 'VSCODE_HANDLES_UNCAUGHT_ERRORS': 'true', 'XDG_SESSION_TYPE': 'wayland', 'DEBUG': 'release', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/haoran', 'CHROME_DESKTOP': 'code.desktop', 'CONDA_SHLVL': '1', 'DESKTOP_SESSION': 'ubuntu', 'NO_PROXY': 'localhost,127.0.0.0/8,::1', 'VSCODE_IPC_HOOK': '/run/user/1000/vscode-4862dcd6-1.12-main.sock', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'PAGER': 'cat', 'LC_MONETARY': 'zh_CN.UTF-8', 'LC_CTYPE': 'C.UTF-8', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '1728', 'IM_CONFIG_CHECK_ENV': '1', 'NO_COLOR': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=687a5f6ea11d54c4f48ea8186a7544df', 'COLORTERM': '', '_CONDA_ROOT': '/home/haoran/miniconda3', 'VSCODE_CRASH_REPORTER_PROCESS_TYPE': 'extensionHost', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'https_proxy': 'http://192.168.12.1:7897', 'CODEX_PERMISSION_PROFILE': ':workspace', 'ROS_DISTRO': 'humble', 'LOGNAME': 'haoran', 'ALL_PROXY': 'http://192.168.12.1:7897', 'http_proxy': 'http://192.168.12.1:7897', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'RUST_LOG': 'warn', 'USERNAME': 'haoran', 'TERM': 'dumb', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'FC_FONTATIONS': '1', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/haoran/.codex/tmp/arg0/codex-arg0iY8NLK:/home/haoran/miniconda3/bin:/home/haoran/miniconda3/condabin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/haoran/.vscode/extensions/openai.chatgpt-26.727.40816-linux-x64/bin/linux-x86_64', 'SESSION_MANAGER': 'local/haoran-pc:@/tmp/.ICE-unix/1728,unix/haoran-pc:/tmp/.ICE-unix/1728', 'PAPERSIZE': 'a4', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'zh_CN.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/b54d442b_5e3d_49e8_a499_addc48667f78', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'wayland', 'DISPLAY': ':0', 'CODEX_SANDBOX_NETWORK_DISABLED': '1', 'LANG': 'C.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'zh_CN.UTF-8', 'XMODIFIERS': '@im=ibus', 'GH_PAGER': 'cat', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.OZUNT3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.106', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config:/home/haoran/Arm/meter_replacement/robot/install/cr5_description:/opt/ros/humble', 'CONDA_PYTHON_EXE': '/home/haoran/miniconda3/bin/python', 'SHELL': '/bin/bash', 'LC_NAME': 'zh_CN.UTF-8', 'QT_ACCESSIBILITY': '1', 'ELECTRON_RUN_AS_NODE': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'CONDA_DEFAULT_ENV': 'base', 'CODEX_THREAD_ID': '019f7ebc-36bd-71a3-8ab6-46771edd9418', 'LC_MEASUREMENT': 'zh_CN.UTF-8', '_CONDA_EXE': '/home/haoran/miniconda3/bin/conda', 'LC_IDENTIFICATION': 'zh_CN.UTF-8', 'GIT_PAGER': 'cat', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/haoran/Arm/meter_replacement/robot/build/meter_grasp', 'VSCODE_CLI': '1', 'LC_ALL': 'C.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'CONDA_EXE': '/home/haoran/miniconda3/bin/conda', 'VSCODE_CODE_CACHE_PATH': '/home/haoran/.config/Code/CachedData/5264f2156cbcd7aea5fd004d29eaa10209155d66', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=687a5f6ea11d54c4f48ea8186a7544df', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/haoran/Arm/meter_replacement/robot/build/meter_grasp/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'HTTP_PROXY': 'http://192.168.12.1:7897', 'LC_NUMERIC': 'zh_CN.UTF-8', 'CONDA_PREFIX': '/home/haoran/miniconda3', 'LC_PAPER': 'zh_CN.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6800', 'ELECTRON_NO_ATTACH_CONSOLE': '1', 'VSCODE_PID': '3079', 'CMAKE_PREFIX_PATH': '/home/haoran/Arm/meter_replacement/robot/install/cr5_moveit_config:/home/haoran/Arm/meter_replacement/robot/install/cr5_description'}, 'shell': False}
+[60.446292] (-) TimerEvent: {}
+[60.547451] (-) TimerEvent: {}
+[60.622489] (meter_grasp) StdoutLine: {'line': b'running develop\n'}
+[60.647779] (-) TimerEvent: {}
+[60.748308] (-) TimerEvent: {}
+[60.755492] (meter_grasp) StdoutLine: {'line': b'running egg_info\n'}
+[60.755746] (meter_grasp) StdoutLine: {'line': b'writing meter_grasp.egg-info/PKG-INFO\n'}
+[60.756071] (meter_grasp) StdoutLine: {'line': b'writing dependency_links to meter_grasp.egg-info/dependency_links.txt\n'}
+[60.756355] (meter_grasp) StdoutLine: {'line': b'writing entry points to meter_grasp.egg-info/entry_points.txt\n'}
+[60.756700] (meter_grasp) StdoutLine: {'line': b'writing requirements to meter_grasp.egg-info/requires.txt\n'}
+[60.756917] (meter_grasp) StdoutLine: {'line': b'writing top-level names to meter_grasp.egg-info/top_level.txt\n'}
+[60.759396] (meter_grasp) StdoutLine: {'line': b"reading manifest file 'meter_grasp.egg-info/SOURCES.txt'\n"}
+[60.759842] (meter_grasp) StdoutLine: {'line': b"writing manifest file 'meter_grasp.egg-info/SOURCES.txt'\n"}
+[60.760787] (meter_grasp) StdoutLine: {'line': b'running build_ext\n'}
+[60.761110] (meter_grasp) StdoutLine: {'line': b'Creating /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/python3.10/site-packages/meter-grasp.egg-link (link to .)\n'}
+[60.761915] (meter_grasp) StdoutLine: {'line': b'Installing add_meter_collision script to /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/meter_grasp\n'}
+[60.762357] (meter_grasp) StdoutLine: {'line': b'Installing attach_meter script to /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/meter_grasp\n'}
+[60.762688] (meter_grasp) StdoutLine: {'line': b'Installing detach_meter script to /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/meter_grasp\n'}
+[60.765248] (meter_grasp) StdoutLine: {'line': b'Installing run_meter_grasp script to /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/meter_grasp\n'}
+[60.765315] (meter_grasp) StdoutLine: {'line': b'Installing run_meter_remove script to /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/meter_grasp\n'}
+[60.765366] (meter_grasp) StdoutLine: {'line': b'Installing run_pick_sequence script to /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/meter_grasp\n'}
+[60.765410] (meter_grasp) StdoutLine: {'line': b'Installing show_meter_cad script to /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/meter_grasp\n'}
+[60.765453] (meter_grasp) StdoutLine: {'line': b'Installing show_meter_slots script to /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/meter_grasp\n'}
+[60.765495] (meter_grasp) StdoutLine: {'line': b'\n'}
+[60.765536] (meter_grasp) StdoutLine: {'line': b'Installed /home/haoran/Arm/meter_replacement/robot/build/meter_grasp\n'}
+[60.765577] (meter_grasp) StdoutLine: {'line': b'running symlink_data\n'}
+[60.765680] (meter_grasp) StdoutLine: {'line': b'symbolically linking /home/haoran/Arm/meter_replacement/robot/build/meter_grasp/launch/bundle_generation_scene.launch.py -> /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/share/meter_grasp/launch\n'}
+[60.790677] (meter_grasp) CommandEnded: {'returncode': 0}
+[60.803726] (meter_grasp) JobEnded: {'identifier': 'meter_grasp', 'rc': 0}
+[60.804590] (-) EventReactorShutdown: {}

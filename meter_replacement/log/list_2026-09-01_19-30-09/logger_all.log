@@ -1,0 +1,53 @@
+[0.228s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'list', '--base-paths', 'robot/src', 'simulation/ros2/meter_grasp']
+[0.228s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='list', build_base='build', ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['robot/src', 'simulation/ros2/meter_grasp'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], topological_order=False, names_only=False, paths_only=False, topological_graph=False, topological_graph_dot=False, topological_graph_density=False, topological_graph_legend=False, topological_graph_dot_cluster=False, topological_graph_dot_include_skipped=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7b9d58758e80>, verb_extension=<colcon_package_information.verb.list.ListVerb object at 0x7b9d588d5cf0>, main=<bound method ListVerb.main of <colcon_package_information.verb.list.ListVerb object at 0x7b9d588d5cf0>>)
+[0.582s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.583s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.583s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.583s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.583s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.583s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/haoran/Arm/meter_replacement/robot/src', '/home/haoran/Arm/meter_replacement/simulation/ros2/meter_grasp'
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(robot/src) by extensions ['ignore', 'ignore_ament_install']
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(robot/src) by extension 'ignore'
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(robot/src) by extension 'ignore_ament_install'
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(robot/src) by extensions ['colcon_pkg']
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(robot/src) by extension 'colcon_pkg'
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(robot/src) by extensions ['colcon_meta']
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(robot/src) by extension 'colcon_meta'
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(robot/src) by extensions ['ros']
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(robot/src) by extension 'ros'
+[0.602s] Level 1:colcon.colcon_core.package_identification:_identify(robot/src) by extensions ['cmake', 'python']
+[0.602s] Level 1:colcon.colcon_core.package_identification:_identify(robot/src) by extension 'cmake'
+[0.602s] Level 1:colcon.colcon_core.package_identification:_identify(robot/src) by extension 'python'
+[0.602s] Level 1:colcon.colcon_core.package_identification:_identify(robot/src) by extensions ['python_setup_py']
+[0.602s] Level 1:colcon.colcon_core.package_identification:_identify(robot/src) by extension 'python_setup_py'
+[0.602s] Level 1:colcon.colcon_core.package_identification:_identify(robot/src/cr5_description) by extensions ['ignore', 'ignore_ament_install']
+[0.603s] Level 1:colcon.colcon_core.package_identification:_identify(robot/src/cr5_description) by extension 'ignore'
+[0.603s] Level 1:colcon.colcon_core.package_identification:_identify(robot/src/cr5_description) by extension 'ignore_ament_install'
+[0.603s] Level 1:colcon.colcon_core.package_identification:_identify(robot/src/cr5_description) by extensions ['colcon_pkg']
+[0.603s] Level 1:colcon.colcon_core.package_identification:_identify(robot/src/cr5_description) by extension 'colcon_pkg'
+[0.603s] Level 1:colcon.colcon_core.package_identification:_identify(robot/src/cr5_description) by extensions ['colcon_meta']
+[0.603s] Level 1:colcon.colcon_core.package_identification:_identify(robot/src/cr5_description) by extension 'colcon_meta'
+[0.603s] Level 1:colcon.colcon_core.package_identification:_identify(robot/src/cr5_description) by extensions ['ros']
+[0.603s] Level 1:colcon.colcon_core.package_identification:_identify(robot/src/cr5_description) by extension 'ros'
+[0.608s] DEBUG:colcon.colcon_core.package_identification:Package 'robot/src/cr5_description' with type 'ros.ament_cmake' and name 'cr5_description'
+[0.608s] Level 1:colcon.colcon_core.package_identification:_identify(robot/src/cr5_moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[0.608s] Level 1:colcon.colcon_core.package_identification:_identify(robot/src/cr5_moveit_config) by extension 'ignore'
+[0.608s] Level 1:colcon.colcon_core.package_identification:_identify(robot/src/cr5_moveit_config) by extension 'ignore_ament_install'
+[0.608s] Level 1:colcon.colcon_core.package_identification:_identify(robot/src/cr5_moveit_config) by extensions ['colcon_pkg']
+[0.608s] Level 1:colcon.colcon_core.package_identification:_identify(robot/src/cr5_moveit_config) by extension 'colcon_pkg'
+[0.609s] Level 1:colcon.colcon_core.package_identification:_identify(robot/src/cr5_moveit_config) by extensions ['colcon_meta']
+[0.609s] Level 1:colcon.colcon_core.package_identification:_identify(robot/src/cr5_moveit_config) by extension 'colcon_meta'
+[0.609s] Level 1:colcon.colcon_core.package_identification:_identify(robot/src/cr5_moveit_config) by extensions ['ros']
+[0.609s] Level 1:colcon.colcon_core.package_identification:_identify(robot/src/cr5_moveit_config) by extension 'ros'
+[0.611s] DEBUG:colcon.colcon_core.package_identification:Package 'robot/src/cr5_moveit_config' with type 'ros.ament_cmake' and name 'cr5_moveit_config'
+[0.612s] Level 1:colcon.colcon_core.package_identification:_identify(simulation/ros2/meter_grasp) by extensions ['ignore', 'ignore_ament_install']
+[0.612s] Level 1:colcon.colcon_core.package_identification:_identify(simulation/ros2/meter_grasp) by extension 'ignore'
+[0.612s] Level 1:colcon.colcon_core.package_identification:_identify(simulation/ros2/meter_grasp) by extension 'ignore_ament_install'
+[0.612s] Level 1:colcon.colcon_core.package_identification:_identify(simulation/ros2/meter_grasp) by extensions ['colcon_pkg']
+[0.612s] Level 1:colcon.colcon_core.package_identification:_identify(simulation/ros2/meter_grasp) by extension 'colcon_pkg'
+[0.612s] Level 1:colcon.colcon_core.package_identification:_identify(simulation/ros2/meter_grasp) by extensions ['colcon_meta']
+[0.612s] Level 1:colcon.colcon_core.package_identification:_identify(simulation/ros2/meter_grasp) by extension 'colcon_meta'
+[0.612s] Level 1:colcon.colcon_core.package_identification:_identify(simulation/ros2/meter_grasp) by extensions ['ros']
+[0.612s] Level 1:colcon.colcon_core.package_identification:_identify(simulation/ros2/meter_grasp) by extension 'ros'
+[0.614s] DEBUG:colcon.colcon_core.package_identification:Package 'simulation/ros2/meter_grasp' with type 'ros.ament_python' and name 'meter_grasp'
+[0.614s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults

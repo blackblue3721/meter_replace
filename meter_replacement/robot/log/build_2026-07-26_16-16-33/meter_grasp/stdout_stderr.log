@@ -1,0 +1,19 @@
+running develop
+running egg_info
+writing meter_grasp.egg-info/PKG-INFO
+writing dependency_links to meter_grasp.egg-info/dependency_links.txt
+writing entry points to meter_grasp.egg-info/entry_points.txt
+writing requirements to meter_grasp.egg-info/requires.txt
+writing top-level names to meter_grasp.egg-info/top_level.txt
+reading manifest file 'meter_grasp.egg-info/SOURCES.txt'
+writing manifest file 'meter_grasp.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/python3.10/site-packages/meter-grasp.egg-link (link to .)
+Installing add_meter_collision script to /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/meter_grasp
+Installing attach_meter script to /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/meter_grasp
+Installing detach_meter script to /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/meter_grasp
+Installing run_meter_grasp script to /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/meter_grasp
+Installing run_pick_sequence script to /home/haoran/Arm/meter_replacement/robot/install/meter_grasp/lib/meter_grasp
+
+Installed /home/haoran/Arm/meter_replacement/robot/build/meter_grasp
+running symlink_data

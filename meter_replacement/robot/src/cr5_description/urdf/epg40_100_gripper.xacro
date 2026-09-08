@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!--
+    CHA EPG40-100-C7 parallel gripper supplied in August 2026.
+
+    The visual meshes are derived from the supplier STEP assembly.  That CAD
+    contains the actuator and its two moving jaw blocks, but not the custom
+    fingers that will contact the electricity meter.  Collision geometry is
+    intentionally simplified from the measured CAD envelope for stable MoveIt
+    planning.
+
+    Supplier CAD convention:
+      rear mounting plane Y=-95 mm; jaw end points toward +Y.
+    Mesh conversion convention:
+      rear mounting plane Z=0; jaw end points toward +Z.
+
+    The legacy process TCP remains at 240 mm so previously validated arm paths
+    do not silently change.  Replace it with the calibrated tool TCP after the
+    custom fingers are installed.
+  -->
+  <xacro:macro name="epg40_100_gripper"
+               params="parent prefix:='gripper_' mount_xyz:='0 0 0' mount_rpy:='0 0 0' stroke:=0.040 process_tcp_z:=0.240">
+    <joint name="${prefix}mount_joint" type="fixed">
+      <parent link="${parent}"/>
+      <child link="${prefix}base_link"/>
+      <origin xyz="${mount_xyz}" rpy="${mount_rpy}"/>
+    </joint>
+
+    <link name="${prefix}base_link">
+      <visual>
+        <geometry>
+          <mesh filename="package://cr5_description/meshes/epg40_100/epg40_100_body.stl"
+                scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="epg40_body"><color rgba="0.34 0.36 0.40 1"/></material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0.055"/>
+        <geometry><box size="0.050 0.035 0.110"/></geometry>
+      </collision>
+      <collision>
+        <origin xyz="0.0385 0 0.0305"/>
+        <geometry><box size="0.039 0.014 0.024"/></geometry>
+      </collision>
+      <!-- Supplier mass/inertia were not provided; update before dynamics sign-off. -->
+      <inertial>
+        <origin xyz="0 0 0.055"/>
+        <mass value="0.8"/>
+        <inertia ixx="0.00090" ixy="0" ixz="0" iyy="0.00095" iyz="0" izz="0.00021"/>
+      </inertial>
+    </link>
+
+    <link name="${prefix}left_finger_link">
+      <visual>
+        <geometry>
+          <mesh filename="package://cr5_description/meshes/epg40_100/epg40_100_left_jaw.stl"
+                scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="epg40_jaw"><color rgba="0.20 0.48 0.78 1"/></material>
+      </visual>
+      <collision>
+        <origin xyz="0.010 -0.009 0.10475"/>
+        <geometry><box size="0.029 0.010 0.0105"/></geometry>
+      </collision>
+      <inertial>
+        <origin xyz="0.010 -0.009 0.10475"/>
+        <mass value="0.04"/>
+        <inertia ixx="0.0000008" ixy="0" ixz="0" iyy="0.0000032" iyz="0" izz="0.0000030"/>
+      </inertial>
+    </link>
+
+    <joint name="${prefix}finger_joint" type="prismatic">
+      <parent link="${prefix}base_link"/>
+      <child link="${prefix}left_finger_link"/>
+      <!-- Opening direction derived from the two jaw centres in supplier CAD. -->
+      <axis xyz="0.7357 -0.6773 0"/>
+      <limit lower="0" upper="${stroke / 2.0}" effort="100" velocity="0.10"/>
+    </joint>
+
+    <link name="${prefix}right_finger_link">
+      <visual>
+        <geometry>
+          <mesh filename="package://cr5_description/meshes/epg40_100/epg40_100_right_jaw.stl"
+                scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="epg40_jaw"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.010 0.009 0.10475"/>
+        <geometry><box size="0.029 0.010 0.0105"/></geometry>
+      </collision>
+      <inertial>
+        <origin xyz="-0.010 0.009 0.10475"/>
+        <mass value="0.04"/>
+        <inertia ixx="0.0000008" ixy="0" ixz="0" iyy="0.0000032" iyz="0" izz="0.0000030"/>
+      </inertial>
+    </link>
+
+    <joint name="${prefix}right_finger_joint" type="prismatic">
+      <parent link="${prefix}base_link"/>
+      <child link="${prefix}right_finger_link"/>
+      <axis xyz="0.7357 -0.6773 0"/>
+      <limit lower="-${stroke / 2.0}" upper="0" effort="100" velocity="0.10"/>
+      <mimic joint="${prefix}finger_joint" multiplier="-1" offset="0"/>
+    </joint>
+
+    <!-- Actual front face of the supplied actuator; custom fingers start here. -->
+    <link name="${prefix}jaw_mount"/>
+    <joint name="${prefix}jaw_mount_joint" type="fixed">
+      <parent link="${prefix}base_link"/>
+      <child link="${prefix}jaw_mount"/>
+      <origin xyz="0 0 0.110"/>
+    </joint>
+
+    <!-- Compatibility TCP; intentionally unchanged until physical TCP calibration. -->
+    <link name="${prefix}tcp"/>
+    <joint name="${prefix}tcp_joint" type="fixed">
+      <parent link="${prefix}base_link"/>
+      <child link="${prefix}tcp"/>
+      <origin xyz="0 0 ${process_tcp_z}"/>
+    </joint>
+  </xacro:macro>
+</robot>

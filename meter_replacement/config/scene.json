@@ -1,0 +1,404 @@
+{
+  "version": 8,
+  "scene_name": "right_cr5_real_workcell",
+  "coordinate_frame": {
+    "frame_id": "world",
+    "origin": "right_cr5_base_center",
+    "axes": {
+      "x_positive": "along the 2 m table length toward the physical left short edge",
+      "y_positive": "along the 1 m table depth toward the operator/front long edge",
+      "z_positive": "upward"
+    },
+    "right_cr5_base": {
+      "position_m": [0.0, 0.0, 0.0],
+      "yaw_deg": 45.0,
+      "quaternion_wxyz": [0.92387953, 0.0, 0.0, 0.38268343],
+      "orientation_reference": "Photo-verified installation estimate: the base cable connector points diagonally toward world -X/+Y, approximately 45 degrees from the front table direction.",
+      "validation_status": "photo_verified; remeasure with a square or laser before contact commissioning"
+    }
+  },
+  "measurements": {
+    "source": "user measurements and three laboratory photos supplied on 2026-07-27",
+    "table": {
+      "length_x_m": 2.0,
+      "depth_y_m": 1.0,
+      "right_cr5_distance_from_right_short_edge_m": 0.60,
+      "right_cr5_distance_from_front_long_edge_m": 0.15
+    },
+    "meter_cabinet": {
+      "overall_width_x_m": 0.70,
+      "height_z_m": 0.80,
+      "depth_y_m": 0.20,
+      "left_section_width_x_m": 0.30,
+      "right_section_width_x_m": 0.40,
+      "centered_on_table_length": true
+    },
+    "d435_workcell_camera": {
+      "model": "Intel RealSense D435",
+      "position_relative_to_right_cr5_m": [0.44, 0.1205, 0.54],
+      "measured_left_offset_m": 0.44,
+      "measured_camera_height_m": 0.54,
+      "body_size_m": [0.02505, 0.09, 0.025],
+      "support_post_diameter_m": 0.024,
+      "support_post_center_y_m": 0.138,
+      "support_rail_thickness_m": 0.01,
+      "position_status": "user_measured_x_and_z; provisional_y_and_orientation_pending_rigid_mount_calibration",
+      "support_status": "post diameter and rail thickness user-measured; post X, rail span and camera orientation remain photo-derived"
+    },
+    "assumptions_to_remeasure": [
+      "The tabletop thickness is provisionally 0.06 m.",
+      "The cabinet is placed flush with the rear table edge.",
+      "Both cabinet doors are shown fully open at approximately 180 degrees.",
+      "Cabinet wall thickness, internal device sizes and internal device positions are photo-derived approximations.",
+      "The loose meter pickup X/Y pose is a mirrored provisional pose because it was not measured in the photos.",
+      "The right CR5 mounting yaw is currently a photo-verified 45 degree estimate and must be physically measured before contact commissioning.",
+      "The D435 world X and Z use the measured 0.44 m left offset and 0.54 m centre height. The 0.024 m post diameter and 0.01 m rail thickness are measured; post X, exact camera orientation and world-to-camera extrinsics remain provisional until rigid-mount calibration."
+    ]
+  },
+  "cr5_model_scale_audit": {
+    "units": "SI metres, kilograms, radians and seconds",
+    "mesh_scale": [1.0, 1.0, 1.0],
+    "urdf_key_dimensions_m": {
+      "base_to_joint1_height": 0.147,
+      "joint2_to_joint3": 0.427,
+      "joint3_to_joint4_vector_length": 0.383836,
+      "joint4_to_joint5": 0.116,
+      "joint5_to_joint6": 0.105
+    },
+    "official_cr5_reference_m": {
+      "working_radius": 0.9,
+      "maximum_reach": 1.096
+    },
+    "geometry_status": "consistent_with_official_scale; do_not_rescale",
+    "dynamics_status": "not_calibrated: URDF link masses total 12.483806 kg while the official whole-robot weight is 25 kg"
+  },
+  "simulation": {
+    "gravity_m_s2": [0.0, 0.0, -9.81],
+    "timestep_s": 0.002,
+    "contact_solver": {
+      "status": "provisional_until_real_gripper_contact_calibration",
+      "cone": "elliptic",
+      "iterations": 100,
+      "noslip_iterations": 20,
+      "friction_to_normal_impedance_ratio": 10.0,
+      "solref": [0.01, 1.0],
+      "solimp": [0.9, 0.95, 0.001, 0.5, 2.0]
+    },
+    "epg40_100_gripper": {
+      "status": "supplier_cad_visual_with_simplified_collision; custom_meter_contact_fingers_pending",
+      "model": "CHA EPG40-100-C7",
+      "source_step": "assets/cad/gripper/epg40-100/source/EPG40-100.step",
+      "mount_position_m": [0.0, 0.0, 0.0],
+      "body_visual_mesh": "robot/src/cr5_description/meshes/epg40_100/epg40_100_body.stl",
+      "left_jaw_visual_mesh": "robot/src/cr5_description/meshes/epg40_100/epg40_100_left_jaw.stl",
+      "right_jaw_visual_mesh": "robot/src/cr5_description/meshes/epg40_100/epg40_100_right_jaw.stl",
+      "mesh_scale": [0.001, 0.001, 0.001],
+      "base_size_m": [0.050, 0.035, 0.110],
+      "base_center_position_m": [0.0, 0.0, 0.055],
+      "base_mass_kg": 0.8,
+      "left_jaw_size_m": [0.029, 0.010, 0.0105],
+      "left_jaw_center_position_m": [0.010, -0.009, 0.10475],
+      "right_jaw_size_m": [0.029, 0.010, 0.0105],
+      "right_jaw_center_position_m": [-0.010, 0.009, 0.10475],
+      "jaw_axis": [0.7357, -0.6773, 0.0],
+      "finger_mass_kg": 0.04,
+      "stroke_m": 0.040,
+      "maximum_total_grip_force_n": 100.0,
+      "position_gain_n_per_m": 2000.0,
+      "joint_damping_n_s_per_m": 2.0,
+      "sliding_friction": 0.9,
+      "torsional_friction": 0.02,
+      "rolling_friction": 0.001
+    },
+    "grasp_contact_test": {
+      "purpose": "EPG40-100 actuator and jaw-block dynamics; meter holding is pending custom contact-finger CAD and calibration",
+      "status": "not_valid_for_meter_holding_until_custom_fingers_are_added",
+      "motion_reference": "config/poses.yaml single_arm.meter_top_grasp_candidate",
+      "ik_seed_joint_positions_rad": [
+        0.198785199323942,
+        -0.2735583689780673,
+        -1.5973210623805871,
+        0.327894140169642,
+        1.618645485583754,
+        0.182240150733691
+      ],
+      "arm_fixture_position_gain": 5000.0,
+      "arm_fixture_joint_damping": 10.0,
+      "grasp_center_from_mount_m": [0.0, 0.0, 0.19],
+      "tcp_from_mount_m": [0.0, 0.0, 0.24],
+      "grasp_tcp_position_m": [0.60, 0.0, 0.035],
+      "grasp_tcp_quaternion_wxyz": [0.0, -0.70710678, 0.70710678, 0.0],
+      "lift_offset_world_m": [0.0, 0.0, 0.15],
+      "table_settle_duration_s": 0.4,
+      "close_duration_s": 0.8,
+      "closed_settle_duration_s": 0.2,
+      "lift_duration_s": 2.0,
+      "loaded_duration_s": 1.5,
+      "finger_position_target_m": 0.005,
+      "nominal_sliding_friction": 0.9,
+      "low_sliding_friction": 0.05,
+      "maximum_held_relative_slip_m": 0.025,
+      "minimum_held_vertical_lift_m": 0.12,
+      "minimum_dropped_relative_displacement_m": 0.05
+    }
+  },
+  "frames": {
+    "workcell_d435_link": {
+      "parent_frame": "world",
+      "position_m": [0.439299134, 0.088627926, 0.522044068],
+      "quaternion_wxyz": [0.70216427, -0.008724625, -0.019081992, -0.711705766],
+      "description": "Calibrated fixed D435 body frame, derived from D435 optical-frame to CR5 User 0 calibration and the measured +45 degree CR5 base yaw."
+    },
+    "meter_box": {
+      "parent_frame": "world",
+      "position_m": [0.43773545, -0.73728224, -0.00990855],
+      "quaternion_wxyz": [0.999911456, 0.0, 0.0, 0.013307137],
+      "description": "Cabinet lower centre and yaw calibrated from D435/RViz clicks on 2026-08-23; physical tape-measured size remains 0.70 x 0.80 x 0.20 m."
+    }
+  },
+  "workcell_camera_visual": {
+    "frame_id": "workcell_d435_link",
+    "marker_topic": "/workcell_camera_visual",
+    "mesh_resource": "package://realsense2_description/meshes/d435.dae",
+    "mesh_pose_in_camera_frame": {
+      "position_m": [0.0043, -0.0175, 0.0],
+      "quaternion_wxyz": [0.5, 0.5, 0.5, 0.5]
+    },
+    "mesh_scale": [1.0, 1.0, 1.0],
+    "rgba": [0.52, 0.56, 0.62, 1.0],
+    "source_cad": "assets/cad/camera/intel-realsense-d435/source/D435_Solid.SLDPRT",
+    "runtime_mesh_source": "ROS Humble realsense2_description official D435 mesh"
+  },
+  "meter_template": {
+    "size_m": [0.16, 0.11, 0.07],
+    "installed_envelope_size_m": [0.11, 0.07, 0.16],
+    "mass_kg": 1.5,
+    "visual_model": {
+      "source": "assets/cad/electric_meter/source/electric_meter.step; runtime STL meshes are retained once in the meter_grasp ROS package",
+      "cad_units": "millimetres",
+      "cad_bounding_box_mm": [110.0884, 160.0, 70.0],
+      "accepted_nominal_size_mm": [110.0, 160.0, 70.0],
+      "mesh_scale": [0.001, 0.001, 0.001],
+      "mesh_pose_in_meter_frame": {
+        "position_m": [-0.0808, 0.0555942, -0.035],
+        "quaternion_wxyz": [0.70710678, 0.0, 0.0, -0.70710678]
+      },
+      "meshes": [
+        {
+          "name": "electric_meter_body_visual",
+          "project_file": "simulation/ros2/meter_grasp/meshes/electric_meter_body.stl",
+          "ros_resource": "package://meter_grasp/meshes/electric_meter_body.stl",
+          "rgba": [0.78, 0.82, 0.93, 1.0]
+        },
+        {
+          "name": "electric_meter_cover_visual",
+          "project_file": "simulation/ros2/meter_grasp/meshes/electric_meter_cover.stl",
+          "ros_resource": "package://meter_grasp/meshes/electric_meter_cover.stl",
+          "rgba": [0.88, 0.90, 0.96, 1.0]
+        }
+      ]
+    },
+    "semantic_axes": {
+      "local_x_positive": "meter top",
+      "local_y_positive": "meter left side when viewed from the front; local -Y points right so the frame remains right-handed",
+      "local_z_positive": "meter front/display face",
+      "local_z_negative": "meter back/mounting face"
+    },
+    "desktop_orientation": "front/display face points +Z; top points -Y toward the cabinet",
+    "installed_orientation": "front/display face points +Y out of the cabinet; top points +Z"
+  },
+  "meter_slot_state_rgba": {
+    "EMPTY": [0.12, 0.82, 0.32, 0.28],
+    "RESERVED": [0.95, 0.72, 0.10, 0.38],
+    "OCCUPIED": [0.16, 0.42, 0.72, 0.42],
+    "UNKNOWN": [0.55, 0.55, 0.55, 0.28]
+  },
+  "meter_slots": [
+    {
+      "id": "slot_r1_c1",
+      "frame_id": "meter_slot_r1_c1",
+      "parent_frame": "meter_box",
+      "description": "Upper-left slot when facing the cabinet.",
+      "position_m": [-0.0842158, -0.03619195, 0.70426562],
+      "quaternion_wxyz": [1.0, 0.0, 0.0, 0.0],
+      "initial_state": "OCCUPIED",
+      "position_source": "D435 YOLO display-centre 2026-08-23; shifted 35 mm inward along the calibrated cabinet normal to the 70 mm meter geometric centre",
+      "marker_rgba": [0.12, 0.82, 0.32, 0.28]
+    },
+    {
+      "id": "slot_r1_c2",
+      "frame_id": "meter_slot_r1_c2",
+      "parent_frame": "meter_box",
+      "description": "Upper-right slot when facing the cabinet.",
+      "position_m": [-0.23476301, -0.02815478, 0.69061004],
+      "quaternion_wxyz": [1.0, 0.0, 0.0, 0.0],
+      "initial_state": "EMPTY",
+      "marker_rgba": [0.12, 0.82, 0.32, 0.28]
+    },
+    {
+      "id": "slot_r2_c1",
+      "frame_id": "meter_slot_r2_c1",
+      "parent_frame": "meter_box",
+      "description": "Lower-left slot when facing the cabinet.",
+      "position_m": [-0.08448856, -0.02815478, 0.42846357],
+      "quaternion_wxyz": [1.0, 0.0, 0.0, 0.0],
+      "initial_state": "OCCUPIED",
+      "marker_rgba": [0.12, 0.82, 0.32, 0.28]
+    },
+    {
+      "id": "slot_r2_c2",
+      "frame_id": "meter_slot_r2_c2",
+      "parent_frame": "meter_box",
+      "description": "Lower-right slot when facing the cabinet.",
+      "position_m": [-0.23476301, -0.02815478, 0.42846357],
+      "quaternion_wxyz": [1.0, 0.0, 0.0, 0.0],
+      "initial_state": "OCCUPIED",
+      "marker_rgba": [0.12, 0.82, 0.32, 0.28]
+    }
+  ],
+  "collision_objects": [
+    {
+      "name": "workcell_tabletop",
+      "role": "static_environment",
+      "source": "measured_length_and_depth; assumed_thickness",
+      "size_m": [2.0, 1.0, 0.06],
+      "position_m": [0.40, -0.35, -0.035],
+      "quaternion_wxyz": [1.0, 0.0, 0.0, 0.0],
+      "rgba": [0.44, 0.34, 0.25, 1.0]
+    },
+    {
+      "name": "meter_cabinet_back",
+      "role": "static_environment",
+      "source": "measured_envelope; assumed_wall_thickness",
+      "size_m": [0.70, 0.02, 0.80],
+      "position_m": [0.440130522, -0.827250366, 0.39009145],
+      "quaternion_wxyz": [0.999911456, 0.0, 0.0, 0.013307137],
+      "rgba": [0.48, 0.52, 0.50, 1.0]
+    },
+    {
+      "name": "meter_cabinet_left_side",
+      "role": "static_environment",
+      "source": "measured_envelope; assumed_wall_thickness",
+      "size_m": [0.02, 0.20, 0.80],
+      "position_m": [0.777615036, -0.728234188, 0.39009145],
+      "quaternion_wxyz": [0.999911456, 0.0, 0.0, 0.013307137],
+      "rgba": [0.76, 0.79, 0.77, 1.0]
+    },
+    {
+      "name": "meter_cabinet_right_side",
+      "role": "static_environment",
+      "source": "measured_envelope; assumed_wall_thickness",
+      "size_m": [0.02, 0.20, 0.80],
+      "position_m": [0.097855864, -0.746330292, 0.39009145],
+      "quaternion_wxyz": [0.999911456, 0.0, 0.0, 0.013307137],
+      "rgba": [0.76, 0.79, 0.77, 1.0]
+    },
+    {
+      "name": "meter_cabinet_top",
+      "role": "static_environment",
+      "source": "measured_envelope; assumed_wall_thickness",
+      "size_m": [0.66, 0.20, 0.02],
+      "position_m": [0.43773545, -0.73728224, 0.78009145],
+      "quaternion_wxyz": [0.999911456, 0.0, 0.0, 0.013307137],
+      "rgba": [0.76, 0.79, 0.77, 1.0]
+    },
+    {
+      "name": "meter_cabinet_bottom",
+      "role": "static_environment",
+      "source": "measured_envelope; assumed_wall_thickness",
+      "size_m": [0.66, 0.20, 0.02],
+      "position_m": [0.43773545, -0.73728224, 0.00009145],
+      "quaternion_wxyz": [0.999911456, 0.0, 0.0, 0.013307137],
+      "rgba": [0.76, 0.79, 0.77, 1.0]
+    },
+    {
+      "name": "meter_cabinet_divider",
+      "role": "static_environment",
+      "source": "measured_section_widths; assumed_wall_thickness",
+      "size_m": [0.02, 0.20, 0.76],
+      "position_m": [0.487717742, -0.735951644, 0.39009145],
+      "quaternion_wxyz": [0.999911456, 0.0, 0.0, 0.013307137],
+      "rgba": [0.72, 0.75, 0.73, 1.0]
+    },
+    {
+      "name": "meter_cabinet_left_door_open",
+      "role": "static_environment",
+      "source": "measured_width; photo-derived_open_pose",
+      "size_m": [0.30, 0.02, 0.80],
+      "position_m": [0.934631059, -0.614015239, 0.39009145],
+      "quaternion_wxyz": [0.999911456, 0.0, 0.0, 0.013307137],
+      "rgba": [0.84, 0.86, 0.84, 0.72]
+    },
+    {
+      "name": "meter_cabinet_right_door_open",
+      "role": "static_environment",
+      "source": "measured_width; photo-derived_open_pose",
+      "size_m": [0.40, 0.02, 0.80],
+      "position_m": [-0.114997073, -0.641957752, 0.39009145],
+      "quaternion_wxyz": [0.999911456, 0.0, 0.0, 0.013307137],
+      "rgba": [0.84, 0.86, 0.84, 0.72]
+    },
+    {
+      "name": "cabinet_right_breaker_bank",
+      "role": "static_cabinet_device",
+      "source": "photo-derived_approximation",
+      "size_m": [0.30, 0.07, 0.10],
+      "position_m": [0.284062906, -0.60132361, 0.12509145],
+      "quaternion_wxyz": [0.999911456, 0.0, 0.0, 0.013307137],
+      "rgba": [0.35, 0.40, 0.45, 1.0]
+    },
+    {
+      "name": "cabinet_left_breaker",
+      "role": "static_cabinet_device",
+      "source": "photo-derived_approximation",
+      "size_m": [0.14, 0.08, 0.22],
+      "position_m": [0.63367283, -0.58201298, 0.42509145],
+      "quaternion_wxyz": [0.999911456, 0.0, 0.0, 0.013307137],
+      "rgba": [0.24, 0.27, 0.29, 1.0]
+    },
+    {
+      "name": "d435_support_vertical",
+      "role": "static_camera_support",
+      "source": "user-measured 0.024 m round post; X and height photo-derived",
+      "geometry": "cylinder",
+      "radius_m": 0.012,
+      "height_m": 0.62,
+      "position_m": [0.30, 0.138, 0.31],
+      "quaternion_wxyz": [1.0, 0.0, 0.0, 0.0],
+      "rgba": [0.45, 0.47, 0.48, 1.0]
+    },
+    {
+      "name": "d435_support_horizontal",
+      "role": "static_camera_support",
+      "source": "user-measured 0.01 m rail thickness; span and 0.04 m height photo-derived",
+      "size_m": [0.16, 0.01, 0.04],
+      "position_m": [0.37, 0.138, 0.54],
+      "quaternion_wxyz": [1.0, 0.0, 0.0, 0.0],
+      "rgba": [0.08, 0.09, 0.10, 1.0]
+    },
+    {
+      "name": "d435_camera_collision",
+      "role": "static_workcell_camera",
+      "source": "official RealSense D435 90 x 25.05 x 25 mm envelope",
+      "size_m": [0.02505, 0.09, 0.025],
+      "position_m": [0.44, 0.1205, 0.54],
+      "quaternion_wxyz": [0.70710678, 0.0, 0.0, -0.70710678],
+      "rgba": [0.52, 0.56, 0.62, 0.35]
+    },
+    {
+      "name": "electric_meter",
+      "role": "graspable",
+      "source": "SolidWorks CAD nominal envelope 160x110x70 mm; mirrored provisional pickup pose for real workcell",
+      "dynamic": true,
+      "size_m": [0.16, 0.11, 0.07],
+      "mass_kg": 1.5,
+      "friction": [0.9, 0.01, 0.001],
+      "solref": [0.01, 1.0],
+      "solimp": [0.9, 0.95, 0.001, 0.5, 2.0],
+      "condim": 4,
+      "position_m": [0.60, 0.0, 0.035],
+      "quaternion_wxyz": [0.70710678, 0.0, 0.0, -0.70710678],
+      "rgba": [0.16, 0.42, 0.72, 0.0]
+    }
+  ]
+}

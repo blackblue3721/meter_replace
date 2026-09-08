@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "workflow": "desktop_meter_to_slot_r1_c2",
+  "home_profile": "real_commissioning_cabinet_return",
+  "status": "validated_for_real_execution",
+  "reviewed_at": "2026-08-07",
+  "review_basis": "continuous_mock_execution_plus_offline_digest_and_boundary_audit",
+  "stages": [
+    {
+      "name": "pregrasp",
+      "trajectory": "logs/real_cr5/full_install_bundle/pregrasp.json",
+      "sha256": "e5020270604f388c64042d6010141b0e356019b7cf0956281f7c9dbb758cbf57",
+      "executor": "joint_target"
+    },
+    {
+      "name": "grasp_candidate",
+      "trajectory": "logs/real_cr5/full_install_bundle/grasp_candidate.json",
+      "sha256": "fe619d72cddda265ee87738c18b2df9d020b4afefe4356d06516a8c552d83f62",
+      "executor": "servoj"
+    },
+    {
+      "name": "lift",
+      "trajectory": "logs/real_cr5/full_install_bundle/lift.json",
+      "sha256": "beea4b16f1173542601d868f1062249c4f7e1c333b8fe2da452d54138c87862b",
+      "executor": "servoj",
+      "before": "virtual_attach"
+    },
+    {
+      "name": "semantic_flip",
+      "trajectory": "logs/real_cr5/full_install_bundle/semantic_flip.json",
+      "sha256": "21544e111295d2ad205f51550d93e677cbf4e149658e2cd0cdc814732fefa74f",
+      "executor": "joint_target"
+    },
+    {
+      "name": "slot_transfer",
+      "trajectory": "logs/real_cr5/full_install_bundle/slot_transfer.json",
+      "sha256": "f98e1f9901b68ff796e85b5da220e68d22094d50d5605e915b0014b8812d80bf",
+      "executor": "servoj"
+    },
+    {
+      "name": "slot_insert",
+      "trajectory": "logs/real_cr5/full_install_bundle/slot_insert.json",
+      "sha256": "d8f23e2933a22ff9387ddfb6a3010d8b2a27de16e30eaaf92dccac680b3c21b9",
+      "executor": "servoj"
+    },
+    {
+      "name": "slot_retreat",
+      "trajectory": "logs/real_cr5/full_install_bundle/slot_retreat.json",
+      "sha256": "9ed83e418f8d9b31efe2d7ce5a2ebd8b67fb4d5016fb4742e884b92f0040680f",
+      "executor": "servoj",
+      "before": "virtual_detach"
+    },
+    {
+      "name": "return_home",
+      "trajectory": "logs/real_cr5/full_install_bundle/return_home.json",
+      "sha256": "8b81af5f296e43352a6379def8b4ba951b60103a1863f8c117f4e72b51648cf0",
+      "executor": "servoj"
+    }
+  ]
+}

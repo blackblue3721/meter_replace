@@ -1,0 +1,35 @@
+{
+  "run_id": "replay-20260819-01",
+  "workflow": "desktop_meter_to_slot_r1_c2",
+  "created_at": "2026-08-19T10:56:03.847132+08:00",
+  "status": "complete",
+  "completed_stages": [
+    "pregrasp",
+    "grasp_candidate",
+    "lift",
+    "semantic_flip",
+    "slot_transfer",
+    "slot_insert",
+    "slot_retreat",
+    "return_home"
+  ],
+  "trajectory_sha256": {
+    "pregrasp": "e5020270604f388c64042d6010141b0e356019b7cf0956281f7c9dbb758cbf57",
+    "grasp_candidate": "fe619d72cddda265ee87738c18b2df9d020b4afefe4356d06516a8c552d83f62",
+    "lift": "beea4b16f1173542601d868f1062249c4f7e1c333b8fe2da452d54138c87862b",
+    "semantic_flip": "21544e111295d2ad205f51550d93e677cbf4e149658e2cd0cdc814732fefa74f",
+    "slot_transfer": "f98e1f9901b68ff796e85b5da220e68d22094d50d5605e915b0014b8812d80bf",
+    "slot_insert": "d8f23e2933a22ff9387ddfb6a3010d8b2a27de16e30eaaf92dccac680b3c21b9",
+    "slot_retreat": "9ed83e418f8d9b31efe2d7ce5a2ebd8b67fb4d5016fb4742e884b92f0040680f",
+    "return_home": "8b81af5f296e43352a6379def8b4ba951b60103a1863f8c117f4e72b51648cf0"
+  },
+  "last_actual_deg": [
+    90.14479382203359,
+    -3.3622175160020884,
+    105.93912936673306,
+    -94.2230738271581,
+    -135.63310755361425,
+    -90.13909670385983
+  ],
+  "completed_at": "2026-08-19T10:56:44.238505+08:00"
+}
